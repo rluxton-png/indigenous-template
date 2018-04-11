@@ -78,7 +78,7 @@
                   </li>
                   <li>
                     <div class="viewership-icon"><squarespace:block-field id="Subscribers-Icon" /></div>
-                    <div class="viewership-number" style="margin-top:7px;"><squarespace:block-field id="Viewership-Subscribers" /></div>
+                    <div class="viewership-number"><squarespace:block-field id="Viewership-Subscribers" /></div>
                     <div class="viewership-label"><squarespace:block-field id="Subscribers-Txt" /></div>
                   </li>
                   <li>
