@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="touch-styles">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {.if template.mobileStylesEnabled}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {.end}
+    {squarespace-headers}
+    <script>/* Must be below {squarespace-headers} */(function(){var touchTest="ontouchstart"in window||navigator.msMaxTouchPoints;if(!touchTest){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})()</script>
+  </head>
+  {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Disabled -->{.end}
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.if logoImageUrl} logo-image{.end}{.end}{.section collection}{.equal? typeName "index"}{.section collections}{.section 0}{.equal? typeName "gallery"} has-banner-image{.end}{.equal? typeName "page"}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.if authorFilter} filter-author{.end}{.if tagFilter} filter-tag{.end}{.if categoryFilter} filter-category{.end}{.section collection} collection-{urlId|slugify}{.end}">
+
+    <div id="site">
+
+      <input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
+
+      <div id="overlayNav">
+        <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
+      </div>
+
+      <header id="header" role="banner">
+        <div class="header-inner">
+          {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="title-logo-wrapper" data-content-field="site-title">
+            {.section logoImageUrl}
+              <h1 id="logoImage" class="tmpl-loading logo-image"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
+            {.or}
+              <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
+            {.end}
+          </div>{.end}<!-- comment the linebreak between these two elements because science
+          --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label><!-- comment the linebreak between these two elements because science
+          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+        </div>
+      </header>
+
+      <div id="siteWrapper" class="clearfix">
+
+          <!-- Begin 60 Second Docs -->
+          <div id="sixty-sec-docs">
+
+          <!-- Banner -->
+          {.if item}
+            <!-- nothing to see here, move along -->
+          {.or}
+            {.section collection}
+              {.equal? typeName "index"}
+                <!-- nothing to see here, move along -->
+              {.or}
+                {.if mainImage}
+                  <div class="banner-thumbnail-wrapper">
+                    {.section mainImage}
+                      <img src="{assetUrl}?format=original" />
+                    {.end}
+                  </div>
+                {.end}
+              {.end}
+            {.end}
+          {.end}
+
+
+          <main id="page" role="main">
+            <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
+
+              <div class="intro">
+                <div class="intro-text">
+                  <squarespace:block-field id="Intro-Text" columns="12"/>
+                </div>
+                <squarespace:block-field id="Intro-Video" columns="12"/>
+              </div>
+
+              <div class="viewership">
+                <h3>Viewership</h3>
+                <ul class="viewership-numbers">
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon" /></div>
+                    <div class="viewership-number"><squarespace:block-field id="Viewership-Views" /></div>
+                    <div class="viewership-label"><squarespace:block-field id="Viewership-Txt" /></div>
+                  </li>
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Subscribers-Icon" /></div>
+                    <div class="viewership-number"><squarespace:block-field id="Viewership-Subscribers" /></div>
+                    <div class="viewership-label"><squarespace:block-field id="Subscribers-Txt" /></div>
+                  </li>
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Engagement-Icon" /></div>
+                    <div class="viewership-number"><squarespace:block-field id="Viewership-Engagement" /></div>
+                    <div class="viewership-label"><squarespace:block-field id="Engagement-Txt" /></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="featured">
+                <div class="featured-doc featured-1">
+                  <div class="featured-image">
+                    <a class="fb-popup" data-fb-id="1618484115131080">
+                      <squarespace:block-field id="Featured-Doc-Image-1" />
+                    </a>
+                  </div>
+                  <div class="featured-info">
+                    <div class="featured-views">
+                      <div class="featured-info-icon"><img src="assets/img/60secdocs/eye-white.png" /></div>
+                      <div class="featured-info-stats">
+                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Views-1" /></div>
+                        <div class="featured-info-subtitle">views</div>
+                      </div>
+                    </div>
+                    <div class="featured-actions">
+                      <div class="featured-info-icon"><img src="assets/img/60secdocs/bubble-white.png" /></div>
+                      <div class="featured-info-stats">
+                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Actions-1" /></div>
+                        <div class="featured-info-subtitle">Likes, Shares & Comments</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="featured-doc featured-2">
+                  <div class="featured-image">
+                    <a class="fb-popup" data-fb-id="1624321091214049">
+                      <squarespace:block-field id="Featured-Doc-Image-2" />
+                    </a>
+                  </div>
+                  <div class="featured-info">
+                    <div class="featured-views">
+                      <div class="featured-info-icon"><img src="assets/img/60secdocs/eye-white.png" /></div>
+                      <div class="featured-info-stats">
+                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Views-2" /></div>
+                        <div class="featured-info-subtitle">Views</div>
+                      </div>
+                    </div>
+                    <div class="featured-actions">
+                      <div class="featured-info-icon"><img src="assets/img/60secdocs/bubble-white.png" /></div>
+                      <div class="featured-info-stats">
+                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Actions-2" /></div>
+                        <div class="featured-info-subtitle">Likes, Shares & Comments</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="audience">
+                <h3>Audience</h3>
+                <ul>
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-2" /><!--<img src="http://indigenousmedia.com/assets/img/60secdocs/mobile.png" width="51" height="81" />--></div>
+                    <div class="viewership-label solo"><squarespace:block-field id="Viewership-Caption-2" /></div>
+                  </li>
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-3" /><!--<img src="http://indigenousmedia.com/assets/img/60secdocs/world.png" width="77" height="77" />--></div>
+                    <div class="viewership-label solo"><squarespace:block-field id="Viewership-Caption-3" /></div>
+                  </li>
+                  <li>
+                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-4" /><!--<img src="http://indigenousmedia.com/assets/img/60secdocs/people.png" width="62" height="82" />--></div>
+                    <div class="viewership-number"><squarespace:block-field id="Viewership-Caption-4" /></div>
+                    <div class="viewership-label"><squarespace:block-field id="Viewership-Caption-4a" /></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="facebook-videos" id="facebook-videos">
+                <p class="fb-loading">Loading...</p>
+                <div id="facebook-videos-container">
+
+                </div>
+                <a class="load-more" href="#">WATCH MORE</a>
+              </div>
+
+              <div class="as-seen-on">
+                <h3>As Seen On</h3>
+                <div class="press">
+                  <squarespace:block-field id="Press" />
+                </div>
+              </div>
+
+              <div class="watch-on">
+                <h3>Watch 60 Second Docs</h3>
+                <div class="links">
+                  <squarespace:block-field id="Links" />
+                </div>
+              </div>
+
+              <div class="social-like">
+                <div class="fb-like-container">
+                  <div class="fb-like" data-href="https://www.facebook.com/60SecDocs" data-width="150" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+                </div>
+                <div class="yt-subscribe-container">
+                  <div class="g-ytsubscribe" data-channelid="UCYsWPPZMhfI9EddYpPe6CYw" data-layout="full" data-count="default"></div>
+                </div>
+              </div>
+
+            </div>
+          </main>
+
+        </div>
+        <div class="email-form">
+          <squarespace:block-field id="Email-Form" />
+        </div>
+        <!-- End 60 Second Docs -->
+
+        <div id="preFooter">
+          {@|apply pre-footer-with-custom.block}
+        </div>
+
+        <footer id="footer" role="contentinfo">
+          <div class="footer-inner">
+            <a href="http://www.indigenousmedia.com"><img src="assets/img/60secdocs/im_logo.jpg" /></a>
+            <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
+            <squarespace:navigation navigationId="secondaryNav" template="secondary-navigation" />
+            {.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}<div id="siteInfo">{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}<div id="siteInfo">{.end}{.end}{.section website}{.section location}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}<span class="site-address">{.end}{.if addressTitle}{addressTitle}{.end}{.if addressLine1}{.if addressTitle}, {.end}{addressLine1}{.end}{.if addressLine2}{.if addressTitle || addressLine1}, {.or}{.end}{addressLine2}{.end}{.if addressCountry}{.if addressTitle || addressLine1 || addressLine2}, {.end}{addressCountry}{.end}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}</span>{.end}{.end}{.end}{.section websiteSettings}{.if contactPhoneNumber}<span rel="tel" class="site-phone">{contactPhoneNumber}</span>{.end}{.if contactEmail}<a href="mailto:{contactEmail}" class="site-email">{contactEmail}</a>{.end}{.end}{.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}</div>{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}</div>{.end}{.end}
+            <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <div id="fb-video-popup">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F60SecDocs%2Fvideos%2F1646633698982788%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+    </div>
+
+    <div id="exit-popup" class="modal">
+      <div class="exit-popup-email">
+        <squarespace:block-field id="Exit-Email-Form" />
+      </div>
+      <div class="social-like">
+        <div class="fb-like-container">
+          <div class="fb-like" data-href="https://www.facebook.com/60SecDocs" data-width="150" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+        </div>
+        <div class="yt-subscribe-container">
+          <div class="g-ytsubscribe" data-channelid="UCYsWPPZMhfI9EddYpPe6CYw" data-layout="full" data-count="default"></div>
+        </div>
+      </div>
+    </div>
+
+    <squarespace:script src="no-yui.js" combo="true" />
+    <squarespace:script src="no-hover-on-scroll.js" combo="true" />
+    <squarespace:script src="lazyload.js" combo="true" />
+    <squarespace:script src="sticky.js" combo="true" />
+    <squarespace:script src="centernav.js" combo="true" />
+    <squarespace:script src="index-gallery.js" combo="true" />
+    <squarespace:script src="site.js" combo="true" />
+    <squarespace:script src="helpers.js" combo="true" />
+    <squarespace:script src="authenticated.js" combo="true" />
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <squarespace:script src="jquery.modal.min.js" />
+    <squarespace:script src="fb.js" combo="true" />
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    {squarespace-footers}
+
+  </body>
+</html>
