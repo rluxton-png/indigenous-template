@@ -29,7 +29,7 @@
             {.end}
           </div>{.end}<!-- comment the linebreak between these two elements because science
           --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label><!-- comment the linebreak between these two elements because science
-          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+          --><!--<div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="mainNav" template="navigation" /></div>-->
         </div>
       </header>
 
