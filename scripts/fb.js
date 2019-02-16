@@ -6,14 +6,14 @@ window.fbAsyncInit = function() {
   });
 
   FB.api(
-    "/1536789006633925/videos?fields=length&no_story=true&limit=100&access_token=1781519975439910|50ca548c3eb6af45e1812ea315bd658b",
+    "/1536789006633925/videos?fields=length&no_story=true&limit=100&access_token=EAAZAUSHFL3iYBAC5WQ6sopgZBIHooTIooifUMOwrZCiSOV8K4C3tYcGfTX8CTSFDyxDolOZCmQktm4SPQ3gK8sFaTfHaU9v269FZCRsr3cKrOP8QjvrMZBYDoyvbNdLftNNPQObIBLq1kL79o7kEPlqdMd3NZARDASMl9XhGWK2KV1Df4U6jFrh",
     function (response) {
       $(".fb-loading").hide();
       $("a.load-more").css("display", "inline-block");
       if (response && !response.error) {
         $.each(response.data, function( index, value ) {
           if(value.id !== '1620510634928428' && value.length > 20) {
-            $("#facebook-videos-container").append('<div class="fb-video"><a href="#fb-video-popup" class="fb-popup" data-fb-id="'+value.id+'"><img src="https://graph.facebook.com/'+value.id+'/picture?width=500&height=500&access_token=1781519975439910|50ca548c3eb6af45e1812ea315bd658b" /></a></div>');
+            $("#facebook-videos-container").append('<div class="fb-video"><a href="#fb-video-popup" class="fb-popup" data-fb-id="'+value.id+'"><img src="https://graph.facebook.com/'+value.id+'/picture?width=500&height=500&access_token=EAAZAUSHFL3iYBAC5WQ6sopgZBIHooTIooifUMOwrZCiSOV8K4C3tYcGfTX8CTSFDyxDolOZCmQktm4SPQ3gK8sFaTfHaU9v269FZCRsr3cKrOP8QjvrMZBYDoyvbNdLftNNPQObIBLq1kL79o7kEPlqdMd3NZARDASMl9XhGWK2KV1Df4U6jFrh" /></a></div>');
           }
         });
 
@@ -25,7 +25,7 @@ window.fbAsyncInit = function() {
           });
           var videoID = $(this).data('fb-id');
           FB.api(
-            videoID + '?fields=embed_html&access_token=1781519975439910|50ca548c3eb6af45e1812ea315bd658b',
+            videoID + '?fields=embed_html&access_token=EAAZAUSHFL3iYBAC5WQ6sopgZBIHooTIooifUMOwrZCiSOV8K4C3tYcGfTX8CTSFDyxDolOZCmQktm4SPQ3gK8sFaTfHaU9v269FZCRsr3cKrOP8QjvrMZBYDoyvbNdLftNNPQObIBLq1kL79o7kEPlqdMd3NZARDASMl9XhGWK2KV1Df4U6jFrh',
             function(response) {
               $('<div class="modal">'+response.embed_html+'</div>').appendTo('body').modal();
             }
