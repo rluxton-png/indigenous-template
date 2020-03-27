@@ -35,6 +35,9 @@
 
       <div id="siteWrapper" class="clearfix">
 
+        <!-- Begin 60 Second Docs -->
+        <div id="winners">
+
         <!-- Banner -->
         {.if item}
           <!-- nothing to see here, move along -->
