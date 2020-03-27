@@ -31,7 +31,14 @@ html {
 
   }
 
-  @media (max-width: 768px) {
+  .page-section .content {
+      width: 100%;
   }
+
+  @media screen and (min-width: 768px) .page-section.content-width--narrow:not(.content-collection) .content {
+      width: 50%;
+  }
+
+
 
 }
