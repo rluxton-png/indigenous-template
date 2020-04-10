@@ -102,6 +102,10 @@
                 <squarespace:block-field id="recommendations" />
               </div>
             </div>
+
+            <div id="page-3" class="official-page">
+              <squarespace:block-field id="submit-form" />
+            </div>
           </div>
         </main>
 
