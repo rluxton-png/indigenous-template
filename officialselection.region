@@ -85,37 +85,11 @@
         <main id="page" role="main">
           <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
-            {.section collection}
-              {.equal? typeName "products"}<!-- PRODUCT CATEGORY NAV -->{.section categories}
-              <div id="categoryNav">
-                <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
-                <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
-                <nav class="category-nav">
-                  <ul class="category-nav-links">
-                    <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
-                    <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li><!-- comment the linebreak between these two elements because science
-          -->{.repeated section @}<li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li><!-- comment the linebreak between these two elements because science
-          -->{.end}
-                  </ul>
-                </nav>
+            <div id="page-1">
+              <div id="site-title">
+                <squarespace:block-field id="Featured-Doc-Image-1" />
               </div>
-              {.end}{.end}
-
-              {.equal? typeName "blog"}{.if tagFilter}{.or}{.if authorFilter}{.or}<!-- BLOG CATEGORY NAV -->{.section categories}
-              <div id="categoryNav">
-                <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
-                <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
-                <nav class="category-nav">
-                  <ul class="category-nav-links">
-                    <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
-                    <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li><!-- comment the linebreak between these two elements because science
-          -->{.repeated section @}<li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li><!-- comment the linebreak between these two elements because science
-          -->{.end}
-                  </ul>
-                </nav>
-              </div>
-              {.end}{.end}{.end}{.end}
-            {.end}
+            </div>
 
            {squarespace.main-content}
           </div>
