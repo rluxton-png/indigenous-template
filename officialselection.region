@@ -47,7 +47,7 @@
                   {.end}
                     <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
                       <div class="sub-nav">
-                        <div id="60-logo">
+                        <div id="logo-60sd">
                           <img src="../assets/img/official/logo.jpg" />
                         </div>
                         <div class="intro-text">
