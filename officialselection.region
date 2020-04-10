@@ -40,7 +40,7 @@
                 {.if mainImage}
                   <div class="banner-thumbnail-wrapper">
                   {.section mainImage}
-                    <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} data-load="false" /></figure>
+                    <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} data-load="true" /></figure>
                   {.end}
                     <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
                     </div>
