@@ -133,7 +133,9 @@
         $(".official-nav-link").click(function(event) {
           event.preventDefault();
           $(".official-page").hide();
+          $(".official-nav-link").removeClass("active");
           $($(event.target).attr('href')).show();
+          $(event.target).addClass("active");
         });
       });
     </script>
