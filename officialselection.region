@@ -90,7 +90,7 @@
                 <squarespace:block-field id="site-title-block" />
               </div>
               <div id="mailing-list-form">
-
+                <squarespace:block-field id="newsletter-form" />
               </div>
             </div>
           </div>
