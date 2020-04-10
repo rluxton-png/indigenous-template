@@ -158,16 +158,6 @@ html {
         font-style: normal;
       }
 
-      @media screen and (max-width: 768px) {
-        h1 {
-          font-size: 28px;
-          line-height: 28px;
-        }
-        p {
-          width: 260px;
-        }
-      }
-
       #recommendations-container {
         max-width: 1140px;
         margin: 0 auto;
@@ -190,6 +180,19 @@ html {
 
         .image-block:nth-child(odd) {
           margin-right: 32px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        #recommendations-container {
+          max-width: 260px;
+        }
+        h1 {
+          font-size: 28px;
+          line-height: 28px;
+        }
+        p {
+          width: 260px;
         }
       }
     }
