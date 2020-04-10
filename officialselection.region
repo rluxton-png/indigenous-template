@@ -133,7 +133,7 @@
         $(".official-nav-link").click(function(event) {
           event.preventDefault();
           $(".official-page").hide();
-          console.log(event.target);
+          console.log($(event.target).attr('href'));
         });
       });
     </script>
