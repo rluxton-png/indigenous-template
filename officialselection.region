@@ -106,6 +106,9 @@
               <squarespace:block-field id="Links" />
             </div>
             <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
+            <p style="color:#fff;font-size:13px;">
+              © INDIGENOUS MEDIA
+            </p>
           </div>
         </footer>
 
