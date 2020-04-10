@@ -93,6 +93,10 @@
                 <squarespace:block-field id="newsletter-form" />
               </div>
             </div>
+
+            <div id="page-2">
+              <squarespace:block-field id="discover" />
+            </div>
           </div>
         </main>
 
