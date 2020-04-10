@@ -96,6 +96,9 @@
 
             <div id="page-2">
               <squarespace:block-field id="discover" />
+              <div id="recommendations-container">
+                <squarespace:block-field id="recommendations" />
+              </div>
             </div>
           </div>
         </main>
