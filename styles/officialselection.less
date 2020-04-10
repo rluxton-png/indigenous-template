@@ -1,0 +1,140 @@
+/* 60 Second Docs STYLES
+-------------------------------------------------*/
+
+@font-face {
+  font-family: 'Oxygen Regular';
+  src: url('assets/fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Van Condensed';
+  src: url('assets/fonts/VanCondensedLF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asap Semibold';
+  src: url('assets/fonts/Asap/Asap-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asap Medium';
+  src: url('assets/fonts/Asap/Asap-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  font-size: 1vw;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+#official-selection {
+  width: 100%;
+
+  .banner-thumbnail-wrapper {
+    padding: 0;
+    height: 472px;
+
+    .desc-wrapper {
+      padding: 0;
+      max-width: none;
+      text-align: left;
+
+      .sub-nav {
+        #logo-60sd {
+          position: absolute;
+          top: 25px;
+          left: 65px;
+
+          img {
+            width: 95px;
+            height: 95px;
+          }
+        }
+      }
+    }
+  }
+
+  #page {
+    position: relative;
+    margin-top: -325px;
+    padding: 0;
+    max-width: none;
+
+    #site-title {
+      max-width: 486px;
+      margin-left: 65px;
+      margin-bottom: 60px;
+      padding-top: 20px;
+
+      h1 {
+        font-family: 'Van Condensed', arial, sans-serif;
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: .5px;
+        color: #e9d502;
+        text-transform: uppercase;
+      }
+    }
+
+    #page-1 {
+      #mailing-list-form {
+        width: 100%;
+        height: 320px;
+        background-color: #e9d502;
+
+        h2 {
+          font-family: 'Asap Medium', arial, sans-serif;
+          font-size: 36px;
+          line-height: 70px;
+          letter-spacing: .5px;
+          color: #000000;
+          text-transform: uppercase;
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  #footer {
+    background: #000;
+
+    .footer-inner {
+      max-width: 490px;
+      padding: 60px 34px;
+    }
+
+    .links .image-block {
+      display: inline-block;
+      width: 27px;
+      height: 27px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      color: #e9d502;
+      font-family: 'Asap Semibold', 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .index-section-wrapper .content {
+      width: 50%;
+    }
+  }
+
+
+
+}
