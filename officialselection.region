@@ -89,6 +89,9 @@
               <div id="site-title">
                 <squarespace:block-field id="site-title-block" />
               </div>
+              <div id="mailing-list-form">
+
+              </div>
             </div>
 
            {squarespace.main-content}
