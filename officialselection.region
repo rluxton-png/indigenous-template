@@ -30,25 +30,19 @@
             {.or}
               {.background-source-video?}
                 <div class="banner-thumbnail-wrapper">
-                  <div class="color-overlay"></div>
                   <figure id="thumbnail" class="loading content-fill">
                     {@|apply sqs-video-background.block}
                   </figure>
                   <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
-                    <h1 class="page-title">{collection.title}</h1>
-                    {.section description}<div class="page-description">{@}</div>{.end}
                   </div>
                 </div>
               {.or}
                 {.if mainImage}
                   <div class="banner-thumbnail-wrapper">
                   {.section mainImage}
-                    <div class="color-overlay"></div>
                     <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} data-load="false" /></figure>
                   {.end}
                     <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
-                      <h1 class="page-title">{collection.title}</h1>
-                      {.section description}<div class="page-description">{@}</div>{.end}
                     </div>
                   </div>
                 {.end}
