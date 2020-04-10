@@ -87,7 +87,7 @@
         <main id="page" role="main">
           <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
-            <div id="page-1">
+            <div id="page-1" class="official-page">
               <div id="site-title">
                 <squarespace:block-field id="site-title-block" />
               </div>
@@ -96,7 +96,7 @@
               </div>
             </div>
 
-            <div id="page-2">
+            <div id="page-2" class="official-page">
               <squarespace:block-field id="discover" />
               <div id="recommendations-container">
                 <squarespace:block-field id="recommendations" />
@@ -127,6 +127,16 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".official-nav-link").click(function(event) {
+          event.preventDefault();
+          $(".official-page").hide();
+          console.log(event.target);
+        });
+      });
+    </script>
 
     {squarespace-footers}
 
