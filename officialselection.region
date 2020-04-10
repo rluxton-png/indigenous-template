@@ -51,7 +51,9 @@
                           <img src="../assets/img/official/60secdocs_social.jpg" />
                         </div>
                         <div class="intro-text">
-
+                          <a href="#page-1" id="60secdocs-link" class="official-nav-link">60 SECOND DOCS</a>
+                          <a href="#page-2" id="60secdocs-link" class="official-nav-link">OFFICIAL SELECTION</a>
+                          <a href="#page-3" id="60secdocs-link" class="official-nav-link">SUBMIT</a>
                         </div>
                       </div>
                     </div>
