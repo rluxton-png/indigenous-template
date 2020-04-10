@@ -46,13 +46,13 @@
                     <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} data-load="true" /></figure>
                   {.end}
                     <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
-                    </div>
-                    <div class="sub-nav">
-                      <div id="60-logo">
-                        <img src="../assets/img/official/logo.jpg" />
-                      </div>
-                      <div class="intro-text">
+                      <div class="sub-nav">
+                        <div id="60-logo">
+                          <img src="../assets/img/official/logo.jpg" />
+                        </div>
+                        <div class="intro-text">
 
+                        </div>
                       </div>
                     </div>
                   </div>
