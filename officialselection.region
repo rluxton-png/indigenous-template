@@ -87,7 +87,7 @@
 
             <div id="page-1">
               <div id="site-title">
-                <squarespace:block-field id="Featured-Doc-Image-1" />
+                <squarespace:block-field id="site-title-block" />
               </div>
             </div>
 
@@ -107,12 +107,6 @@
             <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
           </div>
         </footer>
-
-        {.if showCart}
-        <div class="{squarespace.cart-classes} custom-cart{.section shoppingCart}{.section entries}{.or} empty{.end}{.end}">
-          <a href="{shoppingCart|cart-url}" class="custom-cart-button">Cart ({shoppingCart|cart-quantity})</a>
-        </div>
-        {.end}
 
       </div>
       </div>
