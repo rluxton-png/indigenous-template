@@ -163,6 +163,10 @@
         'side': 'right'
       });
 
+      $('#menu .official-nav-link').on('click', function() {
+          slideout.toggle();
+      });
+
       // Toggle button
       document.querySelector('.hamburger-icon').addEventListener('click', function() {
         slideout.toggle();
