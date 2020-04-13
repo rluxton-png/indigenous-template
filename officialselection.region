@@ -22,7 +22,9 @@
       <div id="siteWrapper" class="clearfix">
         <nav id="menu">
           <header>
-            <h2>Menu</h2>
+            <a href="#page-1" class="official-nav-link active">60 SECOND DOCS</a>
+            <a href="#page-2" class="official-nav-link">OFFICIAL SELECTION</a>
+            <a href="#page-3" class="official-nav-link">SUBMIT</a>
           </header>
         </nav>
         <!-- Begin 60 Second Docs -->
