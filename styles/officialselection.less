@@ -70,23 +70,34 @@ html {
         }
 
         .intro-text {
-          top: 70px;
-          position: relative;
-          margin: 0 auto;
-          display: block;
+          display: none;
+        }
 
-          .official-nav-link {
-            font-family: "Asap Semibold", "Arial", sans-serif;
-            font-size: 16px;
-            color: #fff;
-            margin-left: 48px;
-            padding-bottom: 5px;
+        @media screen and (min-width: 780px) {
+          .intro-text {
+            top: 70px;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+
+            .official-nav-link {
+              font-family: "Asap Semibold", "Arial", sans-serif;
+              font-size: 16px;
+              color: #fff;
+              margin-left: 48px;
+              padding-bottom: 5px;
+            }
+
+            a.official-nav-link.active {
+              border-bottom: 1px #e9d502 solid;
+            }
           }
 
-          a.official-nav-link.active {
-            border-bottom: 1px #e9d502 solid;
+          .btn-hamburger {
+            display: none;
           }
         }
+
       }
     }
   }
