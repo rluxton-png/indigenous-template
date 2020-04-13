@@ -7,6 +7,7 @@
     {.end}
     {squarespace-headers}
     <script>/* Must be below squarespace-headers */(function(){var touchTest="ontouchstart"in window||navigator.msMaxTouchPoints;if(!touchTest){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})()</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Disabled -->{.end}
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.if logoImageUrl} logo-image{.end}{.end}{.section collection}{.equal? typeName "index"}{.section collections}{.section 0}{.equal? typeName "gallery"} has-banner-image{.end}{.equal? typeName "page"}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.equal? typeName "album"}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.if authorFilter} filter-author{.end}{.if tagFilter} filter-tag{.end}{.if categoryFilter} filter-category{.end}{.section collection} collection-{urlId|slugify}{.end}">
@@ -55,6 +56,9 @@
                           <a href="#page-2" class="official-nav-link">OFFICIAL SELECTION</a>
                           <a href="#page-3" class="official-nav-link">SUBMIT</a>
                         </div>
+                        <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
