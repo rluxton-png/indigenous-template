@@ -157,7 +157,8 @@
         'panel': document.getElementById('official-selection'),
         'menu': document.getElementById('menu'),
         'padding': 256,
-        'tolerance': 70
+        'tolerance': 70,
+        'side': 'right'
       });
 
       // Toggle button
