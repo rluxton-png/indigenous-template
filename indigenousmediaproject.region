@@ -69,14 +69,14 @@
               <div class="project-press">
                 <div class="internal-wrapper">
                   <div class="section-header">IN THE PRESS</div>
-                  <squarespace:block-field id="Project-Press" />
+                  <squarespace:block-field id="Project-Press" columns="12" />
                 </div>
               </div>
 
               <div class="project-photos">
                 <div class="internal-wrapper">
                   <div class="section-header">PHOTOS</div>
-                  <squarespace:block-field id="Project-Photos" />
+                  <squarespace:block-field id="Project-Photos" columns="12" />
                 </div>
               </div>
 
