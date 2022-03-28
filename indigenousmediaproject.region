@@ -55,7 +55,7 @@
               <div class="project-content">
                 <div class="internal-wrapper">
                   <div class="project-media">
-                    <squarespace:block-field id="Project-Media" />
+                    <squarespace:block-field id="Project-Media" columns="12" />
                   </div>
                   <div class="project-summary">
                     <div class="summary-seperator"></div>
