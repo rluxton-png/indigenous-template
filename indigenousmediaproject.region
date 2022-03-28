@@ -41,44 +41,27 @@
             <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
               <div class="project-header">
-                <div class="project-logos">
-                  <div class="client-logo"><squarespace:block-field id="Client-Logo" /></div>
-                  <div class="60sd-logo"><squarespace:block-field id="60sd-Logo" /></div>
-                </div>
-                <div class="project-title">
-                  <squarespace:block-field id="Project-Title" columns="12"/>
+                <div class="internal-wrapper">
+                  <div class="project-logos">
+                    <div class="client-logo"><squarespace:block-field id="Client-Logo" /></div>
+                    <div class="ssd-logo"><squarespace:block-field id="60sd-Logo" /></div>
+                  </div>
+                  <div class="project-title">
+                    <squarespace:block-field id="Project-Title" columns="12"/>
+                  </div>
                 </div>
               </div>
 
-              <div class="viewership">
-                <h3>Viewership</h3>
-                <ul class="viewership-numbers">
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon" /></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Views" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Viewership-Txt" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Subscribers-Icon" /></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Subscribers" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Subscribers-Txt" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Engagement-Icon" /></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Engagement" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Engagement-Txt" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Organic-Icon" /></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Organic" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Organic-Txt" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Reach-Icon" /></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Reach" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Reach-Txt" /></div>
-                  </li>
-                </ul>
+              <div class="project-content">
+                <div class="project-media">
+                  <squarespace:block-field id="Project-Media" />
+                </div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text">
+                    <squarespace:block-field id="Project-Summary-Text" />
+                  </div>
+                </div>
               </div>
 
               <div class="featured">
