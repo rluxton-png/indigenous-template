@@ -18,12 +18,42 @@
 @60-yellow: #e9d330;
 
 // tweak: { "type" : "color", "title" : "Page Header Background Color" }
-@pageHeaderBackgroundColor: #000;
+@pageHeaderBackgroundColor: #ABC5EA;
 
 html {
   font-size: 1vw;
   @media (min-width: 1440px) {
     font-size: 16px;
+  }
+}
+
+#header {
+  background:hsla(0, 0%, 0%, 0.5);
+  height: 120px;
+  position: absolute;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .header-right {
+      width: 50%;
+    }
+
+  }
+
+  .mobile-nav-toggle-label .top-bar, .mobile-nav-toggle-label .middle-bar, .mobile-nav-toggle-label .bottom-bar {
+    background-color: #fff;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 60px;
+    background: #000;
+    color: #fff;
+
+    .header-logo {
+      display: none;
+    }
   }
 }
 
@@ -57,9 +87,21 @@ html {
     margin-bottom: 50px;
   }
 
+  @media only screen and (max-width: 480px) {
+    .internal-wrapper {
+      width: 87%;
+    }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .internal-wrapper {
+      width: 720px;
+    }
+  }
+
   .project-header {
     background-color: @pageHeaderBackgroundColor;
-    padding: 162px 0;
+    padding: 282px 0 162px 0;
 
     .project-logos {
       display: flex;
@@ -85,6 +127,15 @@ html {
       letter-spacing: -0.06em;
       max-width: 894px;
       margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      padding: 100px 0 162px;
+
+      .project-title {
+        font-size: 120px;
+        line-height: 95px;
+      }
     }
   }
 
@@ -117,14 +168,16 @@ html {
     width: 100%;
     background: linear-gradient(91.42deg, #D260E4 0%, #A585F1 100%);
 
-    color: #fff;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px !important;
-    line-height: 24px;
-    /* or 150% */
-    text-align: center;
+    .image-caption p {
+      color: #fff;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px !important;
+      line-height: 24px;
+      /* or 150% */
+      text-align: center;
+    }
   }
 
   .project-photos {
@@ -144,6 +197,17 @@ html {
 
       .project-left, .project-right {
         width: 588px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        flex-direction: column;
+        .project-left, .project-right {
+          width: 325px;
+        }
+      }
+
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        flex-direction: column;
       }
     }
   }
@@ -197,6 +261,22 @@ html {
     text-align: left;
   }
 
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+
+    .footer-left {
+      flex-direction: column;
+    }
+
+    .footer-logo {
+      margin-right: 0px;
+    }
+
+    .footer-links ul li {
+      text-align: center;
+    }
+  }
+
   .footer-links a {
     font-family: 'Roboto';
     font-style: normal;
@@ -209,5 +289,14 @@ html {
 
   .footer-email {
     min-width: 200px;
+  }
+
+  .footer-social strong {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
   }
 }
