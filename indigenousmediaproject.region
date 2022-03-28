@@ -66,110 +66,36 @@
                 </div>
               </div>
 
-              <div class="featured">
-                <div class="featured-doc featured-1">
-                  <div class="featured-image">
-                    <a class="fb-popup" data-fb-id="1618484115131080">
-                      <squarespace:block-field id="Featured-Doc-Image-1" />
-                    </a>
-                  </div>
-                  <div class="featured-info">
-                    <div class="featured-views">
-                      <div class="featured-info-icon"><img src="../assets/img/60secdocs/eye-white.png" /></div>
-                      <div class="featured-info-stats">
-                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Views-1" /></div>
-                        <div class="featured-info-subtitle">views</div>
-                      </div>
-                    </div>
-                    <div class="featured-actions">
-                      <div class="featured-info-icon"><img src="../assets/img/60secdocs/bubble-white.png" /></div>
-                      <div class="featured-info-stats">
-                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Actions-1" /></div>
-                        <div class="featured-info-subtitle">Likes, Shares & Comments</div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="project-press">
+                <div class="internal-wrapper">
+                  <div class="section-header">IN THE PRESS</div>
+                  <squarespace:block-field id="Project-Press" />
                 </div>
-                <div class="featured-doc featured-2">
-                  <div class="featured-image">
-                    <a class="fb-popup" data-fb-id="1624321091214049">
-                      <squarespace:block-field id="Featured-Doc-Image-2" />
-                    </a>
-                  </div>
-                  <div class="featured-info">
-                    <div class="featured-views">
-                      <div class="featured-info-icon"><img src="../assets/img/60secdocs/eye-white.png" /></div>
-                      <div class="featured-info-stats">
-                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Views-2" /></div>
-                        <div class="featured-info-subtitle">Views</div>
-                      </div>
+              </div>
+
+              <div class="project-photos">
+                <div class="internal-wrapper">
+                  <div class="section-header">PHOTOS</div>
+                  <squarespace:block-field id="Project-Photos" />
+                </div>
+              </div>
+
+              <div class="project-other">
+                <div class="internal-wrapper">
+                  <div class="section-header">OTHER PROJECTS</div>
+                  <div class="other-projects">
+                    <div class="project-left">
+                      <squarespace:block-field id="Project-Others-Left" />
                     </div>
-                    <div class="featured-actions">
-                      <div class="featured-info-icon"><img src="../assets/img/60secdocs/bubble-white.png" /></div>
-                      <div class="featured-info-stats">
-                        <div class="featured-info-stat"><squarespace:block-field id="Featured-Doc-Actions-2" /></div>
-                        <div class="featured-info-subtitle">Likes, Shares & Comments</div>
-                      </div>
+                    <div class="project-right">
+                      <squarespace:block-field id="Project-Others-Right" />
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="audience">
-                <h3>Audience</h3>
-                <ul>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-2" /><!--<img src="http://indigenousmedia.com/../assets/img/60secdocs/mobile.png" width="51" height="81" />--></div>
-                    <div class="viewership-label solo"><squarespace:block-field id="Viewership-Caption-2" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-3" /><!--<img src="http://indigenousmedia.com/../assets/img/60secdocs/world.png" width="77" height="77" />--></div>
-                    <div class="viewership-label solo"><squarespace:block-field id="Viewership-Caption-3" /></div>
-                  </li>
-                  <li>
-                    <div class="viewership-icon"><squarespace:block-field id="Viewership-Icon-4" /><!--<img src="http://indigenousmedia.com/../assets/img/60secdocs/people.png" width="62" height="82" />--></div>
-                    <div class="viewership-number"><squarespace:block-field id="Viewership-Caption-4" /></div>
-                    <div class="viewership-label"><squarespace:block-field id="Viewership-Caption-4a" /></div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="facebook-videos" id="facebook-videos">
-                <p class="fb-loading">Loading...</p>
-                <div id="facebook-videos-container">
-
-                </div>
-                <a class="load-more" href="#">WATCH MORE</a>
-              </div>
-
-              <div class="as-seen-on">
-                <h3>Brand Partnerships</h3>
-                <div class="press">
-                  <squarespace:block-field id="Press" />
-                </div>
-              </div>
-
-              <div class="watch-on">
-                <h3>Watch 60 Second Docs</h3>
-                <div class="links">
-                  <squarespace:block-field id="Links" />
-                </div>
-              </div>
-
-              <div class="social-like">
-                <div class="fb-like-container">
-                  <div class="fb-like" data-href="https://www.facebook.com/60SecDocs" data-width="150" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-                </div>
-                <div class="yt-subscribe-container">
-                  <div class="g-ytsubscribe" data-channelid="UCYsWPPZMhfI9EddYpPe6CYw" data-layout="full" data-count="default"></div>
                 </div>
               </div>
 
             </div>
           </main>
-        </div>
-        <div class="email-form">
-          <squarespace:block-field id="Email-Form" />
         </div>
         <!-- End 60 Second Docs -->
 
@@ -203,8 +129,6 @@
     <squarespace:script src="jquery.modal.min.js" />
     <squarespace:script src="fb.js" combo="true" />
     <script src="https://apis.google.com/js/platform.js"></script>
-
-    {squarespace-footers}
 
   </body>
 </html>

@@ -45,6 +45,17 @@ html {
     margin: 0 auto;
   }
 
+  .section-header {
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    display:block;
+  }
+
   .project-header {
     background-color: @pageHeaderBackgroundColor;
     padding: 162px 0;
@@ -78,6 +89,36 @@ html {
 
   .project-content {
     background-color: #363636;
+    width: 100%;
+
+    .project-media, .project-summary {
+      top: -150px;
+      position: relative;
+    }
+
+    .project-summary {
+      max-width: 810px;
+
+      .summary-seperator {
+        width: 168px;
+        height: 3px;
+        background: #fff;
+        margin: 50px 0;
+      }
+    }
+  }
+
+  .project-press, .project-photos, .project-other {
+    padding: 50px 0;
+  }
+
+  .project-press {
+    width: 100%;
+    background: linear-gradient(91.42deg, #D260E4 0%, #A585F1 100%);
+  }
+
+  .project-photos {
+    background: #0A0A0A;
     width: 100%;
   }
 
