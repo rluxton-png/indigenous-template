@@ -53,13 +53,15 @@
               </div>
 
               <div class="project-content">
-                <div class="project-media">
-                  <squarespace:block-field id="Project-Media" />
-                </div>
-                <div class="project-summary">
-                  <div class="summary-seperator"></div>
-                  <div class="summary-text">
-                    <squarespace:block-field id="Project-Summary-Text" />
+                <div class="internal-wrapper">
+                  <div class="project-media">
+                    <squarespace:block-field id="Project-Media" />
+                  </div>
+                  <div class="project-summary">
+                    <div class="summary-seperator"></div>
+                    <div class="summary-text">
+                      <squarespace:block-field id="Project-Summary-Text" />
+                    </div>
                   </div>
                 </div>
               </div>
