@@ -37,6 +37,8 @@
 
         <!-- Begin Indigenous Media Project -->
         <div id="indm-project">
+          <main role="main" data-content-field="main-content">{squarespace.main-content}</main>
+
           <main id="page" role="main">
             <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
