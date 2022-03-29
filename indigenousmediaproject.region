@@ -37,9 +37,9 @@
 
         <!-- Begin Indigenous Media Project -->
         <div id="indm-project">
-          <main id="page" role="main" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
-            <div id="content">
-
+          <main id="page" role="main">
+            <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
+              {squarespace.main-content}
               <div class="project-header">
                 <div class="internal-wrapper">
                   <div class="project-logos">
@@ -47,7 +47,7 @@
                     <div class="ssd-logo"><squarespace:block-field id="60sd-Logo" /></div>
                   </div>
                   <div class="project-title">
-                    <squarespace:block-field id="Project-Title" columns="12"/>
+                    <squarespace:block-field id="Project-Title{squarespace.page-id}" columns="12"/>
                   </div>
                 </div>
               </div>
