@@ -39,15 +39,15 @@
         <div id="indm-project">
           <main id="page" role="main">
             <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
-              {squarespace.main-content}
+
               <div class="project-header">
                 <div class="internal-wrapper">
                   <div class="project-logos">
-                    <div class="client-logo"><squarespace:block-field id="Client-Logo" /></div>
-                    <div class="ssd-logo"><squarespace:block-field id="60sd-Logo" /></div>
+                    <div class="client-logo"><squarespace:block-field id="Client-Logo-{collection.id}" /></div>
+                    <div class="ssd-logo"><squarespace:block-field id="60sd-Logo-{collection.id}" /></div>
                   </div>
                   <div class="project-title">
-                    <squarespace:block-field id="Project-Title{squarespace.page-id}" columns="12"/>
+                    <squarespace:block-field id="Project-Title-{collection.id}" columns="12"/>
                   </div>
                 </div>
               </div>
@@ -55,12 +55,12 @@
               <div class="project-content">
                 <div class="internal-wrapper">
                   <div class="project-media">
-                    <squarespace:block-field id="Project-Media" columns="12" />
+                    <squarespace:block-field id="Project-Media-{collection.id}" columns="12" />
                   </div>
                   <div class="project-summary">
                     <div class="summary-seperator"></div>
                     <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text" />
+                      <squarespace:block-field id="Project-Summary-Text-{collection.id}" />
                     </div>
                   </div>
                 </div>
@@ -69,14 +69,14 @@
               <div class="project-press">
                 <div class="internal-wrapper">
                   <div class="section-header">IN THE PRESS</div>
-                  <squarespace:block-field id="Project-Press" columns="12" />
+                  <squarespace:block-field id="Project-Press-{collection.id}" columns="12" />
                 </div>
               </div>
 
               <div class="project-photos">
                 <div class="internal-wrapper">
                   <div class="section-header">PHOTOS</div>
-                  <squarespace:block-field id="Project-Photos" columns="12" />
+                  <squarespace:block-field id="Project-Photos-{collection.id}" columns="12" />
                 </div>
               </div>
 
@@ -85,10 +85,10 @@
                   <div class="section-header">OTHER PROJECTS</div>
                   <div class="other-projects">
                     <div class="project-left">
-                      <squarespace:block-field id="Project-Others-Left" />
+                      <squarespace:block-field id="Project-Others-Left-{collection.id}" />
                     </div>
                     <div class="project-right">
-                      <squarespace:block-field id="Project-Others-Right" />
+                      <squarespace:block-field id="Project-Others-Right-{collection.id}" />
                     </div>
                   </div>
                 </div>
@@ -98,10 +98,6 @@
           </main>
         </div>
         <!-- End 60 Second Docs -->
-
-        <div id="preFooter">
-          {@|apply pre-footer-with-custom.block}
-        </div>
 
         <footer id="footer" role="contentinfo">
           <div class="footer-inner">
