@@ -99,6 +99,10 @@
         </div>
         <!-- End 60 Second Docs -->
 
+        <div id="preFooter">
+          {@|apply pre-footer-with-custom.block}
+        </div>
+
         <footer id="footer" role="contentinfo">
           <div class="footer-inner">
             <div class="footer-left">
