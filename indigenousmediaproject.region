@@ -19,7 +19,7 @@
         <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
       </div>
 
-      <header id="header" role="banner">
+      <header id="project-header" role="banner">
         <div class="header-inner">
           <div class="header-left">
             <div class="header-logo">

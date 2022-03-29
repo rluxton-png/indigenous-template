@@ -29,7 +29,35 @@ html {
   color:#fff;
 }
 
+#project-header {
+  background:hsla(0, 0%, 0%, 0.5);
+  height: 120px;
+  position: absolute;
 
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .header-right {
+      width: 50%;
+    }
+
+  }
+
+  .mobile-nav-toggle-label .top-bar, .mobile-nav-toggle-label .middle-bar, .mobile-nav-toggle-label .bottom-bar {
+    background-color: #fff;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 60px;
+    background: #000;
+    color: #fff;
+
+    .header-logo {
+      display: none;
+    }
+  }
+}
 
 #indm-project {
   width: 100%;
