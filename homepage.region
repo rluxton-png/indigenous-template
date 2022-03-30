@@ -19,18 +19,17 @@
         <squarespace:navigation navigationId="newNav" template="mobile-navigation" />
       </div>
 
-      <header id="project-header" role="banner">
+      <header id="header" role="banner">
         <div class="header-inner">
-          <div class="header-left">
-            <div class="header-logo">
-              <a href="http://www.indigenousmedia.com"><img src="../assets/img/ind_logo_big.png" /></a>
-            </div>
-          </div>
-          <div class="header-right"><!-- comment the linebreak between these two elements because science
-            --><div class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
-          </div>
-
-
+          {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="title-logo-wrapper" data-content-field="site-title">
+            {.section logoImageUrl}
+              <h1 id="logoImage" class="tmpl-loading logo-image"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
+            {.or}
+              <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
+            {.end}
+          </div>{.end}<!-- comment the linebreak between these two elements because science
+          --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label><!-- comment the linebreak between these two elements because science
+          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
         </div>
       </header>
 
