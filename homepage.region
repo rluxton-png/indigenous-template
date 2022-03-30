@@ -21,9 +21,13 @@
 
       <header id="header" class="homepage" role="banner">
         <div class="header-inner">
-          <!-- comment the linebreak between these two elements because science
-          --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label><!-- comment the linebreak between these two elements because science
-          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
+          {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="title-logo-wrapper" data-content-field="site-title">
+            {.section logoImageUrl}
+              <h1 id="logoImage" class="tmpl-loading logo-image"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
+            {.or}
+              <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
+            {.end}
+          </div>{.end}
         </div>
       </header>
 
