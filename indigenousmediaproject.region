@@ -119,7 +119,7 @@
             <div class="footer-right">
               <div class="footer-social">
                 <strong>Follow Us on Social Media</strong>
-                <div style="margin-bottom:15px;">
+                <div>
                   <squarespace:block-field id="footerSocial" label="Footer Social Links" />
                 </div>
               </div>
