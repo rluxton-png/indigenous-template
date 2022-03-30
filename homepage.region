@@ -27,7 +27,8 @@
             {.or}
               <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
             {.end}
-          </div>{.end}
+          </div>{.end}<!-- comment the linebreak between these two elements because science
+          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
         </div>
       </header>
 
