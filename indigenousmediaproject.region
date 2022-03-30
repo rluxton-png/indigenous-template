@@ -16,7 +16,7 @@
       <input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
 
       <div id="overlayNav">
-        <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
+        <squarespace:navigation navigationId="newNav" template="mobile-navigation" />
       </div>
 
       <header id="project-header" role="banner">
@@ -27,9 +27,10 @@
             </div>
           </div>
           <div class="header-right">
-            <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label>
-            <div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+            <div class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
           </div>
+          <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label>
+
         </div>
       </header>
 
