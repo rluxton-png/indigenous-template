@@ -28,7 +28,7 @@
               <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
             {.end}
           </div>{.end}<!-- comment the linebreak between these two elements because science
-          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
+          --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label>
         </div>
       </header>
 
