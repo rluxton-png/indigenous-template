@@ -43,6 +43,9 @@
 
               <div class="project-header">
                 <div class="internal-wrapper">
+                  <div class="project-awards">
+                    <squarespace:block-field id="Project-Awards-{collection.id}" columns="12" />
+                  </div>
                   <div class="project-logos">
                     <div class="client-logo"><squarespace:block-field id="Client-Logo-{collection.id}" /></div>
                     <div class="ssd-logo"><squarespace:block-field id="60sd-Logo-{collection.id}" columns="12" /></div>
