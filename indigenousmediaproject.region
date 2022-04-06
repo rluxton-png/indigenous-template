@@ -45,7 +45,7 @@
                 <div class="internal-wrapper">
                   <div class="project-logos">
                     <div class="client-logo"><squarespace:block-field id="Client-Logo-{collection.id}" /></div>
-                    <div class="ssd-logo"><squarespace:block-field id="60sd-Logo-{collection.id}" /></div>
+                    <div class="ssd-logo"><squarespace:block-field id="60sd-Logo-{collection.id}" columns="12" /></div>
                   </div>
                   <div class="project-title">
                     <squarespace:block-field id="Project-Title-{collection.id}" columns="12"/>
