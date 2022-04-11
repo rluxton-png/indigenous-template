@@ -37,7 +37,6 @@
           <div class="header-right">
             <div class="tmpl-loading" ><squarespace:navigation navigationId="newNav" template="navigation" /></div>
           </div>
-          <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label>
 
         </div>
       </header>
