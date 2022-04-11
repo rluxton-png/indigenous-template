@@ -19,7 +19,7 @@
         <squarespace:navigation navigationId="newNav" template="mobile-navigation" />
       </div>
 
-      <header id="header" role="banner">
+      <header id="project-header" role="banner">
         <div class="header-inner">
           {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="title-logo-wrapper" data-content-field="site-title">
             {.section logoImageUrl}
