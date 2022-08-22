@@ -145,40 +145,6 @@
                 </div>
               </div>
 
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-6" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-6" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-6" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-7" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-7" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-7" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </main>
         </div>
