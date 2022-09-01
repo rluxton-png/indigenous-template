@@ -60,7 +60,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-1.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-6" columns="12" />
@@ -77,7 +77,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-2.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-1" columns="12" />
@@ -94,7 +94,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-3.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-4" columns="12" />
@@ -111,7 +111,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-4.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-2" columns="12" />
@@ -128,7 +128,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-5.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-5" columns="12" />
@@ -145,7 +145,7 @@
                 </div>
               </div>
 
-              <div class="project-content">
+              <div class="project-content" style="background:url('https://www.indigenousmedia.com/assets/img/blackrock/bg-section-6.jpg') no-repeat; background-size: cover;">
                 <div class="internal-wrapper">
                   <div class="section-header">
                     <squarespace:block-field id="Project-SectionHeader-{collection.id}-3" columns="12" />
