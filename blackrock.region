@@ -1,21 +1,7 @@
-<!-- TEMP DEBUG: remove after verification -->
-<style>
-  /* Force visibility even if external LESS isn't loaded */
-  #blackrock-page .blk__section {
-    min-height: 240px;
-  }
-  /* Super visible alternation so you can confirm 12 bands immediately */
-  #blackrock-page .blk__section:nth-child(odd)  { background:#222; color:#fff; }
-  #blackrock-page .blk__section:nth-child(even) { background:#000; color:#fff; }
-</style>
-
-<div style="background:#ffeb3b;padding:14px;text-align:center;font-weight:bold;">
-  DEBUG: BlackRock layout loaded (remove me after test)
-</div>
-
+<!-- blackrock.region -->
 <div id="blackrock-page" class="blk">
-  <div class="blk__sections">
-    <!-- leave all 12 sections here exactly as you have them -->
+  <!-- Main editable area for this layout -->
+  <div class="blk__sections" data-content-field="main-content">
     <section class="blk__section"><squarespace:block-field id="Section-01" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-02" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-03" columns="12" /></section>
@@ -29,10 +15,4 @@
     <section class="blk__section"><squarespace:block-field id="Section-11" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-12" columns="12" /></section>
   </div>
-
-  <!-- keep the audit requirement as a sibling -
-
-
-  <!-- Required annotation for Squarespace -->
-  <div class="blk__fallback" data-content-field="main-content"></div>
 </div>
