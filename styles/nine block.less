@@ -1,0 +1,25 @@
+/* styles/nineblock.less */
+#nine-template {
+  --bg-odd:  #2f2f2f;
+  --bg-even: #000000;
+  --fg:      #ffffff;
+
+  .blk__section {
+    padding: 80px 0;
+    min-height: 240px;
+    color: var(--fg);
+
+    h1, h2, h3, h4, h5, h6,
+    p, li, blockquote, small {
+      color: inherit;
+    }
+
+    .sqs-block {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  .blk__section:nth-child(odd)  { background: var(--bg-odd); }
+  .blk__section:nth-child(even) { background: var(--bg-even); }
+}
