@@ -35,16 +35,14 @@
 
       <div id="siteWrapper" class="clearfix">
 
-        <!-- Begin Nine-Section Layout -->
-        <div id="nine-template">
+        <!-- Begin Nine-Section Layout (inherits Brand styles) -->
+        <div id="brand-template" class="nine-template">
           <main id="page" role="main">
             <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
               <!-- tiny seed so SS doesn't collapse when empty -->
               <div class="blk__seed" aria-hidden="true">&#160;</div>
 
-              <!-- 9 repeating bands following the brand template section structure -->
-              <!-- Use fresh suffixes (-13 … -21) to avoid colliding with existing brand IDs -->
               <!-- Section 1 -->
               <div class="project-content">
                 <div class="internal-wrapper">
