@@ -1,23 +1,35 @@
 /* styles/blackrock.less */
 #blackrock-page {
-  --bg-odd:  #2f2f2f;
-  --bg-even: #000000;
-  --fg:      #ffffff;
+  --bg-odd:  #2f2f2f;   /* dark gray */
+  --bg-even: #000000;   /* black */
+  --fg:      #ffffff;   /* white text */
 
   color: var(--fg);
 
   .blk__section {
     padding: 80px 0;
+    min-height: 240px;    /* ensure empty sections still render */
     color: var(--fg);
-    h1,h2,h3,h4,h5,h6,p,li,blockquote,small { color: inherit; }
-    .sqs-block { max-width: 1200px; margin: 0 auto; }
+
+    h1, h2, h3, h4, h5, h6,
+    p, li, blockquote, small {
+      color: inherit;
+    }
+
+    .sqs-block {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
   }
 
   .blk__section:nth-child(odd)  { background: var(--bg-odd); }
   .blk__section:nth-child(even) { background: var(--bg-even); }
 }
-/* styles/blackrock.less */
-#blackrock-page .blk__section {
-  min-height: 240px;
-}
 
+/* Invisible seed element prevents Squarespace from hiding empty annotated section */
+#blackrock-page .blk__seed {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
