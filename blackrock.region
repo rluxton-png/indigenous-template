@@ -1,29 +1,95 @@
 <!-- blackrock.region -->
-<!-- TEMP inline styles to force visibility; remove later if you want -->
-<style>
-  #blackrock-page .blk__section { min-height:240px }
-  #blackrock-page .blk__section:nth-child(odd){ background:#2f2f2f; color:#fff }
-  #blackrock-page .blk__section:nth-child(even){ background:#000; color:#fff }
-  #blackrock-page .blk__seed{ width:1px; height:1px; opacity:0; pointer-events:none }
-</style>
-
 <div id="blackrock-page" class="blk">
-  <!-- This wrapper MUST have the annotation, and MUST NOT be truly empty -->
-  <div class="blk__sections" data-content-field="main-content">
-    <!-- Invisible seed keeps the annotated node from being treated as empty -->
-    <div class="blk__seed" aria-hidden="true"></div>
+  <!-- Brand template scope so brandtemplate.less rules apply -->
+  <div id="brand-template">
 
-    <section class="blk__section"><squarespace:block-field id="Section-01" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-02" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-03" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-04" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-05" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-06" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-07" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-08" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-09" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-10" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-11" columns="12" /></section>
-    <section class="blk__section"><squarespace:block-field id="Section-12" columns="12" /></section>
+    <!-- Main editable area (seed prevents auto-hide when empty) -->
+    <div class="blk__sections" data-content-field="main-content">
+      <div class="blk__seed" aria-hidden="true"></div>
+
+      <!-- 01: Project Header (big hero/title area) -->
+      <section class="blk__section project-header">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-01" columns="12" />
+        </div>
+      </section>
+
+      <!-- 02: Generic content (uses alt band color) -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-02" columns="12" />
+        </div>
+      </section>
+
+      <!-- 03: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-03" columns="12" />
+        </div>
+      </section>
+
+      <!-- 04: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-04" columns="12" />
+        </div>
+      </section>
+
+      <!-- 05: Press (brandtemplate.less gives special gradient bg + caption styles) -->
+      <section class="blk__section project-press">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-05" columns="12" />
+        </div>
+      </section>
+
+      <!-- 06: Photos (brandtemplate.less uses #0A0A0A bg) -->
+      <section class="blk__section project-photos">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-06" columns="12" />
+        </div>
+      </section>
+
+      <!-- 07: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-07" columns="12" />
+        </div>
+      </section>
+
+      <!-- 08: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-08" columns="12" />
+        </div>
+      </section>
+
+      <!-- 09: “Other projects” row (brandtemplate.less lays this out) -->
+      <section class="blk__section project-other">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-09" columns="12" />
+        </div>
+      </section>
+
+      <!-- 10: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-10" columns="12" />
+        </div>
+      </section>
+
+      <!-- 11: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-11" columns="12" />
+        </div>
+      </section>
+
+      <!-- 12: Generic content -->
+      <section class="blk__section project-content blk--alt">
+        <div class="internal-wrapper">
+          <squarespace:block-field id="Section-12" columns="12" />
+        </div>
+      </section>
+    </div>
   </div>
 </div>
