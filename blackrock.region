@@ -1,6 +1,9 @@
 <!-- blackrock.region -->
 <div id="blackrock-page" class="blk">
-  <div class="blk__sections">
+  <!-- Main editable area required by Squarespace -->
+  <div class="blk__sections" data-content-field="main-content">
+
+    <!-- Custom block fields (12 editable sections) -->
     <section class="blk__section"><squarespace:block-field id="Section-01" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-02" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-03" columns="12" /></section>
@@ -13,5 +16,10 @@
     <section class="blk__section"><squarespace:block-field id="Section-10" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-11" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-12" columns="12" /></section>
+
+    <!-- Fallback: ensures content is always editable -->
+    <div class="blk__fallback">
+      {squarespace.main-content}
+    </div>
   </div>
 </div>
