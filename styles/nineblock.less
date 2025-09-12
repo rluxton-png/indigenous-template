@@ -1,35 +1,86 @@
 /* styles/nineblock.less */
 
-/* Scope all rules to this template only */
-#nine-template {
+/* Scope all rules to this layout via the class we added on the container */
+.nine-template {
   --bg-odd:  #2f2f2f;  /* dark gray */
   --bg-even: #000000;  /* black */
   --fg:      #ffffff;
 
-  /* Section container from the region markup */
+  /* Make bands full-bleed like the Brand template */
+  #page { max-width: 100%; padding: 0; }
+
+  .internal-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 480px)  { .internal-wrapper { width: 87%;  } }
+  @media (min-width: 481px) and (max-width: 768px) { .internal-wrapper { width: 720px; } }
+
+  /* Section container */
   .project-content {
+    width: 100%;
     padding: 80px 0;
     min-height: 240px;
     color: var(--fg);
 
-    .internal-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
     h1, h2, h3, h4, h5, h6,
-    p, li, blockquote, small {
-      color: inherit;
-    }
+    p, li, blockquote, small { color: inherit; }
   }
 
-  /* Alternate the bands – use :nth-of-type so we count only .project-content siblings.
-     Add higher specificity so we win over brandtemplate.less */
+  /* Alternate the bands; higher specificity to beat other styles */
   #content > .project-content:nth-of-type(odd)  { background: var(--bg-odd);  }
   #content > .project-content:nth-of-type(even) { background: var(--bg-even); }
+
+  /* Seed invisibility (safe if present) */
+  .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 }
 
-/* Keep the seed invisible; harmless if it’s there */
-#nine-template .blk__seed {
-  width: 1px; height: 1px; opacity: 0; pointer-events: none;
+/* ===== Header normalization for this layout ===== */
+.nine-template ~ #footer, /* no-op selector to keep block scoped strictly to the page structure */ {}
+
+body #project-header {
+  background: hsla(0,0%,0%,0.5);
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+}
+body #project-header a { color: #fff; }
+
+body #project-header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+}
+
+body #project-header .mobile-nav-toggle-label .top-bar,
+body #project-header .mobile-nav-toggle-label .middle-bar,
+body #project-header .mobile-nav-toggle-label .bottom-bar {
+  background-color: #fff;
+}
+
+/* Navigation link styles to match Brand */
+body #project-header #mainNavigation a,
+body #project-header #mainNavigation label {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: none;
+  text-align: center;
+}
+body #project-header #mainNavigation a:hover,
+body #project-header #mainNavigation label:hover { opacity: .5; }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  body #project-header {
+    height: 60px;
+    background: #000;
+    position: fixed;
+  }
+  body #project-header .header-logo { display: none; }
+  body #project-header .header-right { display: none; }
 }
