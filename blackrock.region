@@ -1,6 +1,6 @@
 <!-- blackrock.region -->
 <div id="blackrock-page" class="blk">
-  <!-- Your 12 section bands live here and always render -->
+  <!-- 12 section bands -->
   <div class="blk__sections">
     <section class="blk__section"><squarespace:block-field id="Section-01" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-02" columns="12" /></section>
@@ -16,6 +16,6 @@
     <section class="blk__section"><squarespace:block-field id="Section-12" columns="12" /></section>
   </div>
 
-  <!-- Keep the required annotation as a sibling, not a parent -->
+  <!-- Required annotation for Squarespace -->
   <div class="blk__fallback" data-content-field="main-content"></div>
 </div>
