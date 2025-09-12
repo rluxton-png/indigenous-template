@@ -1,13 +1,19 @@
 <!-- blackrock.region -->
-<div id="blackrock-page" class="blk">
-  <div class="blk__sections">
-    <!-- Annotate only the first section as the main content field -->
-    <section class="blk__section" data-content-field="main-content">
-      <!-- Seed so Squarespace doesn't auto-hide the annotated node when empty -->
-      <div class="blk__seed" aria-hidden="true">&#160;</div>
-      <squarespace:block-field id="Section-01" columns="12" />
-    </section>
+<!-- TEMP inline styles to force visibility; remove later if you want -->
+<style>
+  #blackrock-page .blk__section { min-height:240px }
+  #blackrock-page .blk__section:nth-child(odd){ background:#2f2f2f; color:#fff }
+  #blackrock-page .blk__section:nth-child(even){ background:#000; color:#fff }
+  #blackrock-page .blk__seed{ width:1px; height:1px; opacity:0; pointer-events:none }
+</style>
 
+<div id="blackrock-page" class="blk">
+  <!-- This wrapper MUST have the annotation, and MUST NOT be truly empty -->
+  <div class="blk__sections" data-content-field="main-content">
+    <!-- Invisible seed keeps the annotated node from being treated as empty -->
+    <div class="blk__seed" aria-hidden="true"></div>
+
+    <section class="blk__section"><squarespace:block-field id="Section-01" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-02" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-03" columns="12" /></section>
     <section class="blk__section"><squarespace:block-field id="Section-04" columns="12" /></section>
