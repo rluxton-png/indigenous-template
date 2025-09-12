@@ -1,25 +1,35 @@
 /* styles/nineblock.less */
+
+/* Scope all rules to this template only */
 #nine-template {
-  --bg-odd:  #2f2f2f;
-  --bg-even: #000000;
+  --bg-odd:  #2f2f2f;  /* dark gray */
+  --bg-even: #000000;  /* black */
   --fg:      #ffffff;
 
-  .blk__section {
+  /* Section container from the region markup */
+  .project-content {
     padding: 80px 0;
     min-height: 240px;
     color: var(--fg);
+
+    .internal-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     h1, h2, h3, h4, h5, h6,
     p, li, blockquote, small {
       color: inherit;
     }
-
-    .sqs-block {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
   }
 
-  .blk__section:nth-child(odd)  { background: var(--bg-odd); }
-  .blk__section:nth-child(even) { background: var(--bg-even); }
+  /* Alternate the bands – use :nth-of-type so we count only .project-content siblings.
+     Add higher specificity so we win over brandtemplate.less */
+  #content > .project-content:nth-of-type(odd)  { background: var(--bg-odd);  }
+  #content > .project-content:nth-of-type(even) { background: var(--bg-even); }
+}
+
+/* Keep the seed invisible; harmless if it’s there */
+#nine-template .blk__seed {
+  width: 1px; height: 1px; opacity: 0; pointer-events: none;
 }
