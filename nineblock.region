@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {.end}
     {squarespace-headers}
-    <script>/* Must be below {squarespace-headers} */(function(){var touchTest="ontouchstart"in window||navigator.msMaxTouchPoints;if(!touchTest){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})()</script>
+    <script>(function(){var t="ontouchstart"in window||navigator.msMaxTouchPoints;if(!t){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})();</script>
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Disabled -->{.end}
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.if logoImageUrl} logo-image{.end}{.end}{.section collection} collection-{urlId|slugify}{.end}">
 
     <div id="site">
-
       <input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
 
       <div id="overlayNav">
@@ -29,205 +28,128 @@
           <div class="header-right">
             <div class="tmpl-loading"><squarespace:navigation navigationId="newNav" template="navigation" /></div>
           </div>
-          <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label>
+          <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile">
+            <div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div>
+          </label>
         </div>
       </header>
 
       <div id="siteWrapper" class="clearfix">
 
-        <!-- Begin Nine-Section Layout (inherits Brand styles) -->
+        <!-- Inherit Brand styles -->
         <div id="brand-template" class="nine-template">
           <main id="page" role="main">
             <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
 
-              <!-- tiny seed so SS doesn't collapse when empty -->
+              <!-- seed so empty pages still render -->
               <div class="blk__seed" aria-hidden="true">&#160;</div>
 
-              <!-- HERO / PROJECT HEADER (matches brand/blackrock) -->
+              <!-- HERO — uses SAME IDs as Brand/BlackRock -->
               <div class="project-header">
                 <div class="internal-wrapper">
                   <div class="project-header-left">
                     <div class="project-logos">
-                      <div class="client-logo">
-                        <squarespace:block-field id="NB-Client-Logo-{collection.id}" columns="12" />
-                      </div>
-                      <div class="ssd-logo">
-                        <squarespace:block-field id="NB-SSD-Logo-{collection.id}" columns="12" />
-                      </div>
+                      <div class="client-logo"><squarespace:block-field id="Client-Logo-{collection.id}" columns="12" /></div>
+                      <div class="ssd-logo"><squarespace:block-field id="60sd-Logo-{collection.id}" columns="12" /></div>
                     </div>
                     <div class="project-title">
-                      <squarespace:block-field id="NB-Project-Title-{collection.id}" columns="12" />
+                      <squarespace:block-field id="Project-Title-{collection.id}" columns="12" />
                     </div>
                   </div>
                   <div class="project-header-right">
                     <div class="project-awards">
-                      <squarespace:block-field id="NB-Project-Awards-{collection.id}" columns="12" />
+                      <squarespace:block-field id="Project-Awards-{collection.id}" columns="12" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Section 1 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-13" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-13" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-13" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!-- ===== FIRST SIX SECTIONS — EXACT SAME IDS & ORDER AS BRAND TEMPLATE ===== -->
 
-              <!-- Section 2 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-14" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-14" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-14" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!-- order: 6, 4, 1, 2, 5, 3 (matches brandtemplate.region) -->
 
-              <!-- Section 3 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-15" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-15" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-15" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-6" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-6" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-6" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 4 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-16" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-16" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-16" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-4" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-4" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-4" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 5 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-17" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-17" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-17" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-1" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-1" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-1" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 6 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-18" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-18" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-18" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-2" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-2" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-2" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 7 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-19" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-19" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-19" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-5" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-5" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-5" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 8 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-20" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-20" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-20" />
-                    </div>
-                  </div>
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-3" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-3" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-3" /></div>
                 </div>
-              </div>
+              </div></div>
 
-              <!-- Section 9 -->
-              <div class="project-content">
-                <div class="internal-wrapper">
-                  <div class="section-header">
-                    <squarespace:block-field id="Project-SectionHeader-{collection.id}-21" columns="12" />
-                  </div>
-                  <div class="project-media">
-                    <squarespace:block-field id="Project-Media-{collection.id}-21" columns="12" />
-                  </div>
-                  <div class="project-summary">
-                    <div class="summary-seperator"></div>
-                    <div class="summary-text">
-                      <squarespace:block-field id="Project-Summary-Text-{collection.id}-21" />
-                    </div>
-                  </div>
+              <!-- ===== EXTRA 3 SECTIONS — NEW IDS SO THEY DON'T CONFLICT ===== -->
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-7" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-7" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-7" /></div>
                 </div>
-              </div>
+              </div></div>
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-8" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-8" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-8" /></div>
+                </div>
+              </div></div>
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header"><squarespace:block-field id="Project-SectionHeader-{collection.id}-9" columns="12" /></div>
+                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-9" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-9" /></div>
+                </div>
+              </div></div>
 
             </div>
           </main>
