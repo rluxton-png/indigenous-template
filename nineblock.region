@@ -43,6 +43,30 @@
               <!-- tiny seed so SS doesn't collapse when empty -->
               <div class="blk__seed" aria-hidden="true">&#160;</div>
 
+              <!-- HERO / PROJECT HEADER (matches brand/blackrock) -->
+              <div class="project-header">
+                <div class="internal-wrapper">
+                  <div class="project-header-left">
+                    <div class="project-logos">
+                      <div class="client-logo">
+                        <squarespace:block-field id="NB-Client-Logo-{collection.id}" columns="12" />
+                      </div>
+                      <div class="ssd-logo">
+                        <squarespace:block-field id="NB-SSD-Logo-{collection.id}" columns="12" />
+                      </div>
+                    </div>
+                    <div class="project-title">
+                      <squarespace:block-field id="NB-Project-Title-{collection.id}" columns="12" />
+                    </div>
+                  </div>
+                  <div class="project-header-right">
+                    <div class="project-awards">
+                      <squarespace:block-field id="NB-Project-Awards-{collection.id}" columns="12" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!-- Section 1 -->
               <div class="project-content">
                 <div class="internal-wrapper">
