@@ -1,93 +1,190 @@
-<section class="hero ssd-hero">
-  <div class="hero-media">
-    <img src="/assets/img/cover.jpg" alt="">
-  </div>
+<div class="theme-60sd">
+  <!-- HERO -->
+  <section class="hero ssd-hero" role="banner" aria-label="60 Second Docs Hero">
+    <div class="hero-media" aria-hidden="true">
+      <!-- Uses your existing cover image; replace if you add a dedicated hero -->
+      <img src="/assets/img/cover.jpg" alt="">
+    </div>
 
-  <div class="hero-inner container">
-    <h1>THE LEADING DIGITAL DOCUMENTARY BRAND</h1>
-    <p class="subhead">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</p>
+    <div class="hero-inner container">
+      <h1>THE LEADING DIGITAL DOCUMENTARY BRAND</h1>
+      <p class="subhead">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</p>
 
-    <nav class="social" aria-label="Follow 60 Second Docs">
-      <!-- Add SVGs later if/when you commit them -->
-      <a href="#" aria-label="Facebook">FB</a>
-      <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="YouTube">YT</a>
-      <a href="#" aria-label="Snapchat">Snap</a>
-      <a href="#" aria-label="X">X</a>
-      <a href="#" aria-label="TikTok">TT</a>
-    </nav>
-  </div>
+      <!-- Swap text labels with SVGs once you add them under /assets/img/60seconddocs/social/ -->
+      <nav class="social" aria-label="Follow 60 Second Docs">
+        <a href="#" aria-label="Instagram">IG
+          <!-- <img src="/assets/img/60seconddocs/social/instagram.svg" alt=""> -->
+        </a>
+        <a href="#" aria-label="TikTok">TT
+          <!-- <img src="/assets/img/60seconddocs/social/tiktok.svg" alt=""> -->
+        </a>
+        <a href="#" aria-label="YouTube">YT
+          <!-- <img src="/assets/img/60seconddocs/social/youtube.svg" alt=""> -->
+        </a>
+        <a href="#" aria-label="X">X
+          <!-- <img src="/assets/img/60seconddocs/social/x.svg" alt=""> -->
+        </a>
+        <a href="#" aria-label="Facebook">FB
+          <!-- <img src="/assets/img/60seconddocs/social/facebook.svg" alt=""> -->
+        </a>
+        <a href="#" aria-label="Snapchat">Snap
+          <!-- <img src="/assets/img/60seconddocs/social/snapchat.svg" alt=""> -->
+        </a>
+      </nav>
+    </div>
 
-  <div class="badge-stack" aria-label="Awards">
-    <img src="/assets/img/webby.png" alt="Webby Award">
-    <img src="/assets/img/clio.png" alt="Clio Award">
-    <img src="/assets/img/streamy-awards.png" alt="Streamy Awards">
-    <img src="/assets/img/shorty-awards.png" alt="Shorty Awards">
-  </div>
-</section>
+    <!-- Awards/badges (using assets already in the repo) -->
+    <div class="badge-stack" aria-label="Awards">
+      <img src="/assets/img/webby.png" alt="Webby Award">
+      <img src="/assets/img/clio.png" alt="Clio Award">
+      <img src="/assets/img/streamy-awards.png" alt="Streamy Awards">
+      <img src="/assets/img/shorty-awards.png" alt="Shorty Awards">
+    </div>
+  </section>
 
-<section class="container section">
-  <h2 class="section-title">Featuring the World’s Most Interesting Characters</h2>
-  <ul class="gallery" role="list">
-    <!-- Swap FPOs with your actual character stills -->
-    <li class="card"><a class="card-link" href="#"><img src="/assets/img/fpo1.jpg" alt="Character"><span class="card-title">Character</span></a></li>
-    <li class="card"><a class="card-link" href="#"><img src="/assets/img/fpo2.jpg" alt="Character"><span class="card-title">Character</span></a></li>
-    <li class="card"><a class="card-link" href="#"><img src="/assets/img/fpo3.jpg" alt="Character"><span class="card-title">Character</span></a></li>
-    <li class="card"><a class="card-link" href="#"><img src="/assets/img/fpo4.jpg" alt="Character"><span class="card-title">Character</span></a></li>
-    <li class="card"><a class="card-link" href="#"><img src="/assets/img/fpo5.jpg" alt="Character"><span class="card-title">Character</span></a></li>
-  </ul>
-</section>
+  <!-- GALLERY -->
+  <section class="container section" aria-labelledby="characters-heading">
+    <h2 id="characters-heading" class="section-title">Featuring the World’s Most Interesting Characters</h2>
+    <ul class="gallery" role="list">
+      <!-- Replace FPOs with real character stills (800×800 recommended) -->
+      <li class="card">
+        <a href="#" class="card-link">
+          <img src="/assets/img/fpo1.jpg" alt="Character">
+          <span class="card-title">Character</span>
+        </a>
+      </li>
+      <li class="card">
+        <a href="#" class="card-link">
+          <img src="/assets/img/fpo2.jpg" alt="Character">
+          <span class="card-title">Character</span>
+        </a>
+      </li>
+      <li class="card">
+        <a href="#" class="card-link">
+          <img src="/assets/img/fpo3.jpg" alt="Character">
+          <span class="card-title">Character</span>
+        </a>
+      </li>
+      <li class="card">
+        <a href="#" class="card-link">
+          <img src="/assets/img/fpo4.jpg" alt="Character">
+          <span class="card-title">Character</span>
+        </a>
+      </li>
+      <li class="card">
+        <a href="#" class="card-link">
+          <img src="/assets/img/fpo5.jpg" alt="Character">
+          <span class="card-title">Character</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-<section class="container section">
-  <h2 class="visually-hidden">Key Metrics</h2>
-  <div class="ssd-metrics">
-    <div class="ssd-metric"><div class="num" data-count="12000000000">12B+</div><div class="label">Total Video Views</div></div>
-    <div class="ssd-metric"><div class="num" data-count="9900000">9.9MM</div><div class="label">Avg Views / Episode</div></div>
-    <div class="ssd-metric"><div class="num" data-count="13000000">13MM+</div><div class="label">Total Followers</div></div>
-  </div>
-  <div class="ssd-metrics mt">
-    <div class="ssd-metric"><div class="num">18–34</div><div class="label">Majority of Audience</div></div>
-    <div class="ssd-metric"><div class="num">99%</div><div class="label">Organic Viewership</div></div>
-    <div class="ssd-metric"><div class="num">1000+</div><div class="label">Episodes</div></div>
-  </div>
-</section>
+  <!-- METRICS -->
+  <section class="container section" aria-labelledby="metrics-heading">
+    <h2 id="metrics-heading" class="visually-hidden">Key Metrics</h2>
 
-<section class="container section">
-  <h2 class="visually-hidden">Press & Partners</h2>
-  <div class="ssd-press">
-    <img src="/assets/img/logo_variety.jpg" alt="Variety">
-    <img src="/assets/img/logo_people.jpg" alt="People">
-    <img src="/assets/img/logo_mashable.jpg" alt="Mashable">
-    <img src="/assets/img/logo_guardian.jpg" alt="The Guardian">
-    <img src="/assets/img/logo_gq.jpg" alt="GQ">
-    <img src="/assets/img/logo_fullscreen.jpg" alt="Fullscreen">
-    <img src="/assets/img/logo_vulture.jpg" alt="Vulture">
-    <img src="/assets/img/logo_vimeo.png" alt="Vimeo">
-  </div>
-</section>
+    <div class="ssd-metrics">
+      <div class="ssd-metric">
+        <div class="num" data-count="12000000000">12B+</div>
+        <div class="label">Total Video Views</div>
+      </div>
+      <div class="ssd-metric">
+        <div class="num" data-count="9900000">9.9MM</div>
+        <div class="label">Avg Views / Episode</div>
+      </div>
+      <div class="ssd-metric">
+        <div class="num" data-count="13000000">13MM+</div>
+        <div class="label">Total Followers</div>
+      </div>
+    </div>
 
-<section class="container section">
-  <h2 class="visually-hidden">Featured Reel</h2>
-  <div class="video-embed">
-    <iframe title="60 Second Docs Reel" src="https://player.vimeo.com/video/REPLACE_ID"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</section>
+    <div class="ssd-metrics mt">
+      <div class="ssd-metric">
+        <div class="num">18–34</div>
+        <div class="label">Majority of Audience</div>
+      </div>
+      <div class="ssd-metric">
+        <div class="num">99%</div>
+        <div class="label">Organic Viewership</div>
+      </div>
+      <div class="ssd-metric">
+        <div class="num">1000+</div>
+        <div class="label">Episodes</div>
+      </div>
+    </div>
+  </section>
 
-<footer class="container footer">
-  <div class="ssd-cta">
-    <a href="/privacy">Privacy & Terms</a>
-    <span>Interested in advertising, partnering, licensing? <a href="/contact">Send us a note</a></span>
-  </div>
-</footer>
+  <!-- PRESS LOGOS -->
+  <section class="container section" aria-labelledby="press-heading">
+    <h2 id="press-heading" class="visually-hidden">Press & Partners</h2>
+    <div class="ssd-press">
+      <img src="/assets/img/logo_variety.jpg" alt="Variety">
+      <img src="/assets/img/logo_people.jpg" alt="People">
+      <img src="/assets/img/logo_mashable.jpg" alt="Mashable">
+      <img src="/assets/img/logo_guardian.jpg" alt="The Guardian">
+      <img src="/assets/img/logo_gq.jpg" alt="GQ">
+      <img src="/assets/img/logo_fullscreen.jpg" alt="Fullscreen">
+      <img src="/assets/img/logo_vulture.jpg" alt="Vulture">
+      <img src="/assets/img/logo_vimeo.png" alt="Vimeo">
+    </div>
+  </section>
 
+  <!-- REEL -->
+  <section class="container section" aria-labelledby="reel-heading">
+    <h2 id="reel-heading" class="visually-hidden">Featured Reel</h2>
+    <div class="video-embed">
+      <!-- Replace REPLACE_ID with your Vimeo numeric ID -->
+      <iframe
+        title="60 Second Docs Reel"
+        src="https://player.vimeo.com/video/REPLACE_ID"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER / CTA -->
+  <footer class="container footer" role="contentinfo">
+    <div class="ssd-cta">
+      <a href="/privacy">Privacy & Terms</a>
+      <span>Interested in advertising, partnering, licensing? <a href="/contact">Send us a note</a></span>
+    </div>
+  </footer>
+</div>
+
+<!-- Tiny progressive enhancement: count-up animation for metrics -->
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  const els=[...document.querySelectorAll('.ssd-metric .num[data-count]')];
-  if(!('IntersectionObserver'in window)||!els.length) return;
-  const fmt = n => n>=1e9 ? (n/1e9).toFixed(0)+'B+' : n>=1e6 ? (n/1e6).toFixed(1)+'MM' : n.toLocaleString();
-  const run=(el)=>{ const end=+el.dataset.count; let t=0,cur=0,step=()=>{t++;cur=Math.floor(end*(1-Math.exp(-t/40)));el.textContent=fmt(Math.min(cur,end));if(cur<end)requestAnimationFrame(step)};step();};
-  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }),{threshold:.5});
-  els.forEach(el=>io.observe(el));
+document.addEventListener('DOMContentLoaded', function () {
+  const els = Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
+  if (!('IntersectionObserver' in window) || els.length === 0) return;
+
+  const fmt = (n) => n >= 1e9 ? (n / 1e9).toFixed(0) + 'B+'
+                : n >= 1e6 ? (n / 1e6).toFixed(1) + 'MM'
+                : n.toLocaleString();
+
+  const run = (el) => {
+    const end = +el.dataset.count;
+    let t = 0, cur = 0;
+    const step = () => {
+      t++;
+      cur = Math.floor(end * (1 - Math.exp(-t / 40)));
+      el.textContent = fmt(Math.min(cur, end));
+      if (cur < end) requestAnimationFrame(step);
+    };
+    step();
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        run(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  els.forEach((el) => io.observe(el));
 });
 </script>
