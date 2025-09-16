@@ -1,62 +1,162 @@
-// 60 Second Docs — fresh template
-@ssd-yellow: #f0d719;
-@bg: #0b0b0b;
-@fg: #fff;
-@muted: #c7c7c7;
-@card: #111;
-@border: #2a2a2a;
+// 60 Second Docs (New) — full stylesheet
+// --------------------------------------------------
+// Theme tokens
+@ssd-yellow: #f0d719;   // highlight
+@bg:         #0b0b0b;   // page background
+@fg:         #ffffff;   // main text
+@muted:      #c7c7c7;   // subhead / meta
+@card:       #111111;   // tiles/cards
+@border:     #2a2a2a;   // hairlines
 
+// --------------------------------------------------
+// Fonts (swap out with Adobe Fonts kit or @font-face if you have brand fonts)
+@font-head: "Anton", sans-serif;  // headline font
+@font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+// Base
+html, body {
+  background:@bg;
+  color:@fg;
+  font-family:@font-body;
+  line-height:1.5;
+}
+a {
+  color:@fg;
+  text-decoration:none;
+  border-bottom:2px solid @ssd-yellow;
+}
+a:hover { opacity:.85; }
+:focus-visible { outline: 2px dashed @ssd-yellow; outline-offset: 3px; }
+::-moz-selection, ::selection { background:@ssd-yellow; color:#000; }
+
+// --------------------------------------------------
+// Typography
+h1,h2,h3,.section-title { font-family:@font-head; font-weight:800; letter-spacing:-0.02em; }
+h1 { font-size: clamp(32px, 6vw, 72px); line-height:1.02; text-transform:uppercase; margin:0 0 .4rem; }
+h2 { font-size: clamp(22px, 3vw, 36px); }
+p  { font-size: clamp(15px, 1.4vw, 18px); color:@fg; }
+
+// --------------------------------------------------
+// Containers
 .container { width: ~"min(1100px,92vw)"; margin: 0 auto; }
 .section { padding: 56px 0; }
-.section-title { font-size: clamp(22px,2.6vw,32px); letter-spacing: .02em; text-transform: uppercase; margin: 0 0 16px; }
-.visually-hidden { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); }
+.section-title { margin: 0 0 16px; text-transform:uppercase; letter-spacing:.02em; }
+.visually-hidden {
+  position:absolute !important;
+  height:1px; width:1px;
+  overflow:hidden;
+  clip:rect(1px,1px,1px,1px);
+}
 
+// --------------------------------------------------
+// Hero
 .ssd-hero {
-  position: relative; min-height: 68vh; display:grid; place-items:center; overflow:hidden; border-bottom:1px solid @border;
+  position: relative; min-height: 68vh;
+  display:grid; place-items:center;
+  overflow:hidden;
+  border-bottom:1px solid @border;
+
   .hero-media { position:absolute; inset:0;
     img, video { width:100%; height:100%; object-fit:cover; filter:brightness(.55); }
   }
+
   .hero-inner { position:relative; z-index:1; text-align:center; padding:64px 0; }
-  h1 { font-size: clamp(28px,5vw,56px); line-height:1.02; letter-spacing:-.02em; text-transform:uppercase; margin:0; }
-  .subhead { color: @muted; margin:.6rem 0 1rem; text-transform:uppercase; letter-spacing:.08em; }
-  .social { display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
-    a { color:@fg; border:1px solid @fg; padding:.25rem .5rem; font-size:.9rem; text-decoration:none; border-radius:999px; opacity:.9; }
+  .subhead {
+    color:@muted; text-transform:uppercase; letter-spacing:.08em;
+    font-weight:600; margin:.25rem 0 1.25rem;
   }
+
   &::after { content:""; position:absolute; inset:2rem; border:6px solid @ssd-yellow; pointer-events:none; }
 }
-.badge-stack { position:absolute; right:1.25rem; top:15%; display:grid; gap:14px; z-index:2;
+
+.badge-stack {
+  position:absolute; right:1.25rem; top:15%;
+  display:grid; gap:14px; z-index:2;
+
   img{ width:84px; aspect-ratio:1/1; border-radius:999px; border:3px solid @ssd-yellow; }
 }
 
-.gallery { list-style:none; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; padding:0; margin:14px 0 0;
-  .card{ background:@card; border:2px solid @ssd-yellow; position:relative;
-    .card-link{ display:block; position:relative; text-decoration:none; color:inherit; }
-    .card-title{ position:absolute; left:0; right:0; bottom:0; background:fade(#000,75%); padding:.45rem .6rem;
-      font-weight:700; text-transform:uppercase; letter-spacing:.03em; }
+// --------------------------------------------------
+// Gallery
+.gallery {
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px; padding:0; margin:14px 0 0;
+
+  .card {
+    background:@card; border:2px solid @ssd-yellow; position:relative;
+
+    .card-link { display:block; position:relative; text-decoration:none; color:inherit; }
+    .card-title {
+      position:absolute; left:0; right:0; bottom:0;
+      background:fade(#000,75%);
+      padding:.45rem .6rem;
+      font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+    }
   }
 }
 
-.ssd-metrics{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;
-  .ssd-metric{ padding:24px; background:@card; border:2px solid @ssd-yellow; text-align:center;
-    .num{ font-size:clamp(36px,6vw,72px); font-weight:900; line-height:1; }
-    .label{ opacity:.85; text-transform:uppercase; letter-spacing:.06em; margin-top:.25rem; }
+// --------------------------------------------------
+// Metrics
+.ssd-metrics {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;
+
+  .ssd-metric {
+    padding:24px; background:@card; border:2px solid @ssd-yellow; text-align:center;
+    .num   { font-size:clamp(36px,6vw,72px); font-weight:900; line-height:1; color:@fg; }
+    .label { opacity:.85; text-transform:uppercase; letter-spacing:.06em; margin-top:.25rem; color:@muted; }
   }
 }
-.mt{ margin-top:18px; }
+.mt { margin-top:18px; }
 
-.ssd-press{ display:flex; flex-wrap:wrap; gap:22px; align-items:center; justify-content:center; opacity:.95;
-  img{ height:26px; filter:grayscale(1); }
+// --------------------------------------------------
+// Press logos
+.ssd-press {
+  display:flex; flex-wrap:wrap;
+  gap:22px; align-items:center; justify-content:center;
+  opacity:.95;
+
+  img{ height:26px; filter:grayscale(1) brightness(1.2); }
 }
 
-.video-embed{ position:relative; padding-top:56.25%; background:#000; border:1px solid @border;
+// --------------------------------------------------
+// Video embed
+.video-embed {
+  position:relative; padding-top:56.25%;
+  background:#000; border:1px solid @border;
   iframe{ position:absolute; inset:0; width:100%; height:100%; }
 }
 
-.footer{ padding:28px 0 56px; border-top:1px solid @border; }
-.ssd-cta{ display:flex; justify-content:space-between; align-items:center; gap:16px;
+// --------------------------------------------------
+// Footer
+.footer { padding:28px 0 56px; border-top:1px solid @border; }
+.ssd-cta {
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
   a{ color:@fg; text-decoration:none; border-bottom:2px solid @ssd-yellow; &:hover{ opacity:.85; } }
 }
 
+// --------------------------------------------------
+// Social icons
+.social {
+  display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+  a { border:0; }
+  img { width:28px; height:28px; display:block; filter:invert(1); } // white on dark
+}
+
+// --------------------------------------------------
+// Buttons (optional)
+.btn {
+  display:inline-block; padding:.7rem 1rem; background:@ssd-yellow; color:#000;
+  font-weight:800; text-transform:uppercase; letter-spacing:.04em;
+  border:none; border-radius:6px; cursor:pointer;
+}
+.btn.is-ghost {
+  background:transparent; color:@fg; border:2px solid @ssd-yellow;
+}
+
+// --------------------------------------------------
+// Responsive tweaks
 @media (max-width: 900px){
   .gallery{ grid-template-columns:repeat(2,minmax(0,1fr)); }
   .badge-stack{ position:static; display:flex; justify-content:center; }
