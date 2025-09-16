@@ -23,7 +23,7 @@ html, body {
 a {
   color:@fg;
   text-decoration:none;
-  border-bottom:2px solid @ssd-yellow;
+  border:0; // no default underline
 }
 a:hover { opacity:.85; }
 :focus-visible { outline: 2px dashed @ssd-yellow; outline-offset: 3px; }
@@ -133,7 +133,9 @@ p  { font-size: clamp(15px, 1.4vw, 18px); color:@fg; }
 .footer { padding:28px 0 56px; border-top:1px solid @border; }
 .ssd-cta {
   display:flex; justify-content:space-between; align-items:center; gap:16px;
-  a{ color:@fg; text-decoration:none; border-bottom:2px solid @ssd-yellow; &:hover{ opacity:.85; } }
+}
+.ssd-cta a {
+  border-bottom:2px solid @ssd-yellow;
 }
 
 // --------------------------------------------------
