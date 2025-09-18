@@ -182,12 +182,27 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
     font-size: clamp(26px, 7vw, 34px) !important;
   }
 }
+/* --- Fix: enforce H2 (H1.5) in later sections too --- */
+body #brand-template.nine-template #content .project-content .section-header h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-content h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-content h2 {
+  font-size: var(--nb-h15-size) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  text-transform: uppercase !important;
+  margin: 0 0 0.5em !important;
+  color: inherit !important;
+}
 
-/* --- Editor-only readability fixes --- */
-/* In edit mode only, make body copy dark for readability,
-   but KEEP HEADINGS WHITE so they look consistent. */
-body.sqs-edit-mode .nine-template .project-content p,
-body.sqs-edit-mode .nine-template .project-content li,
-body.sqs-edit-mode .nine-template .project-content small {
-  color: #1a1a1a !important;
+/* Normalize any nested italics again, just in case */
+#brand-template.nine-template .project-content .section-header h2 em,
+#brand-template.nine-template .project-content .section-header h2 i {
+  font-style: inherit !important;
 }
