@@ -364,3 +364,40 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   width: 60px;
   margin: 20px 0;
 }
+/* ===== FINAL: make the end-of-section separator always match text color ===== */
+
+/* Handle both spellings + <hr>, and override any theme borders/backgrounds */
+#brand-template.nine-template #content > .project-content .project-summary .summary-seperator,
+#brand-template.nine-template #content > .project-content .project-summary .summary-separator,
+#brand-template.nine-template #content > .project-content .project-summary hr {
+  /* ensure it can render as a solid bar */
+  display: block !important;
+  height: 2px !important;
+  width: 60px !important;
+
+  /* kill any legacy borders/backgrounds */
+  border: 0 !important;
+  outline: 0 !important;
+  background: currentColor !important;
+
+  /* make sure it inherits the section’s text color */
+  color: inherit !important;
+  margin: 20px 0 !important;
+  padding: 0 !important;
+}
+
+/* If any theme uses pseudo-elements for the line, catch those too */
+#brand-template.nine-template #content > .project-content .project-summary .summary-seperator::before,
+#brand-template.nine-template #content > .project-content .project-summary .summary-seperator::after,
+#brand-template.nine-template #content > .project-content .project-summary .summary-separator::before,
+#brand-template.nine-template #content > .project-content .project-summary .summary-separator::after,
+#brand-template.nine-template #content > .project-content .project-summary hr::before,
+#brand-template.nine-template #content > .project-content .project-summary hr::after {
+  content: "" !important;
+  display: none !important;
+}
+
+/* Belt-and-suspenders: make the summary container inherit the section color */
+#brand-template.nine-template #content > .project-content .project-summary {
+  color: inherit !important;
+}
