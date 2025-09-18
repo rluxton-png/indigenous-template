@@ -68,7 +68,7 @@
               <!-- order: 6, 4, 1, 2, 5, 3 (matches brandtemplate.region) -->
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- NOTE: use Heading 1 for largest, Heading 2 here for mid-display (H1.5) -->
+                <!-- Use Heading 1 for largest; Heading 2 anywhere in the section renders as mid-display (H1.5) -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-6" columns="12" />
                 </div>
@@ -80,7 +80,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-4" columns="12" />
                 </div>
@@ -92,7 +91,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-1" columns="12" />
                 </div>
@@ -104,7 +102,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-2" columns="12" />
                 </div>
@@ -116,7 +113,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-5" columns="12" />
                 </div>
@@ -128,7 +124,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-3" columns="12" />
                 </div>
@@ -142,7 +137,6 @@
               <!-- ===== EXTRA 3 SECTIONS — NEW IDS SO THEY DON'T CONFLICT ===== -->
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-7" columns="12" />
                 </div>
@@ -154,7 +148,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-8" columns="12" />
                 </div>
@@ -166,7 +159,6 @@
               </div></div>
 
               <div class="project-content"><div class="internal-wrapper">
-                <!-- Heading 2 here will render at H1.5 size -->
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-9" columns="12" />
                 </div>
