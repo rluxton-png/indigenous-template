@@ -4,8 +4,8 @@
    Nine-Section Template Scope
    =========================== */
 .nine-template {
-  --bg-odd:  #2f2f2f;  /* dark gray */
-  --bg-even: #000000;  /* black */
+  --bg-odd:  #2f2f2f;  /* (legacy) dark gray */
+  --bg-even: #000000;  /* (legacy) black */
   --fg:      #ffffff;
 
   /* Heading size tokens for this layout */
@@ -34,9 +34,9 @@
     p, li, blockquote, small { color: inherit; }
   }
 
-  /* Alternate the bands; higher specificity to beat other styles */
-  #content > .project-content:nth-of-type(odd)  { background: var(--bg-odd);  }
-  #content > .project-content:nth-of-type(even) { background: var(--bg-even); }
+  /* (Removed) old odd/even bands */
+  /* #content > .project-content:nth-of-type(odd)  { background: var(--bg-odd);  }
+     #content > .project-content:nth-of-type(even) { background: var(--bg-even); } */
 }
 
 /* Seed invisibility (safe if present) */
@@ -182,6 +182,7 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
     font-size: clamp(26px, 7vw, 34px) !important;
   }
 }
+
 /* --- Fix: enforce H2 (H1.5) in later sections too --- */
 body #brand-template.nine-template #content .project-content .section-header h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
@@ -206,6 +207,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
 #brand-template.nine-template .project-content .section-header h2 i {
   font-style: inherit !important;
 }
+
 /* ===== FINAL FIX: de-italicize every H2 inside Nine Block, everywhere ===== */
 body #brand-template.nine-template h2,
 body #brand-template.nine-template h2 * {
@@ -234,5 +236,64 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
   font-weight: 800 !important;
   text-transform: uppercase !important;
   margin: 0 0 0.5em !important;
+  color: inherit !important;
+}
+
+/* ===========================
+   NEW: Three-color section cycle
+   =========================== */
+/* Palette + paired text colors */
+@nb-bg-1: #D0CDC7;  @nb-fg-1: #000000;  /* light warm gray  → black text */
+@nb-bg-2: #E6B904;  @nb-fg-2: #000000;  /* yellow          → black text */
+@nb-bg-3: #000000;  @nb-fg-3: #FFFFFF;  /* black           → white text */
+
+/* Apply per-section using a repeating 3-step pattern */
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) {
+  background: @nb-bg-1 !important;
+  color: @nb-fg-1 !important;
+}
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) {
+  background: @nb-bg-2 !important;
+  color: @nb-fg-2 !important;
+}
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
+  background: @nb-bg-3 !important;
+  color: @nb-fg-3 !important;
+}
+
+/* Ensure inner text follows the section color, regardless of block type */
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) li,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) small,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) blockquote,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) a,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) li,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) small,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) blockquote,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) li,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) small,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) blockquote,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) a {
   color: inherit !important;
 }
