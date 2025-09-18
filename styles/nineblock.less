@@ -1,10 +1,17 @@
 /* styles/nineblock.less */
 
-/* Scope all rules to this layout via the class we added on the container */
+/* ===========================
+   Nine-Section Template Scope
+   =========================== */
 .nine-template {
   --bg-odd:  #2f2f2f;  /* dark gray */
   --bg-even: #000000;  /* black */
   --fg:      #ffffff;
+
+  /* New heading size tokens for this layout only */
+  --nb-h1-size:  clamp(36px, 6vw, 72px);   /* reference: existing visual H1 */
+  --nb-h15-size: clamp(30px, 4.8vw, 56px); /* NEW: slightly smaller than H1 */
+  --nb-h2-size:  clamp(24px, 3.6vw, 40px); /* reference: typical H2 */
 
   /* Make bands full-bleed like the Brand template */
   #page { max-width: 100%; padding: 0; }
@@ -30,14 +37,17 @@
   /* Alternate the bands; higher specificity to beat other styles */
   #content > .project-content:nth-of-type(odd)  { background: var(--bg-odd);  }
   #content > .project-content:nth-of-type(even) { background: var(--bg-even); }
-
-  /* Seed invisibility (safe if present) */
-  .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 }
+
+/* Seed invisibility (safe if present) */
+.nine-template .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 /* ===== Header normalization for this layout ===== */
 .nine-template ~ #footer, /* no-op selector to keep block scoped strictly to the page structure */ {}
 
+/* ===========================
+   Global Header / Navigation
+   =========================== */
 body #project-header {
   background: hsla(0,0%,0%,0.5);
   height: 120px;
@@ -83,4 +93,70 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
   }
   body #project-header .header-logo { display: none; }
   body #project-header .header-right { display: none; }
+}
+
+/* =================================
+   NEW: Heading 1.5 (between H1 & H2)
+   ================================= */
+
+/* 1) Utility class to apply H1.5 anywhere */
+.nine-template .nb-h1-5,
+.nine-template h1.nb-h1-5,
+.nine-template h2.nb-h1-5,
+.nine-template h3.nb-h1-5 {
+  font-size: var(--nb-h15-size);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+  color: inherit;
+}
+/* Optional non-uppercase variant */
+.nine-template .nb-h1-5.is-normalcase { text-transform: none; letter-spacing: 0; }
+
+/* 2) “Block option” — enable H1.5 for the first heading in ANY .section-header
+      by dropping a tiny marker inside that header:
+      <div class="nb-size-h15"></div>
+   This uses :has(), which is supported in current Safari/Chromium/Firefox.
+*/
+.nine-template .section-header:has(.nb-size-h15) h1:first-child,
+.nine-template .section-header:has(.nb-size-h15) h2:first-child,
+.nine-template .section-header:has(.nb-size-h15) h3:first-child,
+.nine-template .section-header:has(.nb-size-h15) h4:first-child,
+.nine-template .section-header:has(.nb-size-h15) h5:first-child,
+.nine-template .section-header:has(.nb-size-h15) h6:first-child {
+  font-size: var(--nb-h15-size);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0 0 0.5em;
+}
+
+/* 3) Optional: apply H1.5 to the first heading in ALL section headers globally
+      by toggling a page-level class on #page (not enabled by default).
+      To use: add class="nb-use-h15-global" to #page via a small Code block in the region.
+*/
+.nine-template #page.nb-use-h15-global .section-header h1:first-child,
+.nine-template #page.nb-use-h15-global .section-header h2:first-child,
+.nine-template #page.nb-use-h15-global .section-header h3:first-child {
+  font-size: var(--nb-h15-size);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* 4) Mobile fine-tune for the new size */
+@media (max-width: 480px) {
+  .nine-template .nb-h1-5 { font-size: clamp(26px, 7vw, 34px); }
+  .nine-template .section-header:has(.nb-size-h15) h1:first-child,
+  .nine-template .section-header:has(.nb-size-h15) h2:first-child,
+  .nine-template .section-header:has(.nb-size-h15) h3:first-child,
+  .nine-template .section-header:has(.nb-size-h15) h4:first-child,
+  .nine-template .section-header:has(.nb-size-h15) h5:first-child,
+  .nine-template .section-header:has(.nb-size-h15) h6:first-child {
+    font-size: clamp(26px, 7vw, 34px);
+  }
 }
