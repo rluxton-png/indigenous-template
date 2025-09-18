@@ -150,9 +150,7 @@ body .nine-template .section-header .sqs-block-heading h1 {
   font-style: normal !important;
 }
 
-/* === AUTO APPLY (broad) — first H2 in common section areas ===
-   Catch H2s that live in media/summary blocks or as first direct children.
-*/
+/* === AUTO APPLY (broad) — first H2 in common section areas === */
 body .nine-template #content .project-content > .internal-wrapper > h2:first-child,
 body .nine-template #content .project-content .sqs-block-heading h2:first-child,
 body .nine-template #content .project-content .sqs-block-html h2:first-child,
@@ -186,8 +184,10 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
 }
 
 /* --- Editor-only readability fixes --- */
-body.sqs-edit-mode .nine-template {
-  /* darker text in the editor canvas so selections are readable */
-  --fg: #1a1a1a;
+/* In edit mode only, make body copy dark for readability,
+   but KEEP HEADINGS WHITE so they look consistent. */
+body.sqs-edit-mode .nine-template .project-content p,
+body.sqs-edit-mode .nine-template .project-content li,
+body.sqs-edit-mode .nine-template .project-content small {
+  color: #1a1a1a !important;
 }
-body.sqs-edit-mode .nine-template .project-content { color: var(--fg); }
