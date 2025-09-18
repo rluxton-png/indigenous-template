@@ -401,3 +401,60 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 #brand-template.nine-template #content > .project-content .project-summary {
   color: inherit !important;
 }
+/* ===== Pin the first three sections: 1=GRAY, 2=YELLOW, 3=BLACK ===== */
+
+/* #1 → GRAY with BLACK text/underlines */
+#brand-template.nine-template #content > .project-content:nth-of-type(1) {
+  background: #D0CDC7 !important;
+  color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(1) .section-header,
+#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary {
+  color: inherit !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(1) a {
+  text-decoration-color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary .summary-seperator,
+#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary .summary-separator,
+#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary hr {
+  background: currentColor !important;
+}
+
+/* #2 → YELLOW with BLACK text/underlines */
+#brand-template.nine-template #content > .project-content:nth-of-type(2) {
+  background: #E6B904 !important;
+  color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(2) .section-header,
+#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary {
+  color: inherit !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(2) a {
+  text-decoration-color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary .summary-seperator,
+#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary .summary-separator,
+#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary hr {
+  background: currentColor !important;
+}
+
+/* #3 → BLACK with WHITE text/underlines */
+#brand-template.nine-template #content > .project-content:nth-of-type(3) {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3) .section-header,
+#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary {
+  color: inherit !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3) a {
+  text-decoration-color: #FFFFFF !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary .summary-seperator,
+#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary .summary-separator,
+#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary hr {
+  background: currentColor !important;
+}
+
+/* From #4 onward your existing 3-color cycle continues (4=gray, 5=yellow, 6=black, …). */
