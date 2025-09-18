@@ -308,3 +308,59 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   width: 60px;
   margin: 20px 0;
 }
+/* ===== FORCE section-header colors to match each section ===== */
+
+/* 1,4,7 = GRAY (#D0CDC7) → BLACK text */
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header {
+  color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header a {
+  color: inherit !important;
+}
+
+/* 2,5,8 = YELLOW (#E6B904) → BLACK text */
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header {
+  color: #000000 !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header a {
+  color: inherit !important;
+}
+
+/* 3,6,9 = BLACK (#000000) → WHITE text */
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header {
+  color: #FFFFFF !important;
+}
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h1,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h2,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h3,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h4,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h5,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h6,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header p,
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header a {
+  color: inherit !important;
+}
+
+/* ===== Make the end-of-section line always match text color ===== */
+/* Your region uses .summary-seperator (spelled that way), inside .project-summary */
+#brand-template.nine-template #content > .project-content .project-summary .summary-seperator {
+  border: 0 !important;               /* kill any legacy border color */
+  height: 2px;                         /* visible line */
+  background: currentColor !important; /* match the section/header text color */
+  width: 60px;
+  margin: 20px 0;
+}
