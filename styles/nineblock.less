@@ -206,3 +206,33 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
 #brand-template.nine-template .project-content .section-header h2 i {
   font-style: inherit !important;
 }
+/* ===== FINAL FIX: de-italicize every H2 inside Nine Block, everywhere ===== */
+body #brand-template.nine-template h2,
+body #brand-template.nine-template h2 * {
+  font-style: normal !important;   /* catch <em>, <i>, <cite> inside H2 as well */
+}
+
+/* (Reassert H2 => H1.5 where we want the size bump — across ALL sections) */
+body #brand-template.nine-template #content .project-content .section-header h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-content h2,
+/* if your header H2 is the first element in the section wrapper */
+body #brand-template.nine-template #content .project-content > .internal-wrapper > h2:first-child,
+/* if the header H2 is the first element inside common block wrappers */
+body #brand-template.nine-template #content .project-content .sqs-block-heading h2:first-child,
+body #brand-template.nine-template #content .project-content .sqs-block-html h2:first-child,
+body #brand-template.nine-template #content .project-content .sqs-block-content h2:first-child,
+/* belt-and-suspenders: ensure later sections (7–9) get the same treatment */
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-content h2 {
+  font-size: var(--nb-h15-size) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 0.5em !important;
+  color: inherit !important;
+}
