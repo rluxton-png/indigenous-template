@@ -99,21 +99,7 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
    NEW: Heading 1.5 (between H1 & H2)
    ================================= */
 
-/* 1) AUTOMATIC OPTION:
-      In any Nine Block section header, using H2 as the FIRST heading
-      will render it at the new H1.5 size.
-      H1 remains largest. H3/H4/etc. unchanged.
-*/
-.nine-template .section-header h2:first-child {
-  font-size: var(--nb-h15-size);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0 0 0.5em;
-}
-
-/* 2) Utility class to apply H1.5 anywhere (explicit opt-in) */
+/* Utility class (explicit opt-in anywhere) */
 .nine-template .nb-h1-5,
 .nine-template h1.nb-h1-5,
 .nine-template h2.nb-h1-5,
@@ -126,11 +112,51 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
   margin: 0 0 0.5em;
   color: inherit;
 }
-/* Optional non-uppercase variant */
 .nine-template .nb-h1-5.is-normalcase { text-transform: none; letter-spacing: 0; }
 
-/* 3) Mobile fine-tune for the new size */
+/* Mobile fine-tune */
 @media (max-width: 480px) {
-  .nine-template .section-header h2:first-child,
   .nine-template .nb-h1-5 { font-size: clamp(26px, 7vw, 34px); }
+}
+
+/* === AUTO APPLY FOR SECTION HEADERS ===
+   Any H2 inside a Nine Block section header is styled as H1.5.
+   H1 remains largest; H3+ stay unchanged.
+*/
+body .nine-template #content .section-header h2,
+body .nine-template .project-content .section-header h2,
+body .nine-template .section-header .sqs-block-heading h2,
+body .nine-template .section-header .sqs-block-html h2,
+body .nine-template .section-header .sqs-block-content h2 {
+  font-size: var(--nb-h15-size) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 800 !important;
+  font-style: normal !important;   /* remove accidental italics */
+  text-transform: uppercase !important;
+  margin: 0 0 0.5em !important;
+  color: inherit !important;
+}
+
+/* Normalize em/italic children inside headings */
+.nine-template .section-header h2 em,
+.nine-template .section-header h2 i {
+  font-style: inherit !important;
+}
+
+/* Safety: ensure H1 is never italicized */
+body .nine-template .section-header h1,
+body .nine-template .section-header .sqs-block-heading h1 {
+  font-style: normal !important;
+}
+
+/* Mobile fine-tune for auto-applied H1.5 */
+@media (max-width: 480px) {
+  body .nine-template #content .section-header h2,
+  body .nine-template .project-content .section-header h2,
+  body .nine-template .section-header .sqs-block-heading h2,
+  body .nine-template .section-header .sqs-block-html h2,
+  body .nine-template .section-header .sqs-block-content h2 {
+    font-size: clamp(26px, 7vw, 34px) !important;
+  }
 }
