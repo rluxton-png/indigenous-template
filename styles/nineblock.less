@@ -1,14 +1,16 @@
 /* === BLKFort (Bold + Book) === */
 @font-face {
   font-family: 'BLKFort';
-  src: url('../fonts/BLKFort/BLKFort-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/BLKFort/BLKFort-Bold.woff2') format('woff2'),
+       url('/assets/fonts/BLKFort/BLKFort-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'BLKFort';
-  src: url('../fonts/BLKFort/BLKFort-Book.ttf') format('truetype');
+  src: url('/assets/fonts/BLKFort/BLKFort-Book.woff2') format('woff2'),
+       url('/assets/fonts/BLKFort/BLKFort-Book.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,59 +22,44 @@
    Nine-Section Template Scope
    =========================== */
 .nine-template {
-  --bg-odd:  #2f2f2f;  /* (legacy) dark gray */
-  --bg-even: #000000;  /* (legacy) black */
+  --bg-odd:  #2f2f2f;
+  --bg-even: #000000;
   --fg:      #ffffff;
 
-  /* Heading size tokens for this layout */
   --nb-h1-size:  clamp(36px, 6vw, 72px);
-  --nb-h15-size: clamp(30px, 4.8vw, 56px); /* slightly smaller than H1 */
+  --nb-h15-size: clamp(30px, 4.8vw, 56px);
   --nb-h2-size:  clamp(24px, 3.6vw, 40px);
 
-  /* Base font stack (Book for body by default) */
   --font-sans: 'BLKFort', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  font-family: var(--font-sans);
-  font-weight: 400;
 
-  /* Headings always bold */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'BLKFort', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  /* Body text = Book */
-  p, li, blockquote, small {
-    font-family: 'BLKFort', sans-serif;
-    font-weight: 400;
-  }
-
-  /* Make bands full-bleed like the Brand template */
-  #page { max-width: 100%; padding: 0; }
-
-  .internal-wrapper {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  @media (max-width: 480px)  { .internal-wrapper { width: 87%;  } }
-  @media (min-width: 481px) and (max-width: 768px) { .internal-wrapper { width: 720px; } }
-
-  /* Section container */
-  .project-content {
-    width: 100%;
-    padding: 80px 0;
-    min-height: 240px;
-    color: var(--fg);
-
-    h1, h2, h3, h4, h5, h6,
-    p, li, blockquote, small { color: inherit; }
-  }
+  font-family: var(--font-sans) !important;
+  font-weight: 400 !important;
+  color: var(--fg);
 }
 
-/* Seed invisibility (safe if present) */
+/* === FORCE BLKFort ON TYPOGRAPHY === */
+.nine-template h1,
+.nine-template h2,
+.nine-template h3,
+.nine-template h4,
+.nine-template h5,
+.nine-template h6 {
+  font-family: 'BLKFort', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+.nine-template p,
+.nine-template li,
+.nine-template blockquote,
+.nine-template small {
+  font-family: 'BLKFort', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Seed invisibility */
 .nine-template .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
-/* ===== Header normalization for this layout ===== */
+/* ===== Header normalization ===== */
 .nine-template ~ #footer, /* no-op */ {}
 
 /* ===========================
@@ -100,16 +87,16 @@ body #project-header .mobile-nav-toggle-label .bottom-bar {
   background-color: #fff;
 }
 
-/* Navigation link styles updated to BLKFort-Bold */
+/* Nav links → BLKFort Bold */
 body #project-header #mainNavigation a,
 body #project-header #mainNavigation label {
-  color: #fff;
-  font-family: 'BLKFort', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: none;
-  text-align: center;
+  color: #fff !important;
+  font-family: 'BLKFort', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: none !important;
+  text-align: center !important;
 }
 body #project-header #mainNavigation a:hover,
 body #project-header #mainNavigation label:hover { opacity: .5; }
@@ -126,10 +113,8 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
 }
 
 /* =================================
-   NEW: Heading 1.5 (between H1 & H2)
+   Heading 1.5 (between H1 & H2)
    ================================= */
-
-/* Utility class (explicit opt-in anywhere) */
 .nine-template .nb-h1-5,
 .nine-template h1.nb-h1-5,
 .nine-template h2.nb-h1-5,
@@ -148,10 +133,7 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
   .nine-template .nb-h1-5 { font-size: clamp(26px, 7vw, 34px); }
 }
 
-/* === AUTO APPLY FOR SECTION HEADERS (strict) ===
-   Any H2 inside a Nine Block section header is styled as H1.5.
-   H1 remains largest; H3+ stay unchanged.
-*/
+/* === AUTO APPLY FOR SECTION HEADERS (strict) === */
 body .nine-template #content .section-header h2,
 body .nine-template .project-content .section-header h2,
 body .nine-template .section-header .sqs-block-heading h2,
@@ -161,13 +143,13 @@ body .nine-template .section-header .sqs-block-content h2 {
   line-height: 1.05 !important;
   letter-spacing: -0.01em !important;
   font-weight: 800 !important;
-  font-style: normal !important;   /* remove accidental italics */
+  font-style: normal !important;
   text-transform: uppercase !important;
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
 
-/* Normalize em/italic children inside headings */
+/* Normalize italics inside headers */
 .nine-template .section-header h2 em,
 .nine-template .section-header h2 i {
   font-style: inherit !important;
@@ -228,30 +210,27 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
   color: inherit !important;
 }
 
-/* Normalize any nested italics again, just in case */
+/* Normalize nested italics */
 #brand-template.nine-template .project-content .section-header h2 em,
 #brand-template.nine-template .project-content .section-header h2 i {
   font-style: inherit !important;
 }
 
-/* ===== FINAL FIX: de-italicize every H2 inside Nine Block, everywhere ===== */
+/* ===== FINAL FIX: de-italicize every H2 inside Nine Block ===== */
 body #brand-template.nine-template h2,
 body #brand-template.nine-template h2 * {
   font-style: normal !important;
 }
 
-/* (Reassert H2 => H1.5 where we want the size bump — across ALL sections) */
+/* (Reassert H2 => H1.5 across all sections) */
 body #brand-template.nine-template #content .project-content .section-header h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-content h2,
-/* if your header H2 is the first element in the section wrapper */
 body #brand-template.nine-template #content .project-content > .internal-wrapper > h2:first-child,
-/* if the header H2 is the first element inside common block wrappers */
 body #brand-template.nine-template #content .project-content .sqs-block-heading h2:first-child,
 body #brand-template.nine-template #content .project-content .sqs-block-html h2:first-child,
 body #brand-template.nine-template #content .project-content .sqs-block-content h2:first-child,
-/* belt-and-suspenders: ensure later sections (7–9) get the same treatment */
 body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header h2,
 body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-heading h2,
 body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
@@ -266,13 +245,12 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
 }
 
 /* ===========================
-   NEW: Three-color section cycle
+   Three-color section cycle
    =========================== */
-@nb-bg-1: #F2EFE8;  @nb-fg-1: #000000;  /* gray  → black text */
-@nb-bg-2: #E6B904;  @nb-fg-2: #000000;  /* yellow → black text */
-@nb-bg-3: #000000;  @nb-fg-3: #FFFFFF;  /* black → white text */
+@nb-bg-1: #F2EFE8;  @nb-fg-1: #000000;
+@nb-bg-2: #E6B904;  @nb-fg-2: #000000;
+@nb-bg-3: #000000;  @nb-fg-3: #FFFFFF;
 
-/* Apply per-section repeating 3-step pattern */
 body #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) {
   background: @nb-bg-1 !important;
   color: @nb-fg-1 !important;
@@ -286,7 +264,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   color: @nb-fg-3 !important;
 }
 
-/* Ensure inner text follows the section color */
+/* Ensure text inherits section color */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h1,
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h2,
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h3,
@@ -323,102 +301,48 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   color: inherit !important;
 }
 
-/* === Adaptive link underlines by background === */
+/* === Adaptive link underlines === */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) a,
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a {
-  text-decoration-color: #000000 !important; /* black underlines */
-  color: inherit;
+  text-decoration-color: #000000 !important;
 }
 #brand-template.nine-template #content > .project-content:nth-of-type(3n) a {
-  text-decoration-color: #FFFFFF !important; /* white underlines */
-  color: inherit;
+  text-decoration-color: #FFFFFF !important;
 }
 
-/* === Section separator line inherits text color === */
+/* === Section separator line === */
 #brand-template.nine-template #content > .project-content .summary-seperator {
   border-top: 2px solid currentColor !important;
   width: 60px;
   margin: 20px 0;
 }
-/* ===== FORCE section-header colors to match each section ===== */
 
-/* 1,4,7 = GRAY (#F2EFE8) → BLACK text */
+/* ===== FORCE section-header colors ===== */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header {
   color: #000000 !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header a {
-  color: inherit !important;
-}
-
-/* 2,5,8 = YELLOW (#E6B904) → BLACK text */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header {
   color: #000000 !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header a {
-  color: inherit !important;
-}
-
-/* 3,6,9 = BLACK (#000000) → WHITE text */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header {
   color: #FFFFFF !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header a {
-  color: inherit !important;
-}
 
-/* ===== Make the end-of-section line always match text color ===== */
-/* Your region uses .summary-seperator (spelled that way), inside .project-summary */
-#brand-template.nine-template #content > .project-content .project-summary .summary-seperator {
-  border: 0 !important;               /* kill any legacy border color */
-  height: 2px;                         /* visible line */
-  background: currentColor !important; /* match the section/header text color */
-  width: 60px;
-  margin: 20px 0;
-}
-/* ===== FINAL: make the end-of-section separator always match text color ===== */
-
-/* Handle both spellings + <hr>, and override any theme borders/backgrounds */
+/* ===== End-of-section separator ===== */
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator,
 #brand-template.nine-template #content > .project-content .project-summary .summary-separator,
 #brand-template.nine-template #content > .project-content .project-summary hr {
-  /* ensure it can render as a solid bar */
   display: block !important;
   height: 2px !important;
   width: 60px !important;
-
-  /* kill any legacy borders/backgrounds */
   border: 0 !important;
   outline: 0 !important;
   background: currentColor !important;
-
-  /* make sure it inherits the section’s text color */
-  color: inherit !important;
   margin: 20px 0 !important;
   padding: 0 !important;
 }
 
-/* If any theme uses pseudo-elements for the line, catch those too */
+/* Kill pseudo-element lines */
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator::before,
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator::after,
 #brand-template.nine-template #content > .project-content .project-summary .summary-separator::before,
@@ -429,65 +353,21 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   display: none !important;
 }
 
-/* Belt-and-suspenders: make the summary container inherit the section color */
+/* Make summary container inherit color */
 #brand-template.nine-template #content > .project-content .project-summary {
   color: inherit !important;
 }
 
-/* ===== Pin the first three sections: 1=GRAY, 2=YELLOW, 3=BLACK ===== */
-
-/* #1 → GRAY with BLACK text/underlines */
+/* ===== Pin the first three sections ===== */
 #brand-template.nine-template #content > .project-content:nth-of-type(1) {
   background: #F2EFE8 !important;
   color: #000000 !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(1) .section-header,
-#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary {
-  color: inherit !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(1) a {
-  text-decoration-color: #000000 !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary .summary-seperator,
-#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary .summary-separator,
-#brand-template.nine-template #content > .project-content:nth-of-type(1) .project-summary hr {
-  background: currentColor !important;
-}
-
-/* #2 → YELLOW with BLACK text/underlines */
 #brand-template.nine-template #content > .project-content:nth-of-type(2) {
   background: #E6B904 !important;
   color: #000000 !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(2) .section-header,
-#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary {
-  color: inherit !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(2) a {
-  text-decoration-color: #000000 !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary .summary-seperator,
-#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary .summary-separator,
-#brand-template.nine-template #content > .project-content:nth-of-type(2) .project-summary hr {
-  background: currentColor !important;
-}
-
-/* #3 → BLACK with WHITE text/underlines */
 #brand-template.nine-template #content > .project-content:nth-of-type(3) {
   background: #000000 !important;
   color: #FFFFFF !important;
 }
-#brand-template.nine-template #content > .project-content:nth-of-type(3) .section-header,
-#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary {
-  color: inherit !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(3) a {
-  text-decoration-color: #FFFFFF !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary .summary-seperator,
-#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary .summary-separator,
-#brand-template.nine-template #content > .project-content:nth-of-type(3) .project-summary hr {
-  background: currentColor !important;
-}
-
-/* From #4 onward your existing 3-color cycle continues (4=gray, 5=yellow, 6=black, …). */
