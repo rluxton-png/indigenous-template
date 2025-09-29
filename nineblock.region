@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {.end}
     {squarespace-headers}
+
+    <!-- Temporary minimal responsive helpers; will move to .less when you share it -->
+    <style>
+      /* Fluid media: keeps iframes/videos/images inside their container */
+      .project-media { width: 100%; }
+      .project-media img,
+      .project-media video { max-width: 100%; height: auto; display: block; }
+
+      /* The wrapper JS adds; preserves a 16:9 (can be overridden in .less) */
+      .embed-fluid { position: relative; width: 100%; }
+      .embed-fluid::before { content: ""; display: block; padding-top: 56.25%; }
+      .embed-fluid > iframe,
+      .embed-fluid > video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+      /* Scalable headlines: gentle, elegant sizing (we’ll fine-tune in .less) */
+      .section-header h1,
+      .project-title h1 { font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.15; }
+      .section-header h2 { font-size: clamp(1.25rem, 2.8vw, 2rem); line-height: 1.2; }
+      .project-summary { max-width: 78ch; }
+      .project-summary p { font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.55; }
+
+      /* Prevent overflow on narrow viewports */
+      .internal-wrapper { overflow-wrap: anywhere; }
+    </style>
+
     <script>(function(){var t="ontouchstart"in window||navigator.msMaxTouchPoints;if(!t){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})();</script>
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Disabled -->{.end}
@@ -72,7 +97,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-6" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-6" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-6" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-6" /></div>
@@ -83,7 +108,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-4" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-4" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-4" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-4" /></div>
@@ -94,7 +119,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-1" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-1" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-1" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-1" /></div>
@@ -105,7 +130,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-2" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-2" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-2" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-2" /></div>
@@ -116,7 +141,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-5" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-5" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-5" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-5" /></div>
@@ -127,20 +152,20 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-3" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-3" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-3" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-3" /></div>
                 </div>
               </div></div>
 
-              <!-- ===== EXTRA 3 SECTIONS — NEW IDS SO THEY DON'T CONFLICT ===== -->
+              <!-- ===== EXTRA 7 SECTIONS — NEW IDS 7–13 ===== -->
 
               <div class="project-content"><div class="internal-wrapper">
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-7" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-7" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-7" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-7" /></div>
@@ -151,7 +176,7 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-8" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-8" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-8" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-8" /></div>
@@ -162,17 +187,62 @@
                 <div class="section-header">
                   <squarespace:block-field id="Project-SectionHeader-{collection.id}-9" columns="12" />
                 </div>
-                <div class="project-media"><squarespace:block-field id="Project-Media-{collection.id}-9" columns="12" /></div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-9" columns="12" /></div>
                 <div class="project-summary">
                   <div class="summary-seperator"></div>
                   <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-9" /></div>
                 </div>
               </div></div>
 
+              <!-- NEW: Sections 10–13 -->
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header">
+                  <squarespace:block-field id="Project-SectionHeader-{collection.id}-10" columns="12" />
+                </div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-10" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-10" /></div>
+                </div>
+              </div></div>
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header">
+                  <squarespace:block-field id="Project-SectionHeader-{collection.id}-11" columns="12" />
+                </div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-11" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-11" /></div>
+                </div>
+              </div></div>
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header">
+                  <squarespace:block-field id="Project-SectionHeader-{collection.id}-12" columns="12" />
+                </div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-12" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-12" /></div>
+                </div>
+              </div></div>
+
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header">
+                  <squarespace:block-field id="Project-SectionHeader-{collection.id}-13" columns="12" />
+                </div>
+                <div class="project-media responsive-media"><squarespace:block-field id="Project-Media-{collection.id}-13" columns="12" /></div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text"><squarespace:block-field id="Project-Summary-Text-{collection.id}-13" /></div>
+                </div>
+              </div></div>
+
             </div>
           </main>
         </div>
-        <!-- End Nine-Section Layout -->
+        <!-- End Thirteen-Section Layout -->
 
         <footer id="footer" role="contentinfo">
           <div class="footer-inner">
@@ -218,6 +288,30 @@
     <squarespace:script src="jquery.modal.min.js" />
     <squarespace:script src="fb.js" combo="true" />
     <script src="https://apis.google.com/js/platform.js"></script>
+
+    <!-- Tiny helper to wrap embeds responsively -->
+    <script>
+      (function () {
+        function wrapEmbeds(scope) {
+          var containers = (scope || document).querySelectorAll('.project-media, .responsive-media');
+          containers.forEach(function (c) {
+            c.querySelectorAll('iframe, video').forEach(function (el) {
+              if (el.closest('.embed-fluid')) return;
+              var w = document.createElement('div');
+              w.className = 'embed-fluid';
+              el.parentNode.insertBefore(w, el);
+              w.appendChild(el);
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function(){ wrapEmbeds(); });
+        } else { wrapEmbeds(); }
+
+        // In case Squarespace lazy-loads blocks after initial render:
+        document.addEventListener('ss-async-block-loaded', function(e){ wrapEmbeds(e.target); });
+      })();
+    </script>
 
   </body>
 </html>
