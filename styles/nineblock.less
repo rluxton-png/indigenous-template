@@ -19,16 +19,17 @@
 /* styles/nineblock.less */
 
 /* ===========================
-   Nine-Section Template Scope
+   Nine-Section (now 13) Template Scope
    =========================== */
 .nine-template {
   --bg-odd:  #2f2f2f;
   --bg-even: #000000;
   --fg:      #ffffff;
 
-  --nb-h1-size:  clamp(36px, 6vw, 72px);
-  --nb-h15-size: clamp(30px, 4.8vw, 56px);
-  --nb-h2-size:  clamp(24px, 3.6vw, 40px);
+  /* UPDATED: Gentle, more elegant headline scale */
+  --nb-h1-size:  clamp(32px, 4.8vw, 52px);   // was up to 72px
+  --nb-h15-size: clamp(26px, 3.8vw, 40px);   // was up to 56px
+  --nb-h2-size:  clamp(20px, 2.8vw, 30px);   // was up to 40px
 
   --font-sans: 'BLKFort', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
@@ -45,8 +46,8 @@
 .nine-template h5,
 .nine-template h6 {
   font-family: 'BLKFort', sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.01em !important;
+  font-weight: 700 !important; /* UPDATED: 700 for elegance (was 700/800 mix) */
+  letter-spacing: -0.005em !important; /* UPDATED: slightly looser than -0.01em */
 }
 .nine-template p,
 .nine-template li,
@@ -54,13 +55,12 @@
 .nine-template small {
   font-family: 'BLKFort', sans-serif !important;
   font-weight: 400 !important;
+  line-height: 1.55; /* UPDATED: improve readability */
+  font-size: clamp(16px, 1.4vw, 18px); /* UPDATED */
 }
 
 /* Seed invisibility */
 .nine-template .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-
-/* ===== Header normalization ===== */
-.nine-template ~ #footer, /* no-op */ {}
 
 /* ===========================
    Global Header / Navigation
@@ -112,6 +112,39 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
   body #project-header .header-right { display: none; }
 }
 
+/* ===========================
+   Layout containment + header offset
+   =========================== */
+/* UPDATED: ensure content isn't hidden under header on desktop/mobile */
+#siteWrapper {
+  /* When header is absolute (desktop), create space; when fixed (mobile), reduce */
+  padding-top: 140px; /* 120px header + breathing room */
+}
+@media (max-width: 768px) {
+  #siteWrapper { padding-top: 72px; } /* 60px header + breathing room */
+}
+
+/* UPDATED: consistent inner width + padding to avoid clipping on small screens */
+.nine-template .internal-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 40px);
+  overflow-wrap: anywhere; /* prevent long URLs from overflowing */
+}
+
+/* ===========================
+   Headings
+   =========================== */
+
+/* H1 (page title / hero) */
+.nine-template .project-title h1,
+.nine-template .section-header h1 {
+  font-size: var(--nb-h1-size);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em;
+}
+
 /* =================================
    Heading 1.5 (between H1 & H2)
    ================================= */
@@ -120,9 +153,9 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
 .nine-template h2.nb-h1-5,
 .nine-template h3.nb-h1-5 {
   font-size: var(--nb-h15-size);
-  line-height: 1.05;
+  line-height: 1.08; /* UPDATED: a bit more air */
   letter-spacing: -0.01em;
-  font-weight: 800;
+  font-weight: 700; /* UPDATED: was 800 */
   text-transform: uppercase;
   margin: 0 0 0.5em;
   color: inherit;
@@ -130,19 +163,20 @@ body #project-header #mainNavigation label:hover { opacity: .5; }
 .nine-template .nb-h1-5.is-normalcase { text-transform: none; letter-spacing: 0; }
 
 @media (max-width: 480px) {
-  .nine-template .nb-h1-5 { font-size: clamp(26px, 7vw, 34px); }
+  .nine-template .nb-h1-5 { font-size: clamp(22px, 6.4vw, 30px); } /* UPDATED smaller */
 }
 
 /* === AUTO APPLY FOR SECTION HEADERS (strict) === */
+/* Keep H2→H1.5 look but gentler scale/weight. This applies through all 13 sections. */
 body .nine-template #content .section-header h2,
 body .nine-template .project-content .section-header h2,
 body .nine-template .section-header .sqs-block-heading h2,
 body .nine-template .section-header .sqs-block-html h2,
 body .nine-template .section-header .sqs-block-content h2 {
   font-size: var(--nb-h15-size) !important;
-  line-height: 1.05 !important;
+  line-height: 1.08 !important; /* UPDATED */
   letter-spacing: -0.01em !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important; /* UPDATED */
   font-style: normal !important;
   text-transform: uppercase !important;
   margin: 0 0 0.5em !important;
@@ -167,9 +201,9 @@ body .nine-template #content .project-content .sqs-block-heading h2:first-child,
 body .nine-template #content .project-content .sqs-block-html h2:first-child,
 body .nine-template #content .project-content .sqs-block-content h2:first-child {
   font-size: var(--nb-h15-size) !important;
-  line-height: 1.05 !important;
+  line-height: 1.08 !important; /* UPDATED */
   letter-spacing: -0.01em !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;  /* UPDATED */
   font-style: normal !important;
   text-transform: uppercase !important;
   margin: 0 0 0.5em !important;
@@ -187,11 +221,11 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   body .nine-template #content .project-content .sqs-block-heading h2:first-child,
   body .nine-template #content .project-content .sqs-block-html h2:first-child,
   body .nine-template #content .project-content .sqs-block-content h2:first-child {
-    font-size: clamp(26px, 7vw, 34px) !important;
+    font-size: clamp(22px, 6.4vw, 30px) !important; /* UPDATED */
   }
 }
 
-/* --- Fix: enforce H2 (H1.5) in later sections too --- */
+/* --- Keep enforcement for later sections (7+) — covers through 13 automatically --- */
 body #brand-template.nine-template #content .project-content .section-header h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
@@ -201,48 +235,64 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
 body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
 body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-content h2 {
   font-size: var(--nb-h15-size) !important;
-  line-height: 1.05 !important;
+  line-height: 1.08 !important; /* UPDATED */
   letter-spacing: -0.01em !important;
-  font-weight: 800 !important;
-  font-style: normal !important;
+  font-weight: 700 !important; /* UPDATED */
   text-transform: uppercase !important;
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
 
-/* Normalize nested italics */
-#brand-template.nine-template .project-content .section-header h2 em,
-#brand-template.nine-template .project-content .section-header h2 i {
-  font-style: inherit !important;
-}
-
-/* ===== FINAL FIX: de-italicize every H2 inside Nine Block ===== */
+/* De-italicize every H2 inside Nine Block */
 body #brand-template.nine-template h2,
 body #brand-template.nine-template h2 * {
   font-style: normal !important;
 }
 
-/* (Reassert H2 => H1.5 across all sections) */
-body #brand-template.nine-template #content .project-content .section-header h2,
-body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
-body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
-body #brand-template.nine-template #content .project-content .section-header .sqs-block-content h2,
-body #brand-template.nine-template #content .project-content > .internal-wrapper > h2:first-child,
-body #brand-template.nine-template #content .project-content .sqs-block-heading h2:first-child,
-body #brand-template.nine-template #content .project-content .sqs-block-html h2:first-child,
-body #brand-template.nine-template #content .project-content .sqs-block-content h2:first-child,
-body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header h2,
-body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-heading h2,
-body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
-body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-content h2 {
-  font-size: var(--nb-h15-size) !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.01em !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  margin: 0 0 0.5em !important;
+/* ===========================
+   Body text + summary
+   =========================== */
+#brand-template.nine-template .project-summary {
   color: inherit !important;
+  max-width: 78ch; /* UPDATED: nicer measure */
 }
+#brand-template.nine-template .project-summary p {
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.6;
+  margin: 0 0 1em;
+}
+
+/* ===========================
+   MEDIA: responsive images & embeds
+   =========================== */
+/* UPDATED: make all media fluid without cutoff */
+.nine-template .project-media,
+.nine-template .responsive-media { width: 100%; }
+
+.nine-template .project-media img,
+.nine-template .project-media video,
+.nine-template .responsive-media img,
+.nine-template .responsive-media video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prefer CSS aspect-ratio where available (JS wrapper in template is a fallback) */
+.nine-template .project-media iframe,
+.nine-template .responsive-media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;    /* UPDATED: default; can be overridden per block if needed */
+  height: auto;
+  border: 0;
+  display: block;
+}
+
+/* If JS wrapper adds .embed-fluid, ensure it behaves */
+.nine-template .embed-fluid { position: relative; width: 100%; }
+.nine-template .embed-fluid::before { content: ""; display: block; padding-top: 56.25%; }
+.nine-template .embed-fluid > iframe,
+.nine-template .embed-fluid > video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* ===========================
    Three-color section cycle
@@ -353,12 +403,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   display: none !important;
 }
 
-/* Make summary container inherit color */
-#brand-template.nine-template #content > .project-content .project-summary {
-  color: inherit !important;
-}
-
-/* ===== Pin the first three sections ===== */
+/* ===== Pin the first three sections (cycle continues for 4–13) ===== */
 #brand-template.nine-template #content > .project-content:nth-of-type(1) {
   background: #F2EFE8 !important;
   color: #000000 !important;
