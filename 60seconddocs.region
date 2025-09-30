@@ -1,41 +1,56 @@
 <div class="theme-60sd" data-theme="dark">
-  <!-- HERO (image-free) -->
+  <!-- HERO (image-free, brand-aligned) -->
   <section class="hero ssd-hero" role="banner" aria-label="60 Second Docs Hero">
-    <div class="hero-inner container">
-      <span class="kicker" aria-hidden="true">60 Second Docs</span>
-      <h1>THE LEADING DIGITAL DOCUMENTARY BRAND</h1>
-      <p class="subhead">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</p>
+    <div class="container hero-inner">
+      <div class="brand-lockup">
+        <a href="/" class="ssd-logo" aria-label="60 Second Docs — Home">
+          <span>60</span>
+          <span>SECOND</span>
+          <span>DOCS</span>
+        </a>
+      </div>
+
+      <h1 class="ssd-headline">
+        <span class="line">THE WORLD’S</span>
+        <span class="line">MOST INTERESTING</span>
+        <span class="line">CHARACTERS</span>
+      </h1>
+
+      <p class="tagline">EXPLORE THE BOUNDARIES</p>
 
       <div class="hero-ctas" role="group" aria-label="Follow 60 Second Docs">
         <nav class="social" aria-label="Follow 60 Second Docs">
-          <a href="#" aria-label="Instagram" title="Instagram" rel="me noopener" class="so so-ig" data-variant="pill">
+          <a href="#" aria-label="Instagram" class="so so-ig">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
             <span class="visually-hidden">Instagram</span>
           </a>
-          <a href="#" aria-label="TikTok" title="TikTok" rel="me noopener" class="so so-tt" data-variant="pill">
+          <a href="#" aria-label="TikTok" class="so so-tt">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3a6.5 6.5 0 006.5 6.5V14a10.5 10.5 0 01-6.5-2.2V16a5.8 5.8 0 11-4.8-5.7V13a2.3 2.3 0 102.3 2.3V3h2z"/></svg>
             <span class="visually-hidden">TikTok</span>
           </a>
-          <a href="#" aria-label="YouTube" title="YouTube" rel="me noopener" class="so so-yt" data-variant="pill">
+          <a href="#" aria-label="YouTube" class="so so-yt">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31.4 31.4 0 000 12a31.4 31.4 0 001 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5 31.4 31.4 0 0024 12a31.4 31.4 0 00-1-4.5zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
             <span class="visually-hidden">YouTube</span>
           </a>
-          <a href="#" aria-label="X" title="X" rel="me noopener" class="so so-x" data-variant="pill">
+          <a href="#" aria-label="X" class="so so-x">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 3H21l-7.3 8.4L22 21h-5.6l-4.4-5.5-5 5.5H3.2l7.7-8.6L2 3h5.7l4 5 4.6-5z"/></svg>
             <span class="visually-hidden">X</span>
           </a>
-          <a href="#" aria-label="Facebook" title="Facebook" rel="me noopener" class="so so-fb" data-variant="pill">
+          <a href="#" aria-label="Facebook" class="so so-fb">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22V12h3l.5-3.8h-3.5V6.1c0-1.1.3-1.8 1.9-1.8h1.6V.8A21 21 0 0014.6 0c-3 0-5 1.8-5 5.2v3H6v3.8h3.7V22h3.8z"/></svg>
             <span class="visually-hidden">Facebook</span>
           </a>
-          <a href="#" aria-label="Snapchat" title="Snapchat" rel="me noopener" class="so so-snap" data-variant="pill">
+          <a href="#" aria-label="Snapchat" class="so so-snap">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3.7 0 6.2 2.7 6.2 6.2 0 1.6-.6 2.8-.6 2.8s.8 1 .8 1.7c0 .8-1 .9-1.5 1.1-.6.2-.4.9 0 1.3.5.4 2.1.7 2.1.7s-.6 1.8-3.9 2.1c-.3 0-.5.3-.4.6.2.6.4 1.3.4 1.3s-1.7.7-2.9-.3c-.2-.1-.4-.1-.6 0-1.2 1-2.9.3-2.9.3s.1-.7.4-1.3c.1-.3 0-.6-.4-.6-3.3-.3-3.9-2.1-3.9-2.1s1.6-.3 2.1-.7c.4-.4.6-1.1 0-1.3-.5-.2-1.5-.3-1.5-1.1 0-.7.8-1.7.8-1.7s-.6-1.2-.6-2.8C5.8 4.7 8.3 2 12 2z"/></svg>
             <span class="visually-hidden">Snapchat</span>
           </a>
         </nav>
-        <a class="btn btn-primary" href="/contact" aria-label="Contact 60 Second Docs">Partner with us</a>
+        <a class="btn btn-primary" href="/contact">Partner with us</a>
       </div>
     </div>
+
+    <!-- brand accent stripe -->
+    <div class="hero-stripe" aria-hidden="true"></div>
   </section>
 
   <!-- FEATURED VIDEOS -->
@@ -48,8 +63,7 @@
     <ul class="video-grid" role="list">
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Grandma Gamer — 60 Second Docs"
+          <iframe title="Grandma Gamer — 60 Second Docs"
             src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -59,8 +73,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Tiny Foods — 60 Second Docs"
+          <iframe title="Tiny Foods — 60 Second Docs"
             src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -70,8 +83,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
+          <iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
             src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -81,8 +93,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Weed Nuns — 60 Second Docs"
+          <iframe title="Weed Nuns — 60 Second Docs"
             src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -92,8 +103,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Air Guitar Champ — 60 Second Docs"
+          <iframe title="Air Guitar Champ — 60 Second Docs"
             src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -103,8 +113,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Recycling Kid — 60 Second Docs"
+          <iframe title="Recycling Kid — 60 Second Docs"
             src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -114,8 +123,7 @@
 
       <li class="video-card" role="listitem">
         <div class="video-embed">
-          <iframe
-            title="Daddy Daughter — 60 Second Docs"
+          <iframe title="Daddy Daughter — 60 Second Docs"
             src="https://player.vimeo.com/video/341443455?h=ced36f96d4&byline=0&title=0"
             loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -166,6 +174,7 @@
   <!-- FOOTER / CTA -->
   <footer class="container footer" role="contentinfo">
     <div class="ssd-cta">
+      <span class="copyright">© INDIGENOUS MEDIA</span>
       <a href="/privacy">Privacy & Terms</a>
       <span>Interested in advertising, partnering, licensing? <a href="/contact">Send us a note</a></span>
     </div>
@@ -178,12 +187,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const els = Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
   if ('IntersectionObserver' in window && els.length) {
     const fmt = (n) => n >= 1e9 ? (n / 1e9).toFixed(0) + 'B+' : n >= 1e6 ? (n / 1e6).toFixed(1) + 'MM' : n.toLocaleString();
-    const run = (el) => {
-      const end = +el.dataset.count; let t = 0, cur = 0;
-      const step = () => { t++; cur = Math.floor(end * (1 - Math.exp(-t / 40)));
-        el.textContent = fmt(Math.min(cur, end));
-        if (cur < end) requestAnimationFrame(step);
-      }; step();
+    const run = (el) => { const end = +el.dataset.count; let t = 0, cur = 0;
+      const step = () => { t++; cur = Math.floor(end * (1 - Math.exp(-t / 40))); el.textContent = fmt(Math.min(cur, end)); if (cur < end) requestAnimationFrame(step); };
+      step();
     };
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
