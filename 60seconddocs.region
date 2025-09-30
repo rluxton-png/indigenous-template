@@ -1,13 +1,6 @@
 <div class="theme-60sd" data-theme="dark">
-  <!-- HERO -->
+  <!-- HERO (image-free) -->
   <section class="hero ssd-hero" role="banner" aria-label="60 Second Docs Hero">
-    <div class="hero-media" aria-hidden="true">
-      <picture>
-        <source srcset="/assets/img/cover@2x.jpg 2x, /assets/img/cover.jpg 1x" media="(min-width:900px)">
-        <img src="/assets/img/cover.jpg" alt="" loading="eager" decoding="async">
-      </picture>
-    </div>
-
     <div class="hero-inner container">
       <span class="kicker" aria-hidden="true">60 Second Docs</span>
       <h1>THE LEADING DIGITAL DOCUMENTARY BRAND</h1>
@@ -17,83 +10,32 @@
         <nav class="social" aria-label="Follow 60 Second Docs">
           <a href="#" aria-label="Instagram" title="Instagram" rel="me noopener" class="so so-ig" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
-            <span class="label">Instagram</span>
+            <span class="visually-hidden">Instagram</span>
           </a>
           <a href="#" aria-label="TikTok" title="TikTok" rel="me noopener" class="so so-tt" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3a6.5 6.5 0 006.5 6.5V14a10.5 10.5 0 01-6.5-2.2V16a5.8 5.8 0 11-4.8-5.7V13a2.3 2.3 0 102.3 2.3V3h2z"/></svg>
-            <span class="label">TikTok</span>
+            <span class="visually-hidden">TikTok</span>
           </a>
           <a href="#" aria-label="YouTube" title="YouTube" rel="me noopener" class="so so-yt" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31.4 31.4 0 000 12a31.4 31.4 0 001 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5 31.4 31.4 0 0024 12a31.4 31.4 0 00-1-4.5zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            <span class="label">YouTube</span>
+            <span class="visually-hidden">YouTube</span>
           </a>
           <a href="#" aria-label="X" title="X" rel="me noopener" class="so so-x" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 3H21l-7.3 8.4L22 21h-5.6l-4.4-5.5-5 5.5H3.2l7.7-8.6L2 3h5.7l4 5 4.6-5z"/></svg>
-            <span class="label">X</span>
+            <span class="visually-hidden">X</span>
           </a>
           <a href="#" aria-label="Facebook" title="Facebook" rel="me noopener" class="so so-fb" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22V12h3l.5-3.8h-3.5V6.1c0-1.1.3-1.8 1.9-1.8h1.6V.8A21 21 0 0014.6 0c-3 0-5 1.8-5 5.2v3H6v3.8h3.7V22h3.8z"/></svg>
-            <span class="label">Facebook</span>
+            <span class="visually-hidden">Facebook</span>
           </a>
           <a href="#" aria-label="Snapchat" title="Snapchat" rel="me noopener" class="so so-snap" data-variant="pill">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3.7 0 6.2 2.7 6.2 6.2 0 1.6-.6 2.8-.6 2.8s.8 1 .8 1.7c0 .8-1 .9-1.5 1.1-.6.2-.4.9 0 1.3.5.4 2.1.7 2.1.7s-.6 1.8-3.9 2.1c-.3 0-.5.3-.4.6.2.6.4 1.3.4 1.3s-1.7.7-2.9-.3c-.2-.1-.4-.1-.6 0-1.2 1-2.9.3-2.9.3s.1-.7.4-1.3c.1-.3 0-.6-.4-.6-3.3-.3-3.9-2.1-3.9-2.1s1.6-.3 2.1-.7c.4-.4.6-1.1 0-1.3-.5-.2-1.5-.3-1.5-1.1 0-.7.8-1.7.8-1.7s-.6-1.2-.6-2.8C5.8 4.7 8.3 2 12 2z"/></svg>
-            <span class="label">Snap</span>
+            <span class="visually-hidden">Snapchat</span>
           </a>
         </nav>
         <a class="btn btn-primary" href="/contact" aria-label="Contact 60 Second Docs">Partner with us</a>
       </div>
     </div>
-
-    <!-- Awards/badges -->
-    <div class="badge-track" aria-label="Awards">
-      <ul class="badge-marquee" role="list">
-        <li><img src="/assets/img/webby.png" alt="Webby Award" loading="lazy" decoding="async"></li>
-        <li><img src="/assets/img/clio.png" alt="Clio Award" loading="lazy" decoding="async"></li>
-        <li><img src="/assets/img/streamy-awards.png" alt="Streamy Awards" loading="lazy" decoding="async"></li>
-        <li><img src="/assets/img/shorty-awards.png" alt="Shorty Awards" loading="lazy" decoding="async"></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="container section" aria-labelledby="characters-heading">
-    <div class="section-head">
-      <h2 id="characters-heading" class="section-title">Featuring the World’s Most Interesting Characters</h2>
-      <a class="btn is-ghost" href="/episodes">Browse all episodes</a>
-    </div>
-
-    <ul class="gallery" role="list">
-      <li class="card">
-        <a href="#" class="card-link">
-          <img src="/assets/img/fpo1.jpg" width="800" height="800" alt="Character" loading="lazy" decoding="async">
-          <span class="card-title">Character</span>
-        </a>
-      </li>
-      <li class="card">
-        <a href="#" class="card-link">
-          <img src="/assets/img/fpo2.jpg" width="800" height="800" alt="Character" loading="lazy" decoding="async">
-          <span class="card-title">Character</span>
-        </a>
-      </li>
-      <li class="card">
-        <a href="#" class="card-link">
-          <img src="/assets/img/fpo3.jpg" width="800" height="800" alt="Character" loading="lazy" decoding="async">
-          <span class="card-title">Character</span>
-        </a>
-      </li>
-      <li class="card">
-        <a href="#" class="card-link">
-          <img src="/assets/img/fpo4.jpg" width="800" height="800" alt="Character" loading="lazy" decoding="async">
-          <span class="card-title">Character</span>
-        </a>
-      </li>
-      <li class="card">
-        <a href="#" class="card-link">
-          <img src="/assets/img/fpo5.jpg" width="800" height="800" alt="Character" loading="lazy" decoding="async">
-          <span class="card-title">Character</span>
-        </a>
-      </li>
-    </ul>
   </section>
 
   <!-- FEATURED VIDEOS -->
@@ -221,38 +163,6 @@
     </div>
   </section>
 
-  <!-- PRESS LOGOS -->
-  <section class="container section" aria-labelledby="press-heading">
-    <h2 id="press-heading" class="visually-hidden">Press & Partners</h2>
-    <div class="ssd-press press-scroller" data-auto="true">
-      <div class="press-track">
-        <img src="/assets/img/logo_variety.jpg" alt="Variety" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_people.jpg" alt="People" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_mashable.jpg" alt="Mashable" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_guardian.jpg" alt="The Guardian" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_gq.jpg" alt="GQ" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_fullscreen.jpg" alt="Fullscreen" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_vulture.jpg" alt="Vulture" loading="lazy" decoding="async">
-        <img src="/assets/img/logo_vimeo.png" alt="Vimeo" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <!-- REEL (optional: keep if you want a single hero reel as well) -->
-  <section class="container section" aria-labelledby="reel-heading">
-    <h2 id="reel-heading" class="section-title">Featured Reel</h2>
-    <div class="video-embed">
-      <!-- Replace REPLACE_ID with your general reel Vimeo numeric ID -->
-      <iframe
-        title="60 Second Docs Reel"
-        src="https://player.vimeo.com/video/REPLACE_ID?byline=0&title=0&muted=1"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
   <!-- FOOTER / CTA -->
   <footer class="container footer" role="contentinfo">
     <div class="ssd-cta">
@@ -262,10 +172,9 @@
   </footer>
 </div>
 
-<!-- Progressive enhancement: count-up + press marquee -->
+<!-- Progressive enhancement: count-up -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // Count-up
   const els = Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
   if ('IntersectionObserver' in window && els.length) {
     const fmt = (n) => n >= 1e9 ? (n / 1e9).toFixed(0) + 'B+' : n >= 1e6 ? (n / 1e6).toFixed(1) + 'MM' : n.toLocaleString();
@@ -280,14 +189,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
     }), { threshold: 0.5 });
     els.forEach((el) => io.observe(el));
-  }
-
-  // Press marquee
-  const scroller = document.querySelector('.press-scroller');
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (scroller && !prefersReduced) {
-    const track = scroller.querySelector('.press-track');
-    track.innerHTML += track.innerHTML; // duplicate for seamless loop
   }
 });
 </script>
