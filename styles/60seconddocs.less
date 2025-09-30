@@ -116,3 +116,23 @@ p { font-size:clamp(15px,1.4vw,18px); }
   .video-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
 }
 @media (max-width:620px){ .video-grid{ grid-template-columns:1fr; } }
+
+/* --- Hotfix overrides --- */
+
+/* 1) Nuke any images/blocks above Featured Videos */
+.theme-60sd .hero .hero-media,
+.theme-60sd .badge-stack,
+.theme-60sd .gallery,
+.theme-60sd .ssd-press,
+.theme-60sd .press-scroller { display:none !important; }
+
+/* 2) Make social icons compact (also works if they're still text links) */
+.theme-60sd .social a,
+.theme-60sd .social .so {
+  display:inline-grid; place-items:center;
+  min-width:34px; width:34px; height:34px; padding:0 !important;
+  border-radius:999px; background:rgba(255,255,255,.06); border:1px solid #2a2a2a;
+  line-height:34px; font-size:12px; /* keeps text versions tidy */
+}
+.theme-60sd .social svg { width:16px !important; height:16px !important; }
+
