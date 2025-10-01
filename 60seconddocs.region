@@ -14,15 +14,17 @@
           <!-- logo tile -->
           <a href="/" aria-label="60 Second Docs — Home"
              style="display:inline-block;background:#f0d719;color:#000;border-radius:6px;
-                    padding:10px 12px;line-height:1;text-decoration:none;font-weight:900;letter-spacing:.02em;">
-            <span style="display:block;font:600 14px/1 Anton,Impact,'Arial Narrow Bold',sans-serif;">60</span>
-            <span style="display:block;font:800 14px/1 Anton,Impact,'Arial Narrow Bold',sans-serif;">SECOND</span>
-            <span style="display:block;font:800 14px/1 Anton,Impact,'Arial Narrow Bold',sans-serif;">DOCS</span>
+                    padding:10px 12px;line-height:1;text-decoration:none;font-weight:900;letter-spacing:.02em;
+                    font-family:'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;">
+            <span style="display:block;font:700 14px/1 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">60</span>
+            <span style="display:block;font:800 14px/1 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">SECOND</span>
+            <span style="display:block;font:800 14px/1 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">DOCS</span>
           </a>
 
           <!-- headline -->
           <h1 class="ssd-headline"
-              style="margin:14px 0 4px;font:900 clamp(32px,6.2vw,86px)/1.04 Anton,Impact,'Arial Narrow Bold',sans-serif;
+              style="margin:14px 0 4px;
+                     font:800 clamp(32px,6.2vw,86px)/1.04 'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;
                      text-transform:uppercase;letter-spacing:-.01em;color:#f0d719;">
             <span class="line" style="display:block;">THE WORLD’S</span>
             <span class="line" style="display:block;">MOST INTERESTING</span>
@@ -31,7 +33,8 @@
 
           <!-- tagline -->
           <p class="tagline"
-             style="margin:6px 0 16px;font:800 clamp(13px,1.2vw,16px)/1.3 Inter,system-ui,Arial,sans-serif;
+             style="margin:6px 0 16px;
+                    font:700 clamp(13px,1.2vw,16px)/1.3 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;
                     text-transform:uppercase;letter-spacing:.04em;opacity:.95;">
             EXPLORE THE BOUNDARIES
           </p>
@@ -87,7 +90,8 @@
 
             <a href="/contact" class="btn btn-primary"
                style="display:inline-flex;align-items:center;padding:.6rem .9rem;background:#f0d719;color:#000;
-                      border-radius:8px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;">
+                      border-radius:8px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;
+                      font-family:'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;">
               Partner with us
             </a>
           </div>
@@ -101,10 +105,15 @@
            style="max-width:1120px;margin:0 auto;padding:56px 4vw;">
     <div class="section-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;">
       <h2 id="featured-videos-heading" class="section-title"
-          style="margin:0;font:900 clamp(22px,3vw,36px)/1 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;letter-spacing:.02em;">
+          style="margin:0;
+                 font:800 clamp(22px,3vw,36px)/1 'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;
+                 text-transform:uppercase;letter-spacing:.02em;">
         Featured Videos
       </h2>
-      <p class="section-sub" style="margin:8px 0 0;color:#c7c7c7;">A sampler of audience favorites</p>
+      <p class="section-sub" style="margin:8px 0 0;color:#c7c7c7;
+                                    font:500 16px/1.4 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        A sampler of audience favorites
+      </p>
     </div>
 
     <ul class="video-grid" role="list"
@@ -118,9 +127,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Grandma Gamer</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Grandma Gamer</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -133,9 +142,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Tiny Foods</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Tiny Foods</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -148,9 +157,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Brazil's Ballerinas (feat. Malala)</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Brazil's Ballerinas (feat. Malala)</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -163,9 +172,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Weed Nuns</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Weed Nuns</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -178,9 +187,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Air Guitar Champ</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Air Guitar Champ</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -193,9 +202,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Recycling Kid</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Recycling Kid</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -208,9 +217,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                   style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
         </div>
-        <h3 class="video-title" style="margin:0;font:800 16px/1.2 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;">Daddy Daughter</h3>
+        <h3 class="video-title" style="margin:0;font:800 16px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;text-transform:uppercase;">Daddy Daughter</h3>
         <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341443455/ced36f96d4" target="_blank" rel="noopener"
-           style="display:inline-block;font:500 14px/1.2 Inter,system-ui,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
+           style="display:inline-block;font:500 14px/1.2 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#c7c7c7;border-bottom:1px solid #f0d719;width:max-content;">
           Open on Vimeo
         </a>
       </li>
@@ -222,33 +231,41 @@
     <div class="container" style="max-width:1120px;margin:0 auto;padding:0 4vw;">
       <header class="section-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;">
         <h2 id="metrics-heading" class="section-title"
-            style="margin:0;font:900 clamp(22px,3vw,36px)/1 Anton,Impact,'Arial Narrow Bold',sans-serif;text-transform:uppercase;letter-spacing:.02em;">
+            style="margin:0;
+                   font:800 clamp(22px,3vw,36px)/1 'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;
+                   text-transform:uppercase;letter-spacing:.02em;">
           By The Numbers
         </h2>
-        <p class="section-sub" style="margin:8px 0 0;color:#c7c7c7;">Brand-safe storytelling at scale</p>
+        <p class="section-sub" style="margin:8px 0 0;color:#c7c7c7;
+                                      font:500 16px/1.4 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+          Brand-safe storytelling at scale
+        </p>
       </header>
 
       <div class="ssd-metrics" role="list"
            style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
           <div class="num" data-count="12000000000"
-               style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">12B+</div>
+               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">12B+</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Total Video Views</div>
         </div>
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
           <div class="num" data-count="9900000"
-               style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">9.9MM</div>
+               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">9.9MM</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Avg Views / Episode</div>
         </div>
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
           <div class="num" data-count="13000000"
-               style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">13MM+</div>
+               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">13MM+</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Total Followers</div>
         </div>
       </div>
@@ -256,20 +273,23 @@
       <div class="ssd-metrics" role="list" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:18px;">
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
-          <div class="num" style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">18–34</div>
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">18–34</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Majority of Audience</div>
         </div>
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
-          <div class="num" style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">99%</div>
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">99%</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Organic Viewership</div>
         </div>
         <div class="ssd-metric" role="listitem"
              style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);">
-          <div class="num" style="font:900 clamp(36px,6vw,72px)/1 Inter,system-ui,Arial,sans-serif;color:#fff;">1000+</div>
+                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">1000+</div>
           <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Episodes</div>
         </div>
       </div>
@@ -279,7 +299,8 @@
   <!-- FOOTER / CTA -->
   <footer class="container footer" role="contentinfo"
           style="max-width:1120px;margin:0 auto;padding:28px 4vw 56px;border-top:1px solid #2a2a2a;">
-    <div class="ssd-cta" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div class="ssd-cta" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+                                 font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
       <span class="copyright" style="color:#c7c7c7;">© INDIGENOUS MEDIA</span>
       <a href="/privacy" style="color:#fff;text-decoration:none;border-bottom:2px solid #f0d719;">Privacy &amp; Terms</a>
       <span>Interested in advertising, partnering, licensing?
