@@ -227,74 +227,74 @@
   </section>
 
   <!-- METRICS -->
-  <section aria-labelledby="metrics-heading" style="padding:56px 0;border-top:1px solid #2a2a2a;">
-    <div class="container" style="max-width:1120px;margin:0 auto;padding:0 4vw;">
-      <header class="section-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;">
-        <h2 id="metrics-heading" class="section-title"
-            style="margin:0;
-                   font:800 clamp(22px,3vw,36px)/1 'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;
-                   text-transform:uppercase;letter-spacing:.02em;">
-          By The Numbers
-        </h2>
-        <p class="section-sub" style="margin:8px 0 0;color:#c7c7c7;
-                                      font:500 16px/1.4 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          Brand-safe storytelling at scale
-        </p>
-      </header>
+<section aria-labelledby="metrics-heading" style="padding:56px 0;border-top:1px solid #2a2a2a;">
+  <div class="container" style="max-width:1120px;margin:0 auto;padding:0 4vw;">
+    <header class="section-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;">
+      <h2 id="metrics-heading" class="section-title"
+          style="margin:0;
+                 font:800 clamp(22px,3vw,36px)/1 'Avenir Next','Avenir',-apple-system,system-ui,'Helvetica Neue',Helvetica,Arial,sans-serif;
+                 text-transform:uppercase;letter-spacing:.02em;">
+        By The Numbers
+      </h2>
+      <p class="section-sub" style="margin:8px 0 0;color:#9a9a9a;
+                                    font:500 16px/1.4 'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        Brand-safe storytelling at scale
+      </p>
+    </header>
 
-      <div class="ssd-metrics" role="list"
-           style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" data-count="12000000000"
-               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">12B+</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Total Video Views</div>
-        </div>
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" data-count="9900000"
-               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">9.9MM</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Avg Views / Episode</div>
-        </div>
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" data-count="13000000"
-               style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">13MM+</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Total Followers</div>
-        </div>
+    <div class="ssd-metrics" role="list"
+         style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" data-count="12000000000"
+             style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">12B+</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Total Video Views</div>
       </div>
-
-      <div class="ssd-metrics" role="list" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:18px;">
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">18–34</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Majority of Audience</div>
-        </div>
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">99%</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Organic Viewership</div>
-        </div>
-        <div class="ssd-metric" role="listitem"
-             style="padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-                    border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-                    font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
-          <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#fff;">1000+</div>
-          <div class="label" style="margin-top:.25rem;color:#c7c7c7;text-transform:uppercase;letter-spacing:.06em;">Episodes</div>
-        </div>
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" data-count="9900000"
+             style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">9.9MM</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Avg Views / Episode</div>
+      </div>
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" data-count="13000000"
+             style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">13MM+</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Total Followers</div>
       </div>
     </div>
-  </section>
+
+    <div class="ssd-metrics" role="list" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:18px;">
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">18–34</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Majority of Audience</div>
+      </div>
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">99%</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Organic Viewership</div>
+      </div>
+      <div class="ssd-metric" role="listitem"
+           style="padding:24px;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));
+                  border:2px solid #f0d719;border-radius:14px;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+                  font-family:'Avenir Next','Avenir',system-ui,-apple-system,Helvetica,Arial,sans-serif;">
+        <div class="num" style="font-weight:800;font-size:clamp(36px,6vw,72px);line-height:1;color:#0b0b0b;">1000+</div>
+        <div class="label" style="margin-top:.25rem;color:#6e6e6e;text-transform:uppercase;letter-spacing:.06em;">Episodes</div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- FOOTER / CTA -->
   <footer class="container footer" role="contentinfo"
