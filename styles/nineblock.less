@@ -16,8 +16,6 @@
   font-display: swap;
 }
 
-/* styles/nineblock.less */
-
 /* ===========================
    Nine-Section (now 13) Template Scope
    =========================== */
@@ -26,7 +24,7 @@
   --bg-even: #000000;
   --fg:      #ffffff;
 
-  /* UPDATED: Gentle, more elegant headline scale */
+  /* headline tokens */
   --nb-h1-size:  clamp(32px, 4.8vw, 52px);
   --nb-h15-size: clamp(26px, 3.8vw, 40px);
   --nb-h2-size:  clamp(20px, 2.8vw, 30px);
@@ -38,7 +36,7 @@
   color: var(--fg);
 }
 
-/* === FORCE BLKFort ON TYPOGRAPHY === */
+/* === BLKFort everywhere === */
 .nine-template h1,
 .nine-template h2,
 .nine-template h3,
@@ -65,7 +63,7 @@
 /* ===========================
    Layout containment
    =========================== */
-/* Header is not fixed/absolute → no spacer needed */
+/* Header is NOT fixed → no spacer */
 #siteWrapper { padding-top: 0 !important; }
 @media (max-width: 768px) { #siteWrapper { padding-top: 0 !important; } }
 
@@ -88,7 +86,7 @@
   margin: 0 0 0.5em;
 }
 
-/* Heading 1.5 */
+/* H1.5 */
 .nine-template .nb-h1-5,
 .nine-template h1.nb-h1-5,
 .nine-template h2.nb-h1-5,
@@ -122,10 +120,8 @@ body .nine-template .section-header .sqs-block-content h2 {
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
-
 .nine-template .section-header h2 em,
 .nine-template .section-header h2 i { font-style: inherit !important; }
-
 body .nine-template .section-header h1,
 body .nine-template .section-header .sqs-block-heading h1 { font-style: normal !important; }
 
@@ -143,7 +139,6 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
-
 @media (max-width: 480px) {
   body .nine-template #content .section-header h2,
   body .nine-template .project-content .section-header h2,
@@ -175,7 +170,6 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
-
 body #brand-template.nine-template h2,
 body #brand-template.nine-template h2 * { font-style: normal !important; }
 
@@ -194,7 +188,6 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
    =========================== */
 .nine-template .project-media,
 .nine-template .responsive-media { width: 100%; }
-
 .nine-template .project-media img,
 .nine-template .project-media video,
 .nine-template .responsive-media img,
@@ -203,7 +196,6 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
   max-width: 100%;
   height: auto;
 }
-
 .nine-template .project-media iframe,
 .nine-template .responsive-media iframe {
   width: 100%;
@@ -212,7 +204,6 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
   border: 0;
   display: block;
 }
-
 .nine-template .embed-fluid { position: relative; width: 100%; }
 .nine-template .embed-fluid::before { content: ""; display: block; padding-top: 56.25%; }
 .nine-template .embed-fluid > iframe,
@@ -305,13 +296,13 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
   content: "" !important; display: none !important;
 }
 
-/* Pin first three sections to the cycle */
+/* Pin first three sections */
 #brand-template.nine-template #content > .project-content:nth-of-type(1) { background:#F2EFE8 !important; color:#000 !important; }
 #brand-template.nine-template #content > .project-content:nth-of-type(2) { background:#E6B904 !important; color:#000 !important; }
 #brand-template.nine-template #content > .project-content:nth-of-type(3) { background:#000 !important; color:#fff !important; }
 
 /* ===========================
-   RESPONSIVE PATCH (drop-in)
+   RESPONSIVE PATCH
    =========================== */
 #brand-template.nine-template .internal-wrapper {
   width: min(92vw, 1200px) !important;
@@ -374,9 +365,8 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 }
 
 /* =========================================
-   CORRECT HEADER RESPONSIVENESS (project-header / project-logos)
+   PROJECT HEADER (single source of truth)
    ========================================= */
-/* Layout + colors; NOT sticky */
 #brand-template.nine-template .project-header {
   display: flex !important;
   align-items: center !important;
@@ -384,50 +374,50 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
   flex-wrap: nowrap !important;
   gap: clamp(8px, 3vw, 32px) !important;
   padding: clamp(12px, 4vw, 40px) clamp(16px, 5vw, 60px) !important;
-  height: auto !important;
-  min-height: 56px;
+  width: 100% !important;
   box-sizing: border-box;
+
   background: #000 !important;
   color: #fff !important;
-  width: 100% !important;
 
-  /* explicitly NOT sticky/fixed */
+  /* NOT sticky */
   position: relative !important;
   top: auto !important;
   z-index: auto !important;
+
+  /* avoid inheriting odd base sizes */
+  font-size: 1rem !important;
 }
 
-/* children can shrink instead of forcing wraps */
 #brand-template.nine-template .project-header > * { min-width: 0 !important; }
 
-/* Bigger floor for title/logo text so it doesn’t look tiny */
-#brand-template.nine-template .project-header .project-logos h1,
-#brand-template.nine-template .project-header .project-logos h2,
-#brand-template.nine-template .project-header .project-logos a,
-#brand-template.nine-template .project-header .project-logos span {
-  font-family: 'BLKFort', system-ui, sans-serif !important;
-  font-weight: 700 !important;
-  font-size: clamp(28px, 6vw, 56px) !important;
+/* Title / logo size (clearly > body text) */
+#brand-template.nine-template .project-header .project-logos {
+  font-size: clamp(26px, 5.5vw, 48px) !important;
   line-height: 1.1 !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 700 !important;
   color: #fff !important;
 }
 
-/* Nav inside header (if present) */
+/* Ensure whatever element holds the text inherits that size */
+#brand-template.nine-template .project-header .project-logos :where(h1,h2,h3,a,span,strong,em,div,.site-title) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Nav: smaller than title, bigger than body */
 #brand-template.nine-template .project-header nav a,
 #brand-template.nine-template .project-header nav label {
-  font-size: clamp(14px, 2.8vw, 20px) !important;
+  font-size: clamp(14px, 2.4vw, 20px) !important;
   line-height: 1.2 !important;
   font-weight: 700 !important;
   color: #fff !important;
 }
-
-/* Ensure any icons are white */
-#brand-template.nine-template .project-header a,
-#brand-template.nine-template .project-header label,
-#brand-template.nine-template .project-header svg { color:#fff !important; fill:#fff !important; }
 
 /* Logo image scaling (if image logo present) */
 #brand-template.nine-template .project-header .project-logos img {
@@ -444,91 +434,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     gap: 8px !important;
     padding: 10px 16px !important;
   }
-  #brand-template.nine-template .project-header .project-logos h1,
-  #brand-template.nine-template .project-header .project-logos h2,
-  #brand-template.nine-template .project-header .project-logos a,
-  #brand-template.nine-template .project-header .project-logos span {
+  #brand-template.nine-template .project-header .project-logos {
     font-size: clamp(22px, 7vw, 32px) !important;
   }
 }
-/* ——— HEADER SIZE OVERRIDE (bulletproof) ——— */
-
-/* 1) Ensure the header bar isn't sticky */
-#brand-template.nine-template .project-header {
-  position: relative !important;
-  top: auto !important;
-  z-index: auto !important;
-}
-
-/* 2) Make the logo/title block itself define the big size */
-#brand-template.nine-template .project-header .project-logos {
-  /* raise the floor; container sets the base so any plain text inherits it */
-  font-size: clamp(28px, 6vw, 56px) !important;
-  line-height: 1.1 !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-}
-
-/* 3) Catch the most common children (whatever Squarespace renders there) */
-#brand-template.nine-template .project-header .project-logos :where(h1,h2,h3,a,span,strong,em,div,.site-title,.sqs-block-content) {
-  font-size: inherit !important;     /* inherit the container’s clamp */
-  line-height: inherit !important;
-  font-weight: inherit !important;
-  color: inherit !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 4) Keep nav readable but smaller than the title */
-#brand-template.nine-template .project-header nav a,
-#brand-template.nine-template .project-header nav label {
-  font-size: clamp(14px, 2.8vw, 20px) !important;
-  line-height: 1.2 !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-}
-
-/* 5) Safety: let header children shrink instead of wrapping */
-#brand-template.nine-template .project-header > * { min-width: 0 !important; }
-
-/* ——— HEADER SIZE TUNING (only affects the site header) ——— */
-
-/* keep header non-sticky */
-#brand-template.nine-template .project-header {
-  position: relative !important;
-  top: auto !important;
-  z-index: auto !important;
-}
-
-/* make the logo/title clearly bigger than body copy */
-#brand-template.nine-template .project-header .project-logos {
-  font-size: clamp(26px, 5.5vw, 48px) !important;  /* ↑ bigger than 18px body */
-  line-height: 1.1 !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-}
-
-/* ensure whatever element holds the text inherits that size */
-#brand-template.nine-template .project-header .project-logos :where(h1,h2,h3,a,span,strong,em,div,.site-title) {
-  font-size: inherit !important;
-  line-height: inherit !important;
-  font-weight: inherit !important;
-  color: inherit !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* nav links: readable, smaller than the title, bigger than paragraphs */
-#brand-template.nine-template .project-header nav a,
-#brand-template.nine-template .project-header nav label {
-  font-size: clamp(15px, 2.4vw, 20px) !important;
-  line-height: 1.2 !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-}
-
-/* safety: header children can shrink instead of forcing wraps */
-#brand-template.nine-template .project-header > * { min-width: 0 !important; }
-
