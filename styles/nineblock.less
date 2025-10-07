@@ -466,3 +466,36 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
   letter-spacing: 0 !important;
   max-width: 72ch;
 }
+/* === ALIGNMENT PATCH (keep title centered, keep section headers centered) === */
+
+/* Keep the header layout flexible but center the title block even when other items exist */
+#brand-template.nine-template .project-header {
+  justify-content: space-between !important; /* keep room for left/right controls if present */
+}
+#brand-template.nine-template .project-header .project-logos {
+  margin-left: auto !important;
+  margin-right: auto !important;       /* centers this flex item */
+  text-align: center !important;
+}
+#brand-template.nine-template .project-header .project-logos > * {
+  display: inline-block;                /* so the text itself centers nicely */
+}
+
+/* Center the big section/page headers & their intro paragraph */
+#brand-template.nine-template .section-header,
+#brand-template.nine-template .project-title {
+  text-align: center !important;
+}
+#brand-template.nine-template .section-header > *,
+#brand-template.nine-template .project-title > * {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Make the intro paragraph under the big header a touch larger (stays centered) */
+#brand-template.nine-template .section-header p,
+#brand-template.nine-template .project-title + p {
+  font-size: clamp(18px, 2.05vw, 22px) !important;
+  line-height: 1.55 !important;
+  max-width: 72ch;
+}
