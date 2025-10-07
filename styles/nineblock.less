@@ -452,6 +452,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 /* =========================================
    CORRECT HEADER RESPONSIVENESS (project-header / project-logos)
    ========================================= */
+/* Custom project header: layout + colors */
 #brand-template.nine-template .project-header {
   display: flex !important;
   align-items: center !important;
@@ -462,7 +463,16 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   height: auto !important;
   min-height: 56px;
   box-sizing: border-box;
+
+  /* ADD THESE */
+  background: #000 !important;   /* give the bar its black background */
+  color: #fff !important;        /* default text color inside header */
+  width: 100% !important;
+  position: sticky;               /* or 'relative' if you don't want it to stick */
+  top: 0;
+  z-index: 1000;
 }
+
 /* allow content to shrink instead of wrapping awkwardly */
 #brand-template.nine-template .project-header > * { min-width: 0; }
 
@@ -477,8 +487,24 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: inherit;
+  color: inherit;                 /* inherits the white from .project-header */
 }
+
+/* ensure links/icons render white inside the header */
+#brand-template.nine-template .project-header a,
+#brand-template.nine-template .project-header label,
+#brand-template.nine-template .project-header svg {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* optional: scale logo image too */
+#brand-template.nine-template .project-header .project-logos img {
+  max-height: clamp(28px, 6vw, 44px);
+  width: auto;
+  display: block;
+}
+
 
 /* nav inside header (if present) */
 #brand-template.nine-template .project-header nav a {
