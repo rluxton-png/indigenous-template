@@ -526,3 +526,101 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   #brand-template.nine-template .project-logos { gap: 10px !important; }
   #brand-template.nine-template .project-title { margin-top: 10px !important; }
 }
+/* =========================================
+   MOBILE HEADER FIX (paste at end of file)
+   ========================================= */
+@media (max-width: 768px) {
+  /* Compact, fixed header */
+  body #project-header {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    height: 56px !important;
+    background: #000 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  }
+
+  /* Inner spacing */
+  body #project-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px !important;
+    gap: 10px;
+  }
+
+  /* Logo sizing */
+  body #project-header .header-logo img {
+    max-height: 36px !important;   /* reduce logo height */
+    width: auto;
+    display: block;
+  }
+
+  /* Hide desktop nav on mobile; use overlay menu */
+  body #project-header .header-right { display: none !important; }
+
+  /* Hamburger / mobile toggle */
+  body #project-header .mobile-nav-toggle-label {
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 36px; height: 36px;
+    cursor: pointer;
+  }
+  body #project-header .mobile-nav-toggle-label .top-bar,
+  body #project-header .mobile-nav-toggle-label .middle-bar,
+  body #project-header .mobile-nav-toggle-label .bottom-bar {
+    width: 24px; height: 2px;
+    background: #fff !important;
+  }
+
+  /* Ensure overlay nav sits above page */
+  #overlayNav {
+    position: fixed;
+    top: 56px; left: 0; right: 0; bottom: 0;
+    z-index: 1001;
+    background: rgba(0,0,0,.96);
+    overflow-y: auto;
+  }
+
+  /* Make overlay nav links readable/tap-friendly */
+  #overlayNav a,
+  #overlayNav label {
+    color: #fff !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    padding: 12px 18px !important;
+    display: block;
+  }
+
+  /* Prevent content from hiding under the fixed header */
+  #siteWrapper,
+  #brand-template.nine-template #page,
+  #brand-template.nine-template #content {
+    padding-top: 56px !important;
+  }
+
+  /* Tighten section header/summary spacing on phones */
+  #brand-template.nine-template .section-header { margin-bottom: 12px !important; }
+  #brand-template.nine-template .project-summary { margin-top: 12px !important; }
+
+  /* Optional: shrink header text a touch for extra-long titles */
+  #brand-template.nine-template .project-title h1,
+  #brand-template.nine-template .project-title h2 {
+    font-size: clamp(24px, 6vw, 34px) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* Even tighter on very small screens */
+@media (max-width: 380px) {
+  body #project-header { height: 50px !important; }
+  #overlayNav { top: 50px; }
+  #siteWrapper,
+  #brand-template.nine-template #page,
+  #brand-template.nine-template #content { padding-top: 50px !important; }
+  body #project-header .header-inner { padding: 8px 10px !important; }
+  body #project-header .header-logo img { max-height: 30px !important; }
+}
+
