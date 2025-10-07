@@ -451,3 +451,43 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     font-size: clamp(22px, 7vw, 32px) !important;
   }
 }
+/* ——— HEADER SIZE OVERRIDE (bulletproof) ——— */
+
+/* 1) Ensure the header bar isn't sticky */
+#brand-template.nine-template .project-header {
+  position: relative !important;
+  top: auto !important;
+  z-index: auto !important;
+}
+
+/* 2) Make the logo/title block itself define the big size */
+#brand-template.nine-template .project-header .project-logos {
+  /* raise the floor; container sets the base so any plain text inherits it */
+  font-size: clamp(28px, 6vw, 56px) !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* 3) Catch the most common children (whatever Squarespace renders there) */
+#brand-template.nine-template .project-header .project-logos :where(h1,h2,h3,a,span,strong,em,div,.site-title,.sqs-block-content) {
+  font-size: inherit !important;     /* inherit the container’s clamp */
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 4) Keep nav readable but smaller than the title */
+#brand-template.nine-template .project-header nav a,
+#brand-template.nine-template .project-header nav label {
+  font-size: clamp(14px, 2.8vw, 20px) !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* 5) Safety: let header children shrink instead of wrapping */
+#brand-template.nine-template .project-header > * { min-width: 0 !important; }
