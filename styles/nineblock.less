@@ -1,10 +1,3 @@
-/* ==========================================================================
-   Nine Block / Brand Template (revised)
-   - Keeps global styles neutral
-   - Leaves all special centering/sizing for the Storylabs page to page-scoped
-     header injection (e.g., #new-page-331-page …)
-   ========================================================================== */
-
 /* === BLKFort (Bold + Book) === */
 @font-face {
   font-family: 'BLKFort';
@@ -24,7 +17,7 @@
 }
 
 /* ===========================
-   Template scope + tokens
+   Nine-Section (now 13) Template Scope
    =========================== */
 .nine-template {
   --bg-odd:  #2f2f2f;
@@ -43,7 +36,7 @@
   color: var(--fg);
 }
 
-/* === BLKFort everywhere (neutral weights/spacing) === */
+/* === BLKFort everywhere === */
 .nine-template h1,
 .nine-template h2,
 .nine-template h3,
@@ -64,7 +57,7 @@
   font-size: clamp(16px, 1.4vw, 18px);
 }
 
-/* Seed invisibility (Squarespace helper element) */
+/* Seed invisibility */
 .nine-template .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 /* ===========================
@@ -93,7 +86,7 @@
   margin: 0 0 0.5em;
 }
 
-/* H1.5 utility */
+/* H1.5 */
 .nine-template .nb-h1-5,
 .nine-template h1.nb-h1-5,
 .nine-template h2.nb-h1-5,
@@ -112,7 +105,7 @@
   .nine-template .nb-h1-5 { font-size: clamp(22px, 6.4vw, 30px); }
 }
 
-/* Auto-apply H1.5 to common H2s (style only, no alignment) */
+/* Auto-apply H1.5 to common H2s */
 body .nine-template #content .section-header h2,
 body .nine-template .project-content .section-header h2,
 body .nine-template .section-header .sqs-block-heading h2,
@@ -127,14 +120,12 @@ body .nine-template .section-header .sqs-block-content h2 {
   margin: 0 0 0.5em !important;
   color: inherit !important;
 }
-
-/* Normalize italics and H1 style */
 .nine-template .section-header h2 em,
 .nine-template .section-header h2 i { font-style: inherit !important; }
 body .nine-template .section-header h1,
 body .nine-template .section-header .sqs-block-heading h1 { font-style: normal !important; }
 
-/* “First-child H2” treatment (style only) */
+/* First-child H2s */
 body .nine-template #content .project-content > .internal-wrapper > h2:first-child,
 body .nine-template #content .project-content .sqs-block-heading h2:first-child,
 body .nine-template #content .project-content .sqs-block-html h2:first-child,
@@ -162,9 +153,25 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   }
 }
 
-/* Keep template-wide headers left-aligned by default (page-specific centering lives in page injection) */
-#brand-template.nine-template .section-header,
-#brand-template.nine-template .project-title { text-align: left !important; }
+/* Late sections enforcement */
+body #brand-template.nine-template #content .project-content .section-header h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content .project-content .section-header .sqs-block-content h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-heading h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-html h2,
+body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) .section-header .sqs-block-content h2 {
+  font-size: var(--nb-h15-size) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 0.5em !important;
+  color: inherit !important;
+}
+body #brand-template.nine-template h2,
+body #brand-template.nine-template h2 * { font-style: normal !important; }
 
 /* ===========================
    Body text + summary
@@ -175,9 +182,6 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   line-height: 1.6;
   margin: 0 0 1em;
 }
-
-/* Neutralize editor “pre-wrap” that can cause odd alignment */
-#brand-template.nine-template .sqs-block-html .sqs-block-content { white-space: normal; }
 
 /* ===========================
    MEDIA
@@ -216,47 +220,10 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n+1)
 body #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) { background:@nb-bg-2 !important; color:@nb-fg-2 !important; }
 body #brand-template.nine-template #content > .project-content:nth-of-type(3n)   { background:@nb-bg-3 !important; color:@nb-fg-3 !important; }
 
-/* Ensure text inherits section color */
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) li,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) small,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) blockquote,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) a,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) li,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) small,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) blockquote,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h1,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h2,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h3,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h4,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h5,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) h6,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) p,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) li,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) small,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) blockquote,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) a {
+/* Keep each section’s text all the same color (prevents stray #fff) */
+#brand-template.nine-template #content > .project-content :is(h1,h2,h3,h4,h5,h6,p,li,a,small,blockquote) {
   color: inherit !important;
 }
-
-/* === Adaptive link underlines === */
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) a,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a { text-decoration-color: #000 !important; }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) a   { text-decoration-color: #fff !important; }
 
 /* === Section separator line === */
 #brand-template.nine-template #content > .project-content .summary-seperator {
@@ -351,7 +318,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 #brand-template.nine-template .project-content a { text-underline-offset: .12em; text-decoration-thickness: .08em; }
 
 /* =========================================
-   PROJECT HEADER (global, neutral)
+   PROJECT HEADER (global, neutral – page can override)
    ========================================= */
 #brand-template.nine-template .project-header {
   display: flex !important;
@@ -371,15 +338,13 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
   top: auto !important;
   z-index: auto !important;
 
-  /* keep header base size sane; page-level rules will override with !important */
-  font-size: 1rem !important;
+  font-size: 1rem !important; /* base only; page overrides will win */
 }
-
 #brand-template.nine-template .project-header > * { min-width: 0 !important; }
 
-/* Title / logo base size (page-specific injection can override) */
+/* Title / logo base size — no !important so page rules can override */
 #brand-template.nine-template .project-header .project-logos {
-  font-size: clamp(26px, 5.5vw, 48px) !important;
+  font-size: clamp(26px, 5.5vw, 48px);
   line-height: 1.1 !important;
   font-weight: 700 !important;
   color: #fff !important;
@@ -421,6 +386,6 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     padding: 10px 16px !important;
   }
   #brand-template.nine-template .project-header .project-logos {
-    font-size: clamp(22px, 7vw, 32px) !important;
+    font-size: clamp(22px, 7vw, 32px);
   }
 }
