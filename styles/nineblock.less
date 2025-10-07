@@ -438,3 +438,31 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     font-size: clamp(22px, 7vw, 32px) !important;
   }
 }
+/* === make the header title actually big, regardless of inner markup === */
+#brand-template.nine-template .project-header :is(.project-logos,.site-title,.project-title) {
+  /* this defines the size for whatever text sits inside */
+  font-size: clamp(28px, 6vw, 56px) !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+#brand-template.nine-template .project-header :is(.project-logos,.site-title,.project-title)
+  :not(svg):not(path) {
+  /* force children (h1/a/span/etc.) to use the size above */
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+}
+
+/* === larger intro paragraph right under page titles/section headers === */
+#brand-template.nine-template .section-header p,
+#brand-template.nine-template .project-title + p,
+#brand-template.nine-template .project-title .intro,
+#brand-template.nine-template .project-intro,
+#brand-template.nine-template .project-summary-intro {
+  font-size: clamp(18px, 2.05vw, 22px) !important; /* bigger than body (16–18) */
+  line-height: 1.55 !important;
+  letter-spacing: 0 !important;
+  max-width: 72ch;
+}
