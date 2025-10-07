@@ -688,3 +688,56 @@ body #project-header #mainNavigation {
     font-size: clamp(15px, 5.8vw, 20px) !important;
   }
 }
+/* === RESPONSIVE FIX: for .project-header / .project-logos header === */
+#brand-template.nine-template .project-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(8px, 3vw, 32px) !important;
+  padding: clamp(12px, 4vw, 40px) clamp(16px, 5vw, 60px) !important;
+  height: auto !important;
+  min-height: 56px;
+  box-sizing: border-box;
+}
+
+/* allow content to shrink instead of wrapping awkwardly */
+#brand-template.nine-template .project-header > * { min-width: 0; }
+
+/* project title / logo text */
+#brand-template.nine-template .project-header .project-logos h1,
+#brand-template.nine-template .project-header .project-logos h2,
+#brand-template.nine-template .project-header .project-logos a {
+  font-family: 'BLKFort', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(20px, 5vw, 42px) !important;
+  line-height: 1.1 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+
+/* navigation inside header (if any) */
+#brand-template.nine-template .project-header nav a {
+  font-size: clamp(14px, 2.5vw, 18px) !important;
+  white-space: nowrap;
+  font-weight: 700 !important;
+  color: inherit;
+}
+
+/* mobile: tighten further */
+@media (max-width: 600px) {
+  #brand-template.nine-template .project-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 10px 16px !important;
+  }
+
+  #brand-template.nine-template .project-header .project-logos h1,
+  #brand-template.nine-template .project-header .project-logos h2,
+  #brand-template.nine-template .project-header .project-logos a {
+    font-size: clamp(18px, 6vw, 26px) !important;
+  }
+}
