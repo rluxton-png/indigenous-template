@@ -416,3 +416,113 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   background: #000000 !important;
   color: #FFFFFF !important;
 }
+/* ===========================
+   RESPONSIVE PATCH (drop-in)
+   =========================== */
+
+/* 1) Fluid container: use a fluid width that caps at 1200px */
+#brand-template.nine-template .internal-wrapper {
+  width: min(92vw, 1200px) !important;   /* replaces fixed widths */
+  margin: 0 auto !important;
+}
+
+/* 2) Fluid section padding (tighten on smaller screens) */
+#brand-template.nine-template .project-content {
+  padding: clamp(32px, 7vw, 80px) 0 !important;
+}
+
+/* 3) Fluid typography system (keeps your existing tokens, but ensures scale) */
+:root {
+  --nb-body-size: clamp(15px, 1.7vw, 18px);       /* base paragraph size */
+  --nb-small-size: clamp(12px, 1.2vw, 14px);
+}
+#brand-template.nine-template .project-content,
+#brand-template.nine-template .project-content p,
+#brand-template.nine-template .project-content li,
+#brand-template.nine-template .project-content small {
+  font-size: var(--nb-body-size) !important;
+  line-height: 1.55 !important;
+}
+#brand-template.nine-template .project-content small { font-size: var(--nb-small-size) !important; }
+
+/* Headings: keep your H1 + H1.5 intent, but fluid */
+#brand-template.nine-template .project-content h1 { 
+  font-size: clamp(34px, 6.25vw, 72px) !important; 
+  line-height: 1.05 !important;
+}
+#brand-template.nine-template .project-content h2 { 
+  /* Will be H1.5 by our earlier rules; ensure mobile floor/desktop ceiling */
+  font-size: clamp(28px, 4.8vw, 56px) !important; 
+  line-height: 1.05 !important;
+}
+#brand-template.nine-template .project-content h3 { font-size: clamp(22px, 3.6vw, 32px) !important; }
+#brand-template.nine-template .project-content h4 { font-size: clamp(18px, 2.8vw, 24px) !important; }
+#brand-template.nine-template .project-content h5 { font-size: clamp(16px, 2.2vw, 20px) !important; }
+#brand-template.nine-template .project-content h6 { font-size: clamp(14px, 1.9vw, 18px) !important; }
+
+/* 4) Responsive media: images and videos scale to container */
+#brand-template.nine-template .project-media img,
+#brand-template.nine-template .project-media video {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Squarespace video embeds (incl. Vimeo/YouTube) */
+#brand-template.nine-template .project-media .sqs-block-embed,
+#brand-template.nine-template .project-media .sqs-block-video {
+  max-width: 100% !important;
+}
+#brand-template.nine-template .project-media .sqs-block-embed iframe,
+#brand-template.nine-template .project-media .sqs-block-video iframe {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;   /* modern CSS, no wrapper hack needed */
+  border: 0;
+}
+
+/* 5) Header bar adjusts on small screens */
+@media (max-width: 768px) {
+  body #project-header {
+    height: 56px !important;
+    padding: 0 !important;
+  }
+  body #project-header .header-inner {
+    padding: 14px 18px !important;
+  }
+}
+
+/* 6) Tighten vertical rhythm inside Section Header + Summary on mobile */
+@media (max-width: 600px) {
+  #brand-template.nine-template .section-header { margin-bottom: 14px !important; }
+  #brand-template.nine-template .project-summary { margin-top: 14px !important; }
+  #brand-template.nine-template .project-summary .summary-seperator {
+    width: 48px !important;
+    height: 2px !important;
+  }
+}
+
+/* 7) Ensure long words/URLs don’t overflow on tiny screens */
+#brand-template.nine-template .project-content,
+#brand-template.nine-template .project-content p,
+#brand-template.nine-template .project-content h1,
+#brand-template.nine-template .project-content h2,
+#brand-template.nine-template .project-content h3,
+#brand-template.nine-template .project-content h4,
+#brand-template.nine-template .project-content h5,
+#brand-template.nine-template .project-content h6 {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 8) Keep link underlines visible on all sizes (uses your existing color rules) */
+#brand-template.nine-template .project-content a {
+  text-underline-offset: .12em;
+  text-decoration-thickness: .08em;
+}
+
+/* 9) Make the hero/header block more compact on phones (optional) */
+@media (max-width: 480px) {
+  #brand-template.nine-template .project-logos { gap: 10px !important; }
+  #brand-template.nine-template .project-title { margin-top: 10px !important; }
+}
