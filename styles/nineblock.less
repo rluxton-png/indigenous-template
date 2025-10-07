@@ -27,9 +27,9 @@
   --fg:      #ffffff;
 
   /* UPDATED: Gentle, more elegant headline scale */
-  --nb-h1-size:  clamp(32px, 4.8vw, 52px);   // was up to 72px
-  --nb-h15-size: clamp(26px, 3.8vw, 40px);   // was up to 56px
-  --nb-h2-size:  clamp(20px, 2.8vw, 30px);   // was up to 40px
+  --nb-h1-size:  clamp(32px, 4.8vw, 52px);
+  --nb-h15-size: clamp(26px, 3.8vw, 40px);
+  --nb-h2-size:  clamp(20px, 2.8vw, 30px);
 
   --font-sans: 'BLKFort', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
@@ -46,8 +46,8 @@
 .nine-template h5,
 .nine-template h6 {
   font-family: 'BLKFort', sans-serif !important;
-  font-weight: 700 !important; /* UPDATED: 700 for elegance (was 700/800 mix) */
-  letter-spacing: -0.005em !important; /* UPDATED: slightly looser than -0.01em */
+  font-weight: 700 !important;
+  letter-spacing: -0.005em !important;
 }
 .nine-template p,
 .nine-template li,
@@ -55,37 +55,31 @@
 .nine-template small {
   font-family: 'BLKFort', sans-serif !important;
   font-weight: 400 !important;
-  line-height: 1.55; /* UPDATED: improve readability */
-  font-size: clamp(16px, 1.4vw, 18px); /* UPDATED */
+  line-height: 1.55;
+  font-size: clamp(16px, 1.4vw, 18px);
 }
 
 /* Seed invisibility */
 .nine-template .blk__seed { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 /* ===========================
-   Layout containment + header offset
+   Layout containment
    =========================== */
-/* If your header is not absolute/fixed, you can delete this block later. */
-#siteWrapper {
-  padding-top: 140px; /* 120px header + breathing room */
-}
-@media (max-width: 768px) {
-  #siteWrapper { padding-top: 72px; } /* 60px header + breathing room */
-}
+/* Header is not fixed/absolute → no spacer needed */
+#siteWrapper { padding-top: 0 !important; }
+@media (max-width: 768px) { #siteWrapper { padding-top: 0 !important; } }
 
-/* UPDATED: consistent inner width + padding to avoid clipping on small screens */
+/* Consistent inner width + padding */
 .nine-template .internal-wrapper {
   max-width: 1280px;
   margin: 0 auto;
   padding: clamp(16px, 3vw, 40px);
-  overflow-wrap: anywhere; /* prevent long URLs from overflowing */
+  overflow-wrap: anywhere;
 }
 
 /* ===========================
    Headings
    =========================== */
-
-/* H1 (page title / hero) */
 .nine-template .project-title h1,
 .nine-template .section-header h1 {
   font-size: var(--nb-h1-size);
@@ -94,17 +88,15 @@
   margin: 0 0 0.5em;
 }
 
-/* =================================
-   Heading 1.5 (between H1 & H2)
-   ================================= */
+/* Heading 1.5 */
 .nine-template .nb-h1-5,
 .nine-template h1.nb-h1-5,
 .nine-template h2.nb-h1-5,
 .nine-template h3.nb-h1-5 {
   font-size: var(--nb-h15-size);
-  line-height: 1.08; /* UPDATED: a bit more air */
+  line-height: 1.08;
   letter-spacing: -0.01em;
-  font-weight: 700; /* UPDATED: was 800 */
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 0.5em;
   color: inherit;
@@ -112,10 +104,10 @@
 .nine-template .nb-h1-5.is-normalcase { text-transform: none; letter-spacing: 0; }
 
 @media (max-width: 480px) {
-  .nine-template .nb-h1-5 { font-size: clamp(22px, 6.4vw, 30px); } /* UPDATED smaller */
+  .nine-template .nb-h1-5 { font-size: clamp(22px, 6.4vw, 30px); }
 }
 
-/* === AUTO APPLY FOR SECTION HEADERS (strict) === */
+/* Auto-apply H1.5 to common H2s */
 body .nine-template #content .section-header h2,
 body .nine-template .project-content .section-header h2,
 body .nine-template .section-header .sqs-block-heading h2,
@@ -131,15 +123,13 @@ body .nine-template .section-header .sqs-block-content h2 {
   color: inherit !important;
 }
 
-/* Normalize italics inside headers */
 .nine-template .section-header h2 em,
 .nine-template .section-header h2 i { font-style: inherit !important; }
 
-/* Safety: ensure H1 is never italicized */
 body .nine-template .section-header h1,
 body .nine-template .section-header .sqs-block-heading h1 { font-style: normal !important; }
 
-/* === AUTO APPLY (broad) — first H2 in common section areas === */
+/* First-child H2s */
 body .nine-template #content .project-content > .internal-wrapper > h2:first-child,
 body .nine-template #content .project-content .sqs-block-heading h2:first-child,
 body .nine-template #content .project-content .sqs-block-html h2:first-child,
@@ -154,7 +144,6 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   color: inherit !important;
 }
 
-/* Mobile fine-tune for auto-applied H1.5 */
 @media (max-width: 480px) {
   body .nine-template #content .section-header h2,
   body .nine-template .project-content .section-header h2,
@@ -169,7 +158,7 @@ body .nine-template #content .project-content .sqs-block-content h2:first-child 
   }
 }
 
-/* --- Keep enforcement for later sections (7+) — covers through 13 automatically --- */
+/* Late sections enforcement */
 body #brand-template.nine-template #content .project-content .section-header h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-heading h2,
 body #brand-template.nine-template #content .project-content .section-header .sqs-block-html h2,
@@ -187,17 +176,13 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(n+7) 
   color: inherit !important;
 }
 
-/* De-italicize every H2 inside Nine Block */
 body #brand-template.nine-template h2,
 body #brand-template.nine-template h2 * { font-style: normal !important; }
 
 /* ===========================
    Body text + summary
    =========================== */
-#brand-template.nine-template .project-summary {
-  color: inherit !important;
-  max-width: 78ch; /* UPDATED: nicer measure */
-}
+#brand-template.nine-template .project-summary { color: inherit !important; max-width: 78ch; }
 #brand-template.nine-template .project-summary p {
   font-size: clamp(16px, 1.4vw, 18px);
   line-height: 1.6;
@@ -205,7 +190,7 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
 }
 
 /* ===========================
-   MEDIA: responsive images & embeds
+   MEDIA
    =========================== */
 .nine-template .project-media,
 .nine-template .responsive-media { width: 100%; }
@@ -219,7 +204,6 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
   height: auto;
 }
 
-/* Prefer CSS aspect-ratio where available (JS wrapper in template is a fallback) */
 .nine-template .project-media iframe,
 .nine-template .responsive-media iframe {
   width: 100%;
@@ -229,7 +213,6 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
   display: block;
 }
 
-/* If JS wrapper adds .embed-fluid, ensure it behaves */
 .nine-template .embed-fluid { position: relative; width: 100%; }
 .nine-template .embed-fluid::before { content: ""; display: block; padding-top: 56.25%; }
 .nine-template .embed-fluid > iframe,
@@ -242,18 +225,9 @@ body #brand-template.nine-template h2 * { font-style: normal !important; }
 @nb-bg-2: #E6B904;  @nb-fg-2: #000000;
 @nb-bg-3: #000000;  @nb-fg-3: #FFFFFF;
 
-body #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) {
-  background: @nb-bg-1 !important;
-  color: @nb-fg-1 !important;
-}
-body #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) {
-  background: @nb-bg-2 !important;
-  color: @nb-fg-2 !important;
-}
-body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
-  background: @nb-bg-3 !important;
-  color: @nb-fg-3 !important;
-}
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) { background:@nb-bg-1 !important; color:@nb-fg-1 !important; }
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n+2) { background:@nb-bg-2 !important; color:@nb-fg-2 !important; }
+body #brand-template.nine-template #content > .project-content:nth-of-type(3n)   { background:@nb-bg-3 !important; color:@nb-fg-3 !important; }
 
 /* Ensure text inherits section color */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) h1,
@@ -294,12 +268,8 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 
 /* === Adaptive link underlines === */
 #brand-template.nine-template #content > .project-content:nth-of-type(3n+1) a,
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a {
-  text-decoration-color: #000000 !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) a {
-  text-decoration-color: #FFFFFF !important;
-}
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) a { text-decoration-color: #000 !important; }
+#brand-template.nine-template #content > .project-content:nth-of-type(3n) a   { text-decoration-color: #fff !important; }
 
 /* === Section separator line === */
 #brand-template.nine-template #content > .project-content .summary-seperator {
@@ -308,12 +278,12 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   margin: 20px 0;
 }
 
-/* ===== FORCE section-header colors ===== */
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header { color: #000000 !important; }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header { color: #000000 !important; }
-#brand-template.nine-template #content > .project-content:nth-of-type(3n) .section-header   { color: #FFFFFF !important; }
+/* Section-header colors */
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+1) .section-header { color:#000 !important; }
+#brand-template.nine-template #content > .project-content:nth-of-type(3n+2) .section-header { color:#000 !important; }
+#brand-template.nine-template #content > .project-content:nth-of-type(3n)   .section-header { color:#fff !important; }
 
-/* ===== End-of-section separator ===== */
+/* Summary separators */
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator,
 #brand-template.nine-template #content > .project-content .project-summary .summary-separator,
 #brand-template.nine-template #content > .project-content .project-summary hr {
@@ -326,48 +296,29 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   margin: 20px 0 !important;
   padding: 0 !important;
 }
-
-/* Kill pseudo-element lines */
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator::before,
 #brand-template.nine-template #content > .project-content .project-summary .summary-seperator::after,
 #brand-template.nine-template #content > .project-content .project-summary .summary-separator::before,
 #brand-template.nine-template #content > .project-content .project-summary .summary-separator::after,
 #brand-template.nine-template #content > .project-content .project-summary hr::before,
 #brand-template.nine-template #content > .project-content .project-summary hr::after {
-  content: "" !important;
-  display: none !important;
+  content: "" !important; display: none !important;
 }
 
-/* ===== Pin the first three sections (cycle continues for 4–13) ===== */
-#brand-template.nine-template #content > .project-content:nth-of-type(1) {
-  background: #F2EFE8 !important;
-  color: #000000 !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(2) {
-  background: #E6B904 !important;
-  color: #000000 !important;
-}
-#brand-template.nine-template #content > .project-content:nth-of-type(3) {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-}
+/* Pin first three sections to the cycle */
+#brand-template.nine-template #content > .project-content:nth-of-type(1) { background:#F2EFE8 !important; color:#000 !important; }
+#brand-template.nine-template #content > .project-content:nth-of-type(2) { background:#E6B904 !important; color:#000 !important; }
+#brand-template.nine-template #content > .project-content:nth-of-type(3) { background:#000 !important; color:#fff !important; }
 
 /* ===========================
    RESPONSIVE PATCH (drop-in)
    =========================== */
-
-/* 1) Fluid container: use a fluid width that caps at 1200px */
 #brand-template.nine-template .internal-wrapper {
   width: min(92vw, 1200px) !important;
   margin: 0 auto !important;
 }
+#brand-template.nine-template .project-content { padding: clamp(32px, 7vw, 80px) 0 !important; }
 
-/* 2) Fluid section padding (tighten on smaller screens) */
-#brand-template.nine-template .project-content {
-  padding: clamp(32px, 7vw, 80px) 0 !important;
-}
-
-/* 3) Fluid typography system (keeps your existing tokens, but ensures scale) */
 :root {
   --nb-body-size: clamp(15px, 1.7vw, 18px);
   --nb-small-size: clamp(12px, 1.2vw, 14px);
@@ -381,50 +332,29 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 }
 #brand-template.nine-template .project-content small { font-size: var(--nb-small-size) !important; }
 
-/* Headings: keep your H1 + H1.5 intent, but fluid */
-#brand-template.nine-template .project-content h1 { 
-  font-size: clamp(34px, 6.25vw, 72px) !important; 
-  line-height: 1.05 !important;
-}
-#brand-template.nine-template .project-content h2 { 
-  font-size: clamp(28px, 4.8vw, 56px) !important; 
-  line-height: 1.05 !important;
-}
+#brand-template.nine-template .project-content h1 { font-size: clamp(34px, 6.25vw, 72px) !important; line-height: 1.05 !important; }
+#brand-template.nine-template .project-content h2 { font-size: clamp(28px, 4.8vw, 56px) !important; line-height: 1.05 !important; }
 #brand-template.nine-template .project-content h3 { font-size: clamp(22px, 3.6vw, 32px) !important; }
 #brand-template.nine-template .project-content h4 { font-size: clamp(18px, 2.8vw, 24px) !important; }
 #brand-template.nine-template .project-content h5 { font-size: clamp(16px, 2.2vw, 20px) !important; }
 #brand-template.nine-template .project-content h6 { font-size: clamp(14px, 1.9vw, 18px) !important; }
 
-/* 4) Responsive media: images and videos scale to container */
 #brand-template.nine-template .project-media img,
-#brand-template.nine-template .project-media video {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-}
+#brand-template.nine-template .project-media video { max-width: 100% !important; height: auto !important; display: block !important; }
 
-/* Squarespace video embeds (incl. Vimeo/YouTube) */
 #brand-template.nine-template .project-media .sqs-block-embed,
 #brand-template.nine-template .project-media .sqs-block-video { max-width: 100% !important; }
 #brand-template.nine-template .project-media .sqs-block-embed iframe,
 #brand-template.nine-template .project-media .sqs-block-video iframe {
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9;
-  border: 0;
+  width: 100% !important; height: auto !important; aspect-ratio: 16 / 9; border: 0;
 }
 
-/* 6) Tighten vertical rhythm inside Section Header + Summary on mobile */
 @media (max-width: 600px) {
   #brand-template.nine-template .section-header { margin-bottom: 14px !important; }
   #brand-template.nine-template .project-summary { margin-top: 14px !important; }
-  #brand-template.nine-template .project-summary .summary-seperator {
-    width: 48px !important;
-    height: 2px !important;
-  }
+  #brand-template.nine-template .project-summary .summary-seperator { width: 48px !important; height: 2px !important; }
 }
 
-/* 7) Ensure long words/URLs don’t overflow on tiny screens */
 #brand-template.nine-template .project-content,
 #brand-template.nine-template .project-content p,
 #brand-template.nine-template .project-content h1,
@@ -433,17 +363,11 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 #brand-template.nine-template .project-content h4,
 #brand-template.nine-template .project-content h5,
 #brand-template.nine-template .project-content h6 {
-  word-break: break-word;
-  overflow-wrap: anywhere;
+  word-break: break-word; overflow-wrap: anywhere;
 }
 
-/* 8) Keep link underlines visible on all sizes (uses your existing color rules) */
-#brand-template.nine-template .project-content a {
-  text-underline-offset: .12em;
-  text-decoration-thickness: .08em;
-}
+#brand-template.nine-template .project-content a { text-underline-offset: .12em; text-decoration-thickness: .08em; }
 
-/* 9) Make the hero/header block more compact on phones (optional) */
 @media (max-width: 480px) {
   #brand-template.nine-template .project-logos { gap: 10px !important; }
   #brand-template.nine-template .project-title { margin-top: 10px !important; }
@@ -452,7 +376,7 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
 /* =========================================
    CORRECT HEADER RESPONSIVENESS (project-header / project-logos)
    ========================================= */
-/* Custom project header: layout + colors */
+/* Layout + colors; NOT sticky */
 #brand-template.nine-template .project-header {
   display: flex !important;
   align-items: center !important;
@@ -463,58 +387,56 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   height: auto !important;
   min-height: 56px;
   box-sizing: border-box;
-
-  /* ADD THESE */
-  background: #000 !important;   /* give the bar its black background */
-  color: #fff !important;        /* default text color inside header */
+  background: #000 !important;
+  color: #fff !important;
   width: 100% !important;
-  position: sticky;               /* or 'relative' if you don't want it to stick */
-  top: 0;
-  z-index: 1000;
+
+  /* explicitly NOT sticky/fixed */
+  position: relative !important;
+  top: auto !important;
+  z-index: auto !important;
 }
 
-/* allow content to shrink instead of wrapping awkwardly */
-#brand-template.nine-template .project-header > * { min-width: 0; }
+/* children can shrink instead of forcing wraps */
+#brand-template.nine-template .project-header > * { min-width: 0 !important; }
 
-/* title / logo text */
+/* Bigger floor for title/logo text so it doesn’t look tiny */
 #brand-template.nine-template .project-header .project-logos h1,
 #brand-template.nine-template .project-header .project-logos h2,
-#brand-template.nine-template .project-header .project-logos a {
+#brand-template.nine-template .project-header .project-logos a,
+#brand-template.nine-template .project-header .project-logos span {
   font-family: 'BLKFort', system-ui, sans-serif !important;
   font-weight: 700 !important;
-  font-size: clamp(20px, 5vw, 42px) !important;
+  font-size: clamp(28px, 6vw, 56px) !important;
   line-height: 1.1 !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: inherit;                 /* inherits the white from .project-header */
+  color: #fff !important;
 }
 
-/* ensure links/icons render white inside the header */
+/* Nav inside header (if present) */
+#brand-template.nine-template .project-header nav a,
+#brand-template.nine-template .project-header nav label {
+  font-size: clamp(14px, 2.8vw, 20px) !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* Ensure any icons are white */
 #brand-template.nine-template .project-header a,
 #brand-template.nine-template .project-header label,
-#brand-template.nine-template .project-header svg {
-  color: #fff !important;
-  fill: #fff !important;
-}
+#brand-template.nine-template .project-header svg { color:#fff !important; fill:#fff !important; }
 
-/* optional: scale logo image too */
+/* Logo image scaling (if image logo present) */
 #brand-template.nine-template .project-header .project-logos img {
   max-height: clamp(28px, 6vw, 44px);
   width: auto;
   display: block;
 }
 
-
-/* nav inside header (if present) */
-#brand-template.nine-template .project-header nav a {
-  font-size: clamp(14px, 2.5vw, 18px) !important;
-  white-space: nowrap;
-  font-weight: 700 !important;
-  color: inherit;
-}
-
-/* mobile tightening */
+/* Mobile tightening */
 @media (max-width: 600px) {
   #brand-template.nine-template .project-header {
     flex-direction: column !important;
@@ -524,7 +446,8 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n) {
   }
   #brand-template.nine-template .project-header .project-logos h1,
   #brand-template.nine-template .project-header .project-logos h2,
-  #brand-template.nine-template .project-header .project-logos a {
-    font-size: clamp(18px, 6vw, 26px) !important;
+  #brand-template.nine-template .project-header .project-logos a,
+  #brand-template.nine-template .project-header .project-logos span {
+    font-size: clamp(22px, 7vw, 32px) !important;
   }
 }
