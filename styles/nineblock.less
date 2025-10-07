@@ -403,3 +403,14 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 #brand-template.nine-template #content > .project-content:nth-of-type(3n){
   color: #fff !important; /* black sections → white text */
 }
+/* ——— Optional hardening ——— */
+/* Make Heading block titles inherit whatever the section dictates */
+.nine-template .sqs-block-heading .sqs-block-title {
+  font: inherit;
+  color: inherit;
+}
+
+/* Keep links inside section headers using the section’s color (already true for most elements) */
+#brand-template.nine-template #content > .project-content .section-header a {
+  color: inherit;
+}
