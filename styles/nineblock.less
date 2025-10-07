@@ -491,3 +491,44 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 
 /* 5) Safety: let header children shrink instead of wrapping */
 #brand-template.nine-template .project-header > * { min-width: 0 !important; }
+
+/* ——— HEADER SIZE TUNING (only affects the site header) ——— */
+
+/* keep header non-sticky */
+#brand-template.nine-template .project-header {
+  position: relative !important;
+  top: auto !important;
+  z-index: auto !important;
+}
+
+/* make the logo/title clearly bigger than body copy */
+#brand-template.nine-template .project-header .project-logos {
+  font-size: clamp(26px, 5.5vw, 48px) !important;  /* ↑ bigger than 18px body */
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* ensure whatever element holds the text inherits that size */
+#brand-template.nine-template .project-header .project-logos :where(h1,h2,h3,a,span,strong,em,div,.site-title) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* nav links: readable, smaller than the title, bigger than paragraphs */
+#brand-template.nine-template .project-header nav a,
+#brand-template.nine-template .project-header nav label {
+  font-size: clamp(15px, 2.4vw, 20px) !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* safety: header children can shrink instead of forcing wraps */
+#brand-template.nine-template .project-header > * { min-width: 0 !important; }
+
