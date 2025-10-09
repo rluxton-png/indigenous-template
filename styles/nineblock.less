@@ -611,3 +611,21 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
   }
 }
 
+/* Mobile: hard-center the project title */
+@media (max-width: 600px) {
+  #brand-template.nine-template .project-header {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  #brand-template.nine-template .project-header .project-title {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  #brand-template.nine-template .project-header .project-title h1 {
+    margin: 0 auto !important;
+    max-width: 90% !important;   /* keeps long lines visually balanced */
+  }
+}
