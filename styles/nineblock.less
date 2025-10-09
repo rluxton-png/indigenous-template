@@ -453,3 +453,32 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     margin: 0 auto;
   }
 }
+/* Force-center the Project Awards text + neutralize SQSP right-align helpers */
+#brand-template.nine-template .project-header .project-awards,
+#brand-template.nine-template .project-header .project-awards :is(h1,h2,h3,h4,h5,h6,div,span,a,.sqs-block-content,.sqs-block-html,.sqs-block-heading) {
+  text-align: center !important;
+}
+
+/* Kill alignment utilities that push it right */
+#brand-template.nine-template .project-header :is(.sqs-align-right, .sqs-block-alignment-right, .align-right) {
+  text-align: center !important;
+  margin-left: auto !important;   /* center, not right */
+  margin-right: auto !important;
+  float: none !important;
+}
+
+/* Nuke any inline text-align:right from blocks in the header */
+#brand-template.nine-template .project-header [style*="text-align:right"] {
+  text-align: center !important;
+}
+
+/* Guard against flex tricks (auto margins) pushing to the edge */
+#brand-template.nine-template .project-header .project-awards {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* If the right column itself was setting right text alignment */
+#brand-template.nine-template .project-header-right {
+  text-align: initial !important;
+}
