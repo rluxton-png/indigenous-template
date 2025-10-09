@@ -414,3 +414,42 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 #brand-template.nine-template #content > .project-content .section-header a {
   color: inherit;
 }
+/* === Center the "Project Awards" headline in the header === */
+#brand-template.nine-template .project-header { 
+  position: relative !important; /* already set, reaffirmed for safety */
+}
+
+/* Hard-center the awards block regardless of left/right widths */
+#brand-template.nine-template .project-header .project-awards {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  max-width: 80% !important;   /* prevents overlap on narrower viewports */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Optional: ensure left/right columns have room so centering doesn't collide */
+#brand-template.nine-template .project-header-right { 
+  flex: 1 1 0 !important; 
+}
+#brand-template.nine-template .project-header .project-logos { 
+  flex: 1 1 0; 
+}
+
+/* Mobile: revert to normal flow and center within the column */
+@media (max-width: 600px) {
+  #brand-template.nine-template .project-header {
+    align-items: center !important;  /* you already switch to column on mobile */
+  }
+  #brand-template.nine-template .project-header .project-awards {
+    position: static !important;
+    transform: none !important;
+    max-width: 100% !important;
+    width: 100%;
+    text-align: center !important;
+    margin: 0 auto;
+  }
+}
