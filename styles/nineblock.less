@@ -571,3 +571,70 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     padding-bottom: 12px !important;
   }
 }
+/* ===== Project Title: center + big + white ===== */
+
+/* Desktop/tablet: keep your left/right layout but hard-center the title */
+#brand-template.nine-template .project-header { position: relative !important; }
+#brand-template.nine-template .project-header .project-title {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  max-width: 80% !important;
+  margin: 0 auto !important;
+  z-index: 1;               /* above background/logo if needed */
+}
+
+/* Bigger, white H1 for the title */
+#brand-template.nine-template .project-header .project-title h1 {
+  font-size: clamp(44px, 10vw, 120px) !important;
+  line-height: 1.02 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 700 !important;
+  text-shadow: none !important; /* just in case */
+}
+
+/* Neutralize any Squarespace right-align utilities/inline styles inside the title */
+#brand-template.nine-template .project-header .project-title,
+#brand-template.nine-template .project-header .project-title :is(
+  h1,h2,h3,h4,h5,h6,p,div,span,a,
+  .sqs-block-content,.sqs-block-html,.sqs-block-heading,
+  .sqs-align-right,.sqs-block-alignment-right,.align-right
+) { 
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+#brand-template.nine-template .project-header .project-title [style*="text-align:right"] {
+  text-align: center !important;
+}
+
+/* Give the side areas flex so the center has room (prevents crowding) */
+#brand-template.nine-template .project-header .project-logos,
+#brand-template.nine-template .project-header-right {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+}
+
+/* Mobile: stack and center naturally (no absolute positioning) */
+@media (max-width: 600px) {
+  #brand-template.nine-template .project-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  #brand-template.nine-template .project-header .project-title {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #brand-template.nine-template .project-header .project-title h1 {
+    font-size: clamp(40px, 12vw, 64px) !important; /* tuned for phones */
+  }
+}
