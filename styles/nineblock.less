@@ -482,3 +482,46 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
 #brand-template.nine-template .project-header-right {
   text-align: initial !important;
 }
+/* === MOBILE FIX: force center for Project Awards on small screens === */
+@media (max-width: 600px) {
+  /* Make the header stack and allow centering */
+  #brand-template.nine-template .project-header {
+    align-items: center !important; /* overrides your flex-start */
+  }
+
+  /* Put awards back into normal flow (if previously absolute) */
+  #brand-template.nine-template .project-header .project-awards {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    float: none !important;
+  }
+
+  /* Neutralize SQSP right-alignment utilities & inline styles */
+  #brand-template.nine-template .project-header .project-awards :is(
+    h1,h2,h3,h4,h5,h6,p,div,span,a,
+    .sqs-block-content,.sqs-block-html,.sqs-block-heading,
+    .sqs-align-right,.sqs-block-alignment-right,.align-right
+  ) {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+  }
+
+  /* Kill inline text-align:right specifically on mobile */
+  #brand-template.nine-template .project-header .project-awards [style*="text-align:right"] {
+    text-align: center !important;
+  }
+
+  /* Safety: center any immediate children elements */
+  #brand-template.nine-template .project-header .project-awards .sqs-block-content > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    display: block;  /* prevents inline elements from respecting previous text-align */
+  }
+}
