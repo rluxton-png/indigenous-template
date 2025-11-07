@@ -258,7 +258,23 @@
             </div>
           </main>
         </div>
-        <!-- End Fourteen-Section Layout -->
+              <!-- NEW: Section 15 -->
+              <div class="project-content"><div class="internal-wrapper">
+                <div class="section-header">
+                  <squarespace:block-field id="Project-SectionHeader-{collection.id}-15" columns="12" />
+                </div>
+                <div class="project-media responsive-media">
+                  <squarespace:block-field id="Project-Media-{collection.id}-15" columns="12" />
+                </div>
+                <div class="project-summary">
+                  <div class="summary-seperator"></div>
+                  <div class="summary-text">
+                    <squarespace:block-field id="Project-Summary-Text-{collection.id}-15" />
+                  </div>
+                </div>
+              </div></div>
+
+        <!-- End Fifteen-Section Layout -->
 
         <footer id="footer" role="contentinfo">
           <div class="footer-inner">
