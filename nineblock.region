@@ -255,9 +255,6 @@
                 </div>
               </div></div>
 
-            </div>
-          </main>
-        </div>
               <!-- NEW: Section 15 -->
               <div class="project-content"><div class="internal-wrapper">
                 <div class="section-header">
@@ -274,6 +271,9 @@
                 </div>
               </div></div>
 
+            </div>
+          </main>
+        </div>
         <!-- End Fifteen-Section Layout -->
 
         <footer id="footer" role="contentinfo">
