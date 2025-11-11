@@ -11,15 +11,15 @@
       overflow:hidden;
     "
   >
-    <!-- gradient overlay for cinematic depth -->
+    <!-- gradient overlay -->
     <div style="
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0) 100%);
+      background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.15) 80%, rgba(0,0,0,0) 100%);
       z-index:0;
     "></div>
 
-    <!-- vertical yellow stripe -->
+    <!-- yellow accent stripe -->
     <span class="hero-stripe" aria-hidden="true" style="z-index:2;"></span>
 
     <div class="hero-inner" style="position:relative; z-index:1; text-align:center;">
@@ -28,26 +28,26 @@
         <span>60</span><span>SECOND</span><span>DOCS</span>
       </a>
 
-      <!-- Hero copy -->
-      <h2 class="tagline" style="margin-top:1rem;">
+      <!-- Hero Copy -->
+      <h2 class="tagline" style="margin-top:1rem; color:#f0d719;">
         <span style="display:block;">THE LEADING DIGITAL DOCUMENTARY BRAND</span>
         <span style="display:block;">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</span>
       </h2>
 
-      <h1 class="ssd-headline" style="margin:1.2rem 0 .5rem;">
+      <h1 class="ssd-headline" style="margin:1.2rem 0 .5rem; color:#f0d719;">
         <span class="line">FEATURING THE WORLD’S</span>
         <span class="line">MOST INTERESTING</span>
         <span class="line">CHARACTERS</span>
       </h1>
 
-      <p class="tagline" style="font-weight:700; letter-spacing:.06em; margin:0 0 1.4rem;">
+      <p class="tagline" style="font-weight:700; letter-spacing:.06em; margin:0 0 1.4rem; color:#f0d719;">
         A MASSIVE COMMUNITY DRIVEN BY ORGANIC ENGAGEMENT
       </p>
 
       <!-- Awards -->
       <div class="awards-strip" role="group" aria-label="Awards" style="margin-bottom:1rem;">
-        <span class="award-badge">🏆 Shorty Awards Winner</span>
-        <span class="award-badge">🏆 Webby Award Winner</span>
+        <span class="award-badge" style="color:#f0d719;">🏆 Shorty Awards Winner</span>
+        <span class="award-badge" style="color:#f0d719;">🏆 Webby Award Winner</span>
       </div>
 
       <!-- Social + CTAs -->
@@ -77,20 +77,23 @@
       <p class="section-sub">A sampler of audience favorites</p>
     </div>
 
-    <!-- abbreviated grid for brevity -->
     <ul class="video-grid" role="list">
-      <li class="video-card">
-        <div class="video-embed">
-          <iframe title="Grandma Gamer — 60 Second Docs" src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0" allowfullscreen></iframe>
-        </div>
-        <h3 class="video-title">Grandma Gamer</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank">Open on Vimeo</a>
-      </li>
-      <!-- more cards… -->
+      <!-- Grandma Gamer -->
+      <li class="video-card"><div class="video-embed"><iframe title="Grandma Gamer — 60 Second Docs" src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Grandma Gamer</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">Open on Vimeo</a></li>
+      <!-- Tiny Foods -->
+      <li class="video-card"><div class="video-embed"><iframe title="Tiny Foods — 60 Second Docs" src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Tiny Foods</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">Open on Vimeo</a></li>
+      <!-- Brazil's Ballerinas -->
+      <li class="video-card"><div class="video-embed"><iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs" src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Brazil's Ballerinas (feat. Malala)</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">Open on Vimeo</a></li>
+      <!-- Weed Nuns -->
+      <li class="video-card"><div class="video-embed"><iframe title="Weed Nuns — 60 Second Docs" src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Weed Nuns</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">Open on Vimeo</a></li>
+      <!-- Air Guitar Champ -->
+      <li class="video-card"><div class="video-embed"><iframe title="Air Guitar Champ — 60 Second Docs" src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Air Guitar Champ</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">Open on Vimeo</a></li>
+      <!-- Recycling Kid -->
+      <li class="video-card"><div class="video-embed"><iframe title="Recycling Kid — 60 Second Docs" src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Recycling Kid</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">Open on Vimeo</a></li>
     </ul>
   </section>
 
-  <!-- BY THE NUMBERS -->
+  <!-- METRICS -->
   <section class="section" aria-labelledby="numbers-heading">
     <div class="container">
       <div class="section-head">
@@ -98,16 +101,22 @@
         <p class="section-sub">Brand-safe storytelling at scale</p>
       </div>
 
-      <div class="ssd-metrics">
+      <div class="ssd-metrics" role="list">
         <div class="ssd-metric"><div class="num" data-count="12000000000">12B+</div><div class="label">Total Video Views</div></div>
         <div class="ssd-metric"><div class="num" data-count="9900000">9.9MM</div><div class="label">Avg Views / Episode</div></div>
         <div class="ssd-metric"><div class="num" data-count="13000000">13MM+</div><div class="label">Total Followers</div></div>
+      </div>
+
+      <div class="ssd-metrics mt" role="list">
+        <div class="ssd-metric"><div class="num">18–34</div><div class="label">Majority of Audience</div></div>
+        <div class="ssd-metric"><div class="num">99%</div><div class="label">Organic Viewership</div></div>
+        <div class="ssd-metric"><div class="num">1000+</div><div class="label">Episodes</div></div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="container footer">
+  <footer class="container footer" role="contentinfo">
     <div class="ssd-cta">
       <span class="copyright">© INDIGENOUS MEDIA</span>
       <a href="/privacy">Privacy &amp; Terms</a>
@@ -117,7 +126,7 @@
     </div>
   </footer>
 
-  <!-- Scoped style: Avenir + social icon fix -->
+  <!-- Scoped style -->
   <style>
     .theme-60sd {
       font-family:"Avenir Next","Avenir",-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -132,14 +141,13 @@
 
     /* Social icon fix */
     .theme-60sd .social .so {
-      display:inline-grid;
-      place-items:center;
+      display:inline-grid !important;
+      place-items:center !important;
       width:34px !important;
       height:34px !important;
-      min-width:34px !important;
-      border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid #2a2a2a;
+      border-radius:999px !important;
+      background:rgba(255,255,255,0.06) !important;
+      border:1px solid #2a2a2a !important;
       transition:all .15s ease;
     }
     .theme-60sd .social .so svg {
