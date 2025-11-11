@@ -1,34 +1,33 @@
 <div class="theme-60sd" data-theme="dark">
-  <!-- HERO -->
+  <!-- FULL-BLEED HERO WITH OVERLAYED GRIDS -->
   <section
     class="hero ssd-hero"
     role="banner"
     aria-label="60 Second Docs Hero"
     style="
       position:relative;
-      min-height:100vh;
       background:url('/assets/60SD_Cover_11x11.jpg') center center / 100% 100% no-repeat;
       overflow:hidden;
     "
   >
-    <!-- gradient overlay -->
+    <!-- gradient overlay for legibility -->
     <div style="
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.15) 80%, rgba(0,0,0,0) 100%);
+      background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%);
       z-index:0;
     "></div>
 
-    <!-- yellow accent stripe -->
+    <!-- vertical yellow stripe -->
     <span class="hero-stripe" aria-hidden="true" style="z-index:2;"></span>
 
-    <div class="hero-inner" style="position:relative; z-index:1; text-align:center;">
+    <div class="hero-inner" style="position:relative; z-index:1; text-align:center; padding:72px 0 48px;">
       <!-- Logo -->
       <a href="/" aria-label="60 Second Docs — Home" class="ssd-logo">
         <span>60</span><span>SECOND</span><span>DOCS</span>
       </a>
 
-      <!-- Hero Copy -->
+      <!-- Brand copy (yellow for pop) -->
       <h2 class="tagline" style="margin-top:1rem; color:#f0d719;">
         <span style="display:block;">THE LEADING DIGITAL DOCUMENTARY BRAND</span>
         <span style="display:block;">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</span>
@@ -51,7 +50,7 @@
       </div>
 
       <!-- Social + CTAs -->
-      <div class="hero-ctas" role="group" aria-label="Follow 60 Second Docs">
+      <div class="hero-ctas" role="group" aria-label="Follow 60 Second Docs" style="justify-content:center;">
         <nav class="social" aria-label="Follow 60 Second Docs">
           <a class="so" href="https://instagram.com/60secdocs" aria-label="Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
@@ -67,56 +66,109 @@
         <a href="https://vimeo.com/60secdocs" class="btn btn-primary">Watch on Vimeo</a>
         <a href="/contact" class="btn is-ghost">Partner with us</a>
       </div>
-    </div>
-  </section>
 
-  <!-- FEATURED VIDEOS -->
-  <section class="container section" aria-labelledby="featured-videos-heading">
-    <div class="section-head">
-      <h2 id="featured-videos-heading" class="section-title">Featured Videos</h2>
-      <p class="section-sub">A sampler of audience favorites</p>
-    </div>
+      <!-- OVERLAYED CONTENT GRIDS (videos + metrics) -->
+      <div class="container" style="margin-top:32px;">
+        <!-- Videos grid over the hero -->
+        <ul class="video-grid" role="list" aria-label="Featured Videos" style="backdrop-filter:saturate(120%) blur(0px);">
+          <!-- 1 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Grandma Gamer — 60 Second Docs"
+                      src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Grandma Gamer</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+          <!-- 2 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Tiny Foods — 60 Second Docs"
+                      src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Tiny Foods</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+          <!-- 3 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
+                      src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Brazil's Ballerinas (feat. Malala)</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+          <!-- 4 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Weed Nuns — 60 Second Docs"
+                      src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Weed Nuns</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+          <!-- 5 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Air Guitar Champ — 60 Second Docs"
+                      src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Air Guitar Champ</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+          <!-- 6 -->
+          <li class="video-card" role="listitem">
+            <div class="video-embed">
+              <iframe title="Recycling Kid — 60 Second Docs"
+                      src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0"
+                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <h3 class="video-title">Recycling Kid</h3>
+            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">Open on Vimeo</a>
+          </li>
+        </ul>
 
-    <ul class="video-grid" role="list">
-      <!-- Grandma Gamer -->
-      <li class="video-card"><div class="video-embed"><iframe title="Grandma Gamer — 60 Second Docs" src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Grandma Gamer</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">Open on Vimeo</a></li>
-      <!-- Tiny Foods -->
-      <li class="video-card"><div class="video-embed"><iframe title="Tiny Foods — 60 Second Docs" src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Tiny Foods</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">Open on Vimeo</a></li>
-      <!-- Brazil's Ballerinas -->
-      <li class="video-card"><div class="video-embed"><iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs" src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Brazil's Ballerinas (feat. Malala)</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">Open on Vimeo</a></li>
-      <!-- Weed Nuns -->
-      <li class="video-card"><div class="video-embed"><iframe title="Weed Nuns — 60 Second Docs" src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Weed Nuns</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">Open on Vimeo</a></li>
-      <!-- Air Guitar Champ -->
-      <li class="video-card"><div class="video-embed"><iframe title="Air Guitar Champ — 60 Second Docs" src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Air Guitar Champ</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">Open on Vimeo</a></li>
-      <!-- Recycling Kid -->
-      <li class="video-card"><div class="video-embed"><iframe title="Recycling Kid — 60 Second Docs" src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0" allowfullscreen loading="lazy"></iframe></div><h3 class="video-title">Recycling Kid</h3><a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">Open on Vimeo</a></li>
-    </ul>
-  </section>
+        <!-- Numbers grid over the hero -->
+        <div class="ssd-metrics mt" role="list" aria-label="By The Numbers" style="margin-top:22px;">
+          <div class="ssd-metric" role="listitem">
+            <div class="num" data-count="12000000000">12B+</div>
+            <div class="label">Total Video Views</div>
+          </div>
+          <div class="ssd-metric" role="listitem">
+            <div class="num" data-count="9900000">9.9MM</div>
+            <div class="label">Avg Views / Episode</div>
+          </div>
+          <div class="ssd-metric" role="listitem">
+            <div class="num" data-count="13000000">13MM+</div>
+            <div class="label">Total Followers</div>
+          </div>
+        </div>
 
-  <!-- METRICS -->
-  <section class="section" aria-labelledby="numbers-heading">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="numbers-heading" class="section-title">By The Numbers</h2>
-        <p class="section-sub">Brand-safe storytelling at scale</p>
-      </div>
-
-      <div class="ssd-metrics" role="list">
-        <div class="ssd-metric"><div class="num" data-count="12000000000">12B+</div><div class="label">Total Video Views</div></div>
-        <div class="ssd-metric"><div class="num" data-count="9900000">9.9MM</div><div class="label">Avg Views / Episode</div></div>
-        <div class="ssd-metric"><div class="num" data-count="13000000">13MM+</div><div class="label">Total Followers</div></div>
-      </div>
-
-      <div class="ssd-metrics mt" role="list">
-        <div class="ssd-metric"><div class="num">18–34</div><div class="label">Majority of Audience</div></div>
-        <div class="ssd-metric"><div class="num">99%</div><div class="label">Organic Viewership</div></div>
-        <div class="ssd-metric"><div class="num">1000+</div><div class="label">Episodes</div></div>
+        <div class="ssd-metrics mt" role="list" aria-hidden="false" style="margin-top:18px;">
+          <div class="ssd-metric" role="listitem">
+            <div class="num">18–34</div>
+            <div class="label">Majority of Audience</div>
+          </div>
+          <div class="ssd-metric" role="listitem">
+            <div class="num">99%</div>
+            <div class="label">Organic Viewership</div>
+          </div>
+          <div class="ssd-metric" role="listitem">
+            <div class="num">1000+</div>
+            <div class="label">Episodes</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="container footer" role="contentinfo">
+  <footer class="container footer" role="contentinfo" style="border-top:1px solid #2a2a2a;">
     <div class="ssd-cta">
       <span class="copyright">© INDIGENOUS MEDIA</span>
       <a href="/privacy">Privacy &amp; Terms</a>
@@ -126,7 +178,7 @@
     </div>
   </footer>
 
-  <!-- Scoped style -->
+  <!-- Scoped style: Avenir + social icon fix -->
   <style>
     .theme-60sd {
       font-family:"Avenir Next","Avenir",-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -145,15 +197,20 @@
       place-items:center !important;
       width:34px !important;
       height:34px !important;
+      min-width:34px !important;
       border-radius:999px !important;
       background:rgba(255,255,255,0.06) !important;
       border:1px solid #2a2a2a !important;
+      line-height:34px !important;
+      padding:0 !important;
       transition:all .15s ease;
     }
     .theme-60sd .social .so svg {
       width:16px !important;
       height:16px !important;
       fill:currentColor;
+      display:block;
+      flex:0 0 auto;
     }
     .theme-60sd .social .so:hover {
       background:rgba(255,255,255,0.1);
@@ -162,7 +219,7 @@
   </style>
 </div>
 
-<!-- Count-up -->
+<!-- Count-up animation -->
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   const els=Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
