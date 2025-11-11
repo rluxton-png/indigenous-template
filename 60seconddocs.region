@@ -1,279 +1,328 @@
 <div class="theme-60sd" data-theme="dark">
-  <!-- FULL-BLEED HERO WITH ZOOMED BACKGROUND + OVERLAYED GRIDS -->
-  <section
-    class="hero ssd-hero"
-    role="banner"
-    aria-label="60 Second Docs Hero"
-    style="
-      position:relative;
-      overflow:hidden;
-      padding:72px 0 48px;
-    "
-  >
-    <!-- vertical yellow stripe (optional accent) -->
-    <span class="hero-stripe" aria-hidden="true" style="z-index:3;"></span>
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="ssd-hero" role="banner" aria-label="60 Second Docs Hero">
+    <div class="container hero-container">
+      <!-- Headline -->
+      <h1 class="hero-headline">
+        THE LEADING DIGITAL<br />
+        DOCUMENTARY BRAND
+      </h1>
 
-    <div class="hero-inner" style="position:relative; z-index:4; text-align:center;">
-      <!-- HERO COPY (all lines as large as By The Numbers numerals) -->
-      <div class="hero-headlines" aria-label="Brand statements">
-        <h2 class="tagline bigline" style="margin-top:1rem;">
-          <span class="line">THE LEADING DIGITAL DOCUMENTARY BRAND</span>
-          <span class="line">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</span>
-        </h2>
+      <!-- Framed standalone image -->
+      <figure class="hero-frame">
+        <img src="/assets/60SD_Cover_11x11.jpg" alt="60 Second Docs hero" />
+      </figure>
 
-        <h1 class="ssd-headline bigline" style="margin:1.2rem 0 .4rem;">
-          <span class="line">FEATURING THE WORLD’S MOST INTERESTING CHARACTERS</span>
-          <span class="line">A MASSIVE COMMUNITY DRIVEN BY ORGANIC ENGAGEMENT</span>
-        </h1>
+      <!-- Strap -->
+      <p class="hero-strap">
+        IN ALL THE PLACES AUDIENCES SPEND THEIR TIME
+      </p>
 
-        <p class="awards bigline" style="margin:0 0 1.2rem;">
-          🏆 Shorty Awards Winner &nbsp; 🏆 Webby Award Winner
-        </p>
+      <!-- Social -->
+      <nav class="social" aria-label="Follow 60 Second Docs">
+        <a class="so" href="https://instagram.com/60secdocs" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
+        </a>
+        <a class="so" href="https://www.tiktok.com/@60secdocs" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3a6.5 6.5 0 006.5 6.5V14a10.5 10.5 0 01-6.5-2.2V16a5.8 5.8 0 11-4.8-5.7V13a2.3 2.3 0 102.3 2.3V3h2z"/></svg>
+        </a>
+        <a class="so" href="https://youtube.com/@60secdocs" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31.4 31.4 0 000 12a31.4 31.4 0 001 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5 31.4 31.4 0 0024 12a31.4 31.4 0 00-1-4.5zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </a>
+      </nav>
+
+      <!-- Awards (text placeholders for now) -->
+      <div class="awards-strip" role="group" aria-label="Awards">
+        <span class="award">🏆 Shorty Awards Winner</span>
+        <span class="award">🏆 Webby Award Winner</span>
       </div>
+    </div>
+  </section>
 
-      <!-- Social only (CTAs removed per request) -->
-      <div class="hero-ctas" role="group" aria-label="Follow 60 Second Docs" style="justify-content:center; margin-top:.4rem;">
-        <nav class="social" aria-label="Follow 60 Second Docs">
-          <a class="so" href="https://instagram.com/60secdocs" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
-          </a>
-          <a class="so" href="https://www.tiktok.com/@60secdocs" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3a6.5 6.5 0 006.5 6.5V14a10.5 10.5 0 01-6.5-2.2V16a5.8 5.8 0 11-4.8-5.7V13a2.3 2.3 0 102.3 2.3V3h2z"/></svg>
-          </a>
-          <a class="so" href="https://youtube.com/@60secdocs" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31.4 31.4 0 000 12a31.4 31.4 0 001 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5 31.4 31.4 0 0024 12a31.4 31.4 0 00-1-4.5zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-          </a>
-        </nav>
-      </div>
+  <!-- =========================
+       FEATURED VIDEOS (2x3)
+  ========================== -->
+  <section class="section videos" aria-labelledby="featured-videos-heading">
+    <div class="container">
+      <h2 id="featured-videos-heading" class="section-title white">
+        FEATURING THE WORLD’S<br />MOST INTERESTING CHARACTERS
+      </h2>
 
-      <!-- OVERLAYED CONTENT GRIDS (videos + metrics) -->
-      <div class="container" style="margin-top:32px;">
-        <!-- VIDEOS: 2 x 3 grid over the hero -->
-        <ul class="video-grid grid-2x3" role="list" aria-label="Featured Videos">
-          <!-- 1 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Grandma Gamer — 60 Second Docs"
-                      src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Grandma Gamer</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-          <!-- 2 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Tiny Foods — 60 Second Docs"
-                      src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Tiny Foods</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-          <!-- 3 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
-                      src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Brazil's Ballerinas (feat. Malala)</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-          <!-- 4 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Weed Nuns — 60 Second Docs"
-                      src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Weed Nuns</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-          <!-- 5 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Air Guitar Champ — 60 Second Docs"
-                      src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Air Guitar Champ</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-          <!-- 6 -->
-          <li class="video-card" role="listitem">
-            <div class="video-embed">
-              <iframe title="Recycling Kid — 60 Second Docs"
-                      src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0"
-                      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h3 class="video-title">Recycling Kid</h3>
-            <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">Open on Vimeo</a>
-          </li>
-        </ul>
+      <ul class="video-grid grid-2x3" role="list">
+        <!-- 1 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Recycling Kid — 60 Second Docs"
+              src="https://player.vimeo.com/video/341444502?h=0a78d9a608&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Recycling Kid</h3>
+        </li>
+        <!-- 2 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Weed Nuns — 60 Second Docs"
+              src="https://player.vimeo.com/video/341444707?h=28471ec78a&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Weed Nuns</h3>
+        </li>
+        <!-- 3 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Homeless Haircuts — 60 Second Docs"
+              src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Homeless Haircuts</h3>
+        </li>
+        <!-- 4 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
+              src="https://player.vimeo.com/video/736240393?h=2d21cae855&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Brazil Girl</h3>
+        </li>
+        <!-- 5 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Tiny Foods — 60 Second Docs"
+              src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Flip-Flop Artist</h3>
+        </li>
+        <!-- 6 -->
+        <li class="video-card" role="listitem">
+          <div class="video-embed">
+            <iframe title="Grandma Gamer — 60 Second Docs"
+              src="https://player.vimeo.com/video/344175025?h=660604793a&byline=0&title=0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3 class="video-title">Daddy Daughter Hair School</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-        <!-- NUMBERS grid over the hero -->
-        <div class="ssd-metrics mt" role="list" aria-label="By The Numbers" style="margin-top:24px;">
-          <div class="ssd-metric" role="listitem">
-            <div class="num" data-count="12000000000">12B+</div>
-            <div class="label">Total Video Views</div>
-          </div>
-          <div class="ssd-metric" role="listitem">
-            <div class="num" data-count="9900000">9.9MM</div>
-            <div class="label">Avg Views / Episode</div>
-          </div>
-          <div class="ssd-metric" role="listitem">
-            <div class="num" data-count="13000000">13MM+</div>
-            <div class="label">Total Followers</div>
-          </div>
+  <!-- =========================
+       METRICS
+  ========================== -->
+  <section class="section metrics" aria-labelledby="metrics-heading">
+    <div class="container">
+      <h2 id="metrics-heading" class="section-title white">
+        A MASSIVE COMMUNITY<br />DRIVEN BY ORGANIC ENGAGEMENT
+      </h2>
+
+      <div class="ssd-metrics" role="list">
+        <div class="ssd-metric" role="listitem">
+          <div class="num" data-count="12000000000">12B+</div>
+          <div class="label">Total Video Views</div>
         </div>
+        <div class="ssd-metric" role="listitem">
+          <div class="num" data-count="9900000">9.9MM</div>
+          <div class="label">Avg Views / Episode</div>
+        </div>
+        <div class="ssd-metric" role="listitem">
+          <div class="num" data-count="13000000">13MM+</div>
+          <div class="label">Total Followers</div>
+        </div>
+      </div>
 
-        <div class="ssd-metrics mt" role="list" style="margin-top:18px;">
-          <div class="ssd-metric" role="listitem">
-            <div class="num">18–34</div>
-            <div class="label">Majority of Audience</div>
-          </div>
-          <div class="ssd-metric" role="listitem">
-            <div class="num">99%</div>
-            <div class="label">Organic Viewership</div>
-          </div>
-          <div class="ssd-metric" role="listitem">
-            <div class="num">1000+</div>
-            <div class="label">Episodes</div>
-          </div>
+      <div class="ssd-metrics mt" role="list">
+        <div class="ssd-metric" role="listitem">
+          <div class="num">1000+</div>
+          <div class="label">Episodes</div>
+        </div>
+        <div class="ssd-metric" role="listitem">
+          <div class="num">18–34</div>
+          <div class="label">Majority of Audience</div>
+        </div>
+        <div class="ssd-metric" role="listitem">
+          <div class="num">99%</div>
+          <div class="label">Organic Viewership</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="container footer" role="contentinfo" style="border-top:1px solid #2a2a2a;">
-    <div class="ssd-cta">
-      <span class="copyright">© INDIGENOUS MEDIA</span>
-      <a href="/privacy">Privacy &amp; Terms</a>
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container ssd-cta">
+      <p class="copyright">© INDIGENOUS MEDIA</p>
+      <a class="footlink" href="/privacy">Privacy &amp; Terms</a>
       <span>Interested in advertising, partnering, licensing?
-        <a href="/contact">Send us a note</a>
+        <a class="footlink" href="/contact">Send us a note</a>
       </span>
     </div>
   </footer>
 
-  <!-- Scoped style: Avenir + all-yellow + 2x3 video grid + hero background zoom -->
+  <!-- =========================
+       SCOPED STYLES
+  ========================== -->
   <style>
-    /* Typography scope */
-    .theme-60sd {
+    :root{
+      --ssd-yellow:#f0d719;
+      --bg:#0b0b0b;
+      --fg:#ffffff;
+      --muted:#c7c7c7;
+      --border:#2a2a2a;
+    }
+
+    .theme-60sd{
       font-family:"Avenir Next","Avenir",-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-      color:#f0d719;
+      color:var(--fg);
+      background:var(--bg);
     }
-    .theme-60sd h1,.theme-60sd h2,.theme-60sd h3,
-    .theme-60sd .ssd-headline,.theme-60sd .section-title,
-    .theme-60sd .video-title,.theme-60sd .tagline,
-    .theme-60sd .ssd-logo,.theme-60sd p,.theme-60sd a,
-    .theme-60sd .btn,.theme-60sd .label,.theme-60sd .award-badge {
-      font-family:"Avenir Next","Avenir",-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-      color:#f0d719;
+    .theme-60sd .container{ width:min(1200px,92vw); margin-inline:auto; }
+
+    /* HERO */
+    .theme-60sd .ssd-hero{
+      position:relative;
+      padding:64px 0 48px;
+      background:#0b0b0b;
+    }
+    .theme-60sd .hero-container{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+    }
+    .theme-60sd .hero-headline{
+      margin:0 0 16px 0;
+      color:#fff;
+      font-weight:900;
+      font-size:clamp(44px,8.5vw,120px);
+      line-height:1.02;
+      text-transform:uppercase;
+      letter-spacing:-.01em;
+      text-shadow:0 2px 18px rgba(0,0,0,.45);
+    }
+    .theme-60sd .hero-frame{
+      border:6px solid var(--ssd-yellow);
+      border-radius:6px;
+      overflow:hidden;
+      margin:0 0 14px 0;
+      max-width:960px; width:100%;
+    }
+    .theme-60sd .hero-frame img{ display:block; width:100%; height:auto; }
+    .theme-60sd .hero-strap{
+      color:#fff;
+      font-size:clamp(18px,2vw,28px);
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      margin:0 0 14px 0;
+      text-shadow:0 1px 10px rgba(0,0,0,.45);
     }
 
-    /* Make hero text as large as By The Numbers numerals */
-    .theme-60sd .bigline .line,
-    .theme-60sd .bigline { 
-      font-size: clamp(36px, 6vw, 72px); 
-      font-weight: 900; 
-      line-height: 1.02; 
-      text-transform: uppercase; 
-      letter-spacing: -.01em;
-    }
-
-    /* HERO BACKGROUND: zoomed-in cover with slow zoom animation */
-    @keyframes heroZoom {
-      from { transform: scale(1); }
-      to   { transform: scale(1.06); }
-    }
-    .theme-60sd .ssd-hero::before {
-      content:"";
-      position:absolute; inset:0;
-      background: url('/assets/60SD_Cover_11x11.jpg') center 45% / cover no-repeat;
-      transform-origin:center;
-      animation: heroZoom 16s ease-in-out infinite alternate;
-      z-index:1; /* behind gradient ::after and content */
-    }
-    /* Gradient overlay */
-    .theme-60sd .ssd-hero::after {
-      content:"";
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%);
-      z-index:2;
-    }
-
-    /* Social icon fix (compact) */
-    .theme-60sd .social .so {
-      display:inline-grid !important;
-      place-items:center !important;
-      width:34px !important;
-      height:34px !important;
-      min-width:34px !important;
-      border-radius:999px !important;
-      background:rgba(255,255,255,0.06) !important;
-      border:1px solid #2a2a2a !important;
-      line-height:34px !important;
-      padding:0 !important;
+    /* Social */
+    .theme-60sd .social{ display:flex; gap:10px; justify-content:center; margin:0 0 16px 0; }
+    .theme-60sd .social .so{
+      display:inline-grid; place-items:center;
+      width:34px; height:34px; min-width:34px;
+      border-radius:9999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      color:var(--ssd-yellow);
       transition:all .15s ease;
-      color:#f0d719 !important;
     }
-    .theme-60sd .social .so svg {
-      width:16px !important; height:16px !important; fill:currentColor; display:block; flex:0 0 auto;
-    }
-    .theme-60sd .social .so:hover { background:rgba(255,255,255,0.1); transform:translateY(-1px); }
+    .theme-60sd .social .so svg{ width:16px; height:16px; fill:currentColor; display:block; }
+    .theme-60sd .social .so:hover{ background:rgba(255,255,255,.1); transform:translateY(-1px); }
 
-    /* VIDEO GRID: force 2 columns (2x3) desktop/tablet, 1 col on small screens */
-    .theme-60sd .video-grid.grid-2x3 { 
-      display:grid; 
-      grid-template-columns:repeat(2, minmax(0,1fr)); 
-      gap:20px; 
-      list-style:none; 
-      padding:0; 
-      margin:0;
-    }
-    @media (max-width:700px){
-      .theme-60sd .video-grid.grid-2x3 { grid-template-columns:1fr; }
+    .theme-60sd .awards-strip{
+      display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
+      color:#fff; font-weight:700; font-size:clamp(16px,1.5vw,22px);
     }
 
-    /* Cards and embeds */
-    .theme-60sd .video-card {
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border:2px solid #f0d719; border-radius:14px; padding:14px;
+    /* Sections */
+    .theme-60sd .section{ padding:64px 0; background:var(--bg); }
+    .theme-60sd .section-title{
+      margin:0 0 32px 0;
+      font-weight:900;
+      font-size:clamp(44px,7vw,90px);
+      line-height:1.02;
+      text-transform:uppercase;
+      letter-spacing:-.01em;
+      text-align:center;
+    }
+    .theme-60sd .section-title.white{ color:#fff; }
+
+    /* Videos */
+    .theme-60sd .video-grid.grid-2x3{
+      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px;
+      list-style:none; padding:0; margin:0;
+    }
+    @media (max-width:900px){ .theme-60sd .video-grid.grid-2x3{ grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:620px){ .theme-60sd .video-grid.grid-2x3{ grid-template-columns:1fr; } }
+
+    .theme-60sd .video-card{
       display:flex; flex-direction:column; gap:10px;
     }
-    .theme-60sd .video-embed { position:relative; padding-top:56.25%; background:#000; border:1px solid #2a2a2a; border-radius:10px; overflow:hidden; }
-    .theme-60sd .video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-
-    /* Metrics grid */
-    .theme-60sd .ssd-metrics { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; }
-    @media (max-width:900px){ .theme-60sd .ssd-metrics { grid-template-columns:1fr; } }
-    .theme-60sd .ssd-metric {
-      padding:24px; 
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border:2px solid #f0d719; border-radius:14px; text-align:center; 
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);
+    .theme-60sd .video-embed{
+      position:relative; aspect-ratio:16/9; border:4px solid var(--ssd-yellow);
+      border-radius:6px; overflow:hidden; background:#000;
     }
-    .theme-60sd .num { font-size:clamp(36px,6vw,72px); font-weight:900; line-height:1; }
-    .theme-60sd .label { text-transform:uppercase; letter-spacing:.06em; margin-top:.25rem; }
+    .theme-60sd .video-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .theme-60sd .video-title{
+      margin:4px 0 0 0; color:#fff; text-transform:uppercase; font-weight:800; letter-spacing:.02em;
+    }
 
-    .theme-60sd a:hover { opacity:.9; }
+    /* Metrics */
+    .theme-60sd .ssd-metrics{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; }
+    @media (max-width:900px){ .theme-60sd .ssd-metrics{ grid-template-columns:1fr; } }
+    .theme-60sd .ssd-metric{
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border:2px solid var(--ssd-yellow); border-radius:14px;
+      text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);
+    }
+    .theme-60sd .ssd-metric .num{
+      font-size:clamp(36px,6vw,72px); font-weight:900; line-height:1; color:var(--ssd-yellow);
+    }
+    .theme-60sd .ssd-metric .label{
+      margin-top:.25rem; color:#fff; text-transform:uppercase; letter-spacing:.06em;
+    }
+    .theme-60sd .mt{ margin-top:18px; }
+
+    /* Footer */
+    .theme-60sd .footer{
+      padding:28px 0 56px; border-top:1px solid var(--border); background:var(--bg);
+    }
+    .theme-60sd .ssd-cta{
+      display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:center;
+      color:#c7c7c7; text-align:center;
+    }
+    .theme-60sd .footlink{ color:var(--ssd-yellow); text-decoration:none; }
+    .theme-60sd .footlink:hover{ opacity:.9; }
   </style>
 </div>
 
-<!-- Count-up animation -->
+<!-- =========================
+     COUNT-UP SCRIPT
+========================== -->
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  const els=Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
-  if('IntersectionObserver' in window && els.length){
-    const fmt=(n)=>n>=1e9?(n/1e9).toFixed(0)+'B+':n>=1e6?(n/1e6).toFixed(1)+'MM':n.toLocaleString();
-    const run=(el)=>{const end=+el.dataset.count;let t=0,cur=0;
-      const step=()=>{t++;cur=Math.floor(end*(1-Math.exp(-t/40)));el.textContent=fmt(Math.min(cur,end));if(cur<end)requestAnimationFrame(step)};
+document.addEventListener('DOMContentLoaded', function () {
+  const els = Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
+  if ('IntersectionObserver' in window && els.length) {
+    const fmt = (n) => n >= 1e9 ? (n / 1e9).toFixed(0) + 'B+' :
+                   n >= 1e6 ? (n / 1e6).toFixed(1) + 'MM' : n.toLocaleString();
+    const run = (el) => {
+      const end = +el.dataset.count; let t = 0, cur = 0;
+      const step = () => {
+        t++; cur = Math.floor(end * (1 - Math.exp(-t / 40)));
+        el.textContent = fmt(Math.min(cur, end));
+        if (cur < end) requestAnimationFrame(step);
+      };
       step();
     };
-    const io=new IntersectionObserver((entries)=>entries.forEach((e)=>{if(e.isIntersecting){run(e.target);io.unobserve(e.target)}}),{threshold:0.5});
-    els.forEach((el)=>io.observe(el));
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
+    }), { threshold: 0.5 });
+    els.forEach((el) => io.observe(el));
   }
 });
 </script>
