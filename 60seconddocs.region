@@ -180,6 +180,17 @@
       </span>
     </div>
   </footer>
+<style>
+.theme-60sd {
+  font-family: "Avenir Next", "Avenir", -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.theme-60sd h1, .theme-60sd h2, .theme-60sd h3, 
+.theme-60sd .ssd-headline, .theme-60sd .section-title, 
+.theme-60sd .video-title {
+  font-family: "Avenir Next", "Avenir", -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
 </div>
 
 <!-- Count-up animation -->
