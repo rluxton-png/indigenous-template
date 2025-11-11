@@ -5,17 +5,26 @@
 
     <div class="hero-inner">
       <div class="brand-lockup" style="text-align:center;">
+        <!-- Logo -->
         <a href="/" aria-label="60 Second Docs — Home" class="ssd-logo">
           <span>60</span><span>SECOND</span><span>DOCS</span>
         </a>
 
-        <h1 class="ssd-headline">
-          <span class="line">THE WORLD’S</span>
+        <!-- Hero copy block -->
+        <h2 class="tagline" style="font-weight:800; text-transform:uppercase; letter-spacing:.04em; opacity:.95; margin:.8rem 0 0;">
+          <span style="display:block;">THE LEADING DIGITAL DOCUMENTARY BRAND</span>
+          <span style="display:block;">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</span>
+        </h2>
+
+        <h1 class="ssd-headline" style="margin:1.2rem 0 .5rem;">
+          <span class="line">FEATURING THE WORLD’S</span>
           <span class="line">MOST INTERESTING</span>
           <span class="line">CHARACTERS</span>
         </h1>
 
-        <p class="tagline">IN ALL THE PLACES AUDIENCES SPEND THEIR TIME</p>
+        <p class="tagline" style="font-weight:700; letter-spacing:.06em; margin:0 0 1.4rem;">
+          A MASSIVE COMMUNITY DRIVEN BY ORGANIC ENGAGEMENT
+        </p>
 
         <!-- Awards -->
         <div class="awards-strip" role="group" aria-label="Awards">
@@ -59,7 +68,6 @@
     </div>
 
     <ul class="video-grid" role="list">
-      <!-- 1 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Grandma Gamer — 60 Second Docs"
@@ -67,12 +75,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Grandma Gamer</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/344175025/660604793a" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
 
-      <!-- 2 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Tiny Foods — 60 Second Docs"
@@ -80,12 +85,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Tiny Foods</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/801020286/f9e5d48d71" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
 
-      <!-- 3 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Brazil's Ballerinas (feat. Malala) — 60 Second Docs"
@@ -93,12 +95,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Brazil's Ballerinas (feat. Malala)</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736240393/2d21cae855" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
 
-      <!-- 4 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Weed Nuns — 60 Second Docs"
@@ -106,12 +105,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Weed Nuns</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444707/28471ec78a" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
 
-      <!-- 5 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Air Guitar Champ — 60 Second Docs"
@@ -119,12 +115,9 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Air Guitar Champ</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/736239001/1908b8ad15" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
 
-      <!-- 6 -->
       <li class="video-card" role="listitem">
         <div class="video-embed">
           <iframe title="Recycling Kid — 60 Second Docs"
@@ -132,9 +125,7 @@
                   allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <h3 class="video-title">Recycling Kid</h3>
-        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">
-          Open on Vimeo
-        </a>
+        <a class="video-fallback" href="https://vimeo.com/60secdocs/review/341444502/0a78d9a608" target="_blank" rel="noopener">Open on Vimeo</a>
       </li>
     </ul>
   </section>
@@ -179,7 +170,7 @@
     </div>
   </section>
 
-  <!-- FOOTER / CTA -->
+  <!-- FOOTER -->
   <footer class="container footer" role="contentinfo">
     <div class="ssd-cta">
       <span class="copyright">© INDIGENOUS MEDIA</span>
@@ -191,14 +182,13 @@
   </footer>
 </div>
 
-<!-- Count-up stays the same -->
+<!-- Count-up animation -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const els = Array.from(document.querySelectorAll('.ssd-metric .num[data-count]'));
   if ('IntersectionObserver' in window && els.length) {
     const fmt = (n) => n >= 1e9 ? (n / 1e9).toFixed(0) + 'B+' : n >= 1e6 ? (n / 1e6).toFixed(1) + 'MM' : n.toLocaleString();
-    const run = (el) => {
-      const end = +el.dataset.count; let t = 0, cur = 0;
+    const run = (el) => { const end = +el.dataset.count; let t = 0, cur = 0;
       const step = () => { t++; cur = Math.floor(end * (1 - Math.exp(-t / 40))); el.textContent = fmt(Math.min(cur, end)); if (cur < end) requestAnimationFrame(step); };
       step();
     };
