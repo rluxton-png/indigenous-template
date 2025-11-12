@@ -20,9 +20,9 @@
           <img class="award-img" src="/assets/img/shorty.png" alt="Shorty Award" loading="lazy" />
         </aside>
 
-        <!-- CENTER: Framed standalone image (SWAPPED to Untitled.png) -->
+        <!-- CENTER: Framed standalone image (SWAPPED to stoneskipper.png) -->
         <figure class="hero-frame">
-          <img src="/Untitled.png" alt="60 Second Docs hero" />
+          <img src="/stoneskipper.png" alt="60 Second Docs hero" />
         </figure>
 
         <!-- RIGHT COLUMN: Webby awards (top-down) -->
