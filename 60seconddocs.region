@@ -16,20 +16,20 @@
         <!-- LEFT COLUMN: Other awards (top-down) -->
         <aside class="awards-col awards-left" aria-label="Awards left">
           <img class="award-img" src="/assets/img/digiday.png" alt="Digiday Award" loading="lazy" />
-          <img class="award-img" src="/assets/img/clio.png" alt="Clio Award" loading="lazy" />
-          <img class="award-img" src="/assets/img/shorty.png" alt="Shorty Award" loading="lazy" />
+          <img class="award-img" src="/assets/img/clio.png"   alt="Clio Award"    loading="lazy" />
+          <img class="award-img" src="/assets/img/shorty.png" alt="Shorty Award"  loading="lazy" />
         </aside>
 
-        <!-- CENTER: Framed standalone image (SWAPPED to stoneskipper.png) -->
+        <!-- CENTER: Framed standalone image (stoneskipper.png from GitHub raw) -->
         <figure class="hero-frame">
-          <img src="/stoneskipper.png" alt="60 Second Docs hero" />
+          <img src="https://raw.githubusercontent.com/rluxton-png/indigenous-template/main/stoneskipper.png" alt="60 Second Docs hero" />
         </figure>
 
         <!-- RIGHT COLUMN: Webby awards (top-down) -->
         <aside class="awards-col awards-right" aria-label="Webby Awards right">
-          <img class="award-img" src="/assets/img/webby1.png" alt="Webby Award" loading="lazy" />
-          <img class="award-img" src="/assets/img/webby2020.png" alt="Webby 2020 Award" loading="lazy" />
-          <img class="award-img" src="/assets/img/webby2022.png" alt="Webby 2022 Award" loading="lazy" />
+          <img class="award-img" src="/assets/img/webby1.png"    alt="Webby Award"       loading="lazy" />
+          <img class="award-img" src="/assets/img/webby2020.png" alt="Webby 2020 Award"  loading="lazy" />
+          <img class="award-img" src="/assets/img/webby2022.png" alt="Webby 2022 Award"  loading="lazy" />
         </aside>
       </div>
 
@@ -38,7 +38,7 @@
         IN ALL THE PLACES AUDIENCES SPEND THEIR TIME
       </p>
 
-      <!-- Social (non-clickable icons) -->
+      <!-- Social (display only — no links) -->
       <nav class="social" aria-label="Social profiles (display only)">
         <!-- Facebook -->
         <span class="so" role="img" aria-label="Facebook">
@@ -76,12 +76,6 @@
             <path d="M12 2c3.7 0 6.2 2.7 6.2 6.2 0 1.6-.6 2.8-.6 2.8s.8 1 .8 1.7c0 .8-1 .9-1.5 1.1-.6.2-.4.9 0 1.3.5.4 2.1.7 2.1.7s-.6 1.8-3.9 2.1c-.3 0-.5.3-.4.6.2.6.4 1.3.4 1.3s-1.7.7-2.9-.3c-.2-.1-.4-.1-.6 0-1.2 1-2.9.3-2.9.3s.1-.7.4-1.3c.1-.3 0-.6-.4-.6-3.3-.3-3.9-2.1-3.9-2.1s1.6-.3 2.1-.7c.4-.4.6-1.1 0-1.3-.5-.2-1.5-.3-1.5-1.1 0-.7.8-1.7.8-1.7s-.6-1.2-.6-2.8C5.8 4.7 8.3 2 12 2z"/>
           </svg>
         </span>
-        <!-- Threads (monogram placeholder) -->
-        <span class="so so-label" role="img" aria-label="Threads">@</span>
-        <!-- Giphy (monogram placeholder) -->
-        <span class="so so-label" role="img" aria-label="Giphy">G</span>
-        <!-- Imgur (monogram placeholder) -->
-        <span class="so so-label" role="img" aria-label="Imgur">Im</span>
       </nav>
     </div>
   </section>
@@ -332,7 +326,6 @@
     }
     .theme-60sd .social .so svg{ width:16px; height:16px; fill:currentColor; display:block; }
     .theme-60sd .social .so:hover{ background:rgba(255,255,255,.1); transform:translateY(-1px); }
-    .theme-60sd .social .so-label{ font-size:12px; font-weight:900; letter-spacing:.02em; color:#000; background:#f0d719; padding:0 8px; border-radius:9999px; line-height:20px; }
 
     /* Sections */
     .theme-60sd .section{ padding:64px 0; }
