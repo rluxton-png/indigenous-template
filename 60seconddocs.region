@@ -150,14 +150,14 @@
   <h3 class="video-title">Tiny Foods</h3>
 </li>
 
-        <!-- 6 Daddy Daughter -->
+        <!-- 6 Daddy Daughter Hair School-->
         <li class="video-card" role="listitem">
           <div class="video-embed">
-            <iframe title="Daddy Daughter — 60 Second Docs"
+            <iframe title="Daddy Daughter Hair School — 60 Second Docs"
               src="https://player.vimeo.com/video/341443455?h=ced36f96d4&byline=0&title=0"
               allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-          <h3 class="video-title">Daddy Daughter</h3>
+          <h3 class="video-title">Daddy Daughter Hair School</h3>
         </li>
       </ul>
     </div>
