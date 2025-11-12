@@ -121,24 +121,35 @@
           </div>
           <h3 class="video-title">Grandma Gamer</h3>
         </li>
-        <!-- 4 Air Guitar Champ -->
-        <li class="video-card" role="listitem">
-          <div class="video-embed">
-            <iframe title="Air Guitar Champ — 60 Second Docs"
-              src="https://player.vimeo.com/video/736239001?h=1908b8ad15&byline=0&title=0"
-              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <h3 class="video-title">Air Guitar Champ</h3>
-        </li>
-        <!-- 5 Tiny Foods -->
-        <li class="video-card" role="listitem">
-          <div class="video-embed">
-            <iframe title="Tiny Foods — 60 Second Docs"
-              src="https://player.vimeo.com/video/801020286?h=f9e5d48d71&byline=0&title=0"
-              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <h3 class="video-title">Tiny Foods</h3>
-        </li>
+     <!-- 4 Air Guitar Champ -->
+<li class="video-card" role="listitem">
+  <div class="video-embed">
+    <iframe
+      title="Air Guitar Champ — 60 Second Docs"
+      src="https://player.vimeo.com/video/736239001?h=7dd94ecc27&byline=0&title=0&portrait=0&dnt=1"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+  <h3 class="video-title">Air Guitar Champ</h3>
+</li>
+<!-- 5 Tiny Foods -->
+<li class="video-card" role="listitem">
+  <div class="video-embed">
+    <iframe
+      title="Tiny Foods — 60 Second Docs"
+      src="https://player.vimeo.com/video/801020286?h=e7f67bd532&byline=0&title=0&portrait=0&dnt=1"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+  <h3 class="video-title">Tiny Foods</h3>
+</li>
+
         <!-- 6 Daddy Daughter -->
         <li class="video-card" role="listitem">
           <div class="video-embed">
