@@ -20,9 +20,13 @@
           <img class="award-img" src="/assets/img/shorty.png" alt="Shorty Award"  loading="lazy" />
         </aside>
 
-        <!-- CENTER: Framed standalone image (stoneskipper.png from GitHub raw) -->
+        <!-- CENTER: Framed standalone image (self-hosted) -->
         <figure class="hero-frame">
-          <img src="https://raw.githubusercontent.com/rluxton-png/indigenous-template/main/stoneskipper.png" alt="60 Second Docs hero" />
+          <img
+            src="/assets/img/stoneskipper.png"
+            alt="60 Second Docs hero"
+            width="1640" height="940"
+            loading="eager" fetchpriority="high" decoding="async" />
         </figure>
 
         <!-- RIGHT COLUMN: Webby awards (top-down) -->
@@ -299,8 +303,13 @@
       box-shadow:0 10px 40px rgba(0,0,0,.35);
       background:rgba(0,0,0,.2);
       backdrop-filter:saturate(1.1) brightness(1.02);
+
+      /* Added to stabilize layout before image load */
+      aspect-ratio:16/9;
     }
-    .theme-60sd .hero-frame img{ display:block; width:100%; height:auto; }
+    .theme-60sd .hero-frame img{
+      display:block; width:100%; height:100%; object-fit:cover;
+    }
 
     .theme-60sd .hero-strap{
       color:#fff;
