@@ -629,3 +629,19 @@ body #brand-template.nine-template #content > .project-content:nth-of-type(3n)  
     max-width: 90% !important;   /* keeps long lines visually balanced */
   }
 }
+/* === Tighten hero → first-section spacing === */
+
+/* 1. Less padding on the hero header */
+#brand-template.nine-template .project-header {
+  padding: clamp(30px, 6vw, 72px) clamp(16px, 5vw, 60px) !important;
+}
+
+/* 2. Smaller gap under the main title */
+#brand-template.nine-template .project-header .project-title {
+  margin: 0 auto clamp(16px, 3vw, 32px) !important;
+}
+
+/* 3. Bring the first content section closer to the hero */
+#brand-template.nine-template #content > .project-content:first-of-type {
+  padding-top: clamp(16px, 3vw, 32px) !important;
+}
