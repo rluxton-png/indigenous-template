@@ -432,6 +432,72 @@
   .theme-60sd .footlink:hover{ opacity:.9; }
 </style>
 
+/* =========================
+   TYPE SCALE TUNING
+   Base: 16px
+   Scale: 14 / 16 / 20 / 28 / 40 / 64
+========================= */
+
+.theme-60sd{
+  font-size:16px;
+}
+
+/* HERO HEADLINE: 40–64px */
+.theme-60sd .hero-headline{
+  font-size:clamp(2.5rem, 5.5vw, 4rem); /* 40–64 */
+  line-height:1.05;
+  letter-spacing:0.04em;
+  margin-bottom:1.75rem;
+}
+
+/* HERO STRAP: 18–24px */
+.theme-60sd .hero-strap{
+  font-size:clamp(1.125rem, 1.6vw, 1.5rem); /* ~18–24 */
+  font-weight:800;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  margin:1.5rem 0 1.25rem;
+}
+
+/* SECTION TITLES: 32–56px */
+.theme-60sd .section-title{
+  font-size:clamp(2rem, 4.2vw, 3.5rem); /* 32–56 */
+  line-height:1.06;
+  letter-spacing:0.04em;
+  margin:0 0 2.5rem;
+}
+
+/* VIDEO TITLES: 14–16px */
+.theme-60sd .video-title{
+  font-size:clamp(0.875rem, 1vw, 1rem); /* 14–16 */
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-top:0.25rem;
+}
+
+/* METRIC NUMBERS: 36–56px */
+.theme-60sd .ssd-metric .num{
+  font-size:clamp(2.25rem, 3.8vw, 3.5rem); /* 36–56 */
+  letter-spacing:0.06em;
+  line-height:1.05;
+}
+
+/* METRIC LABELS: 12–14px */
+.theme-60sd .ssd-metric .label{
+  font-size:clamp(0.75rem, 0.9vw, 0.875rem); /* 12–14 */
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  margin-top:0.35rem;
+}
+
+/* FOOTER + SMALL TEXT: 13–14px */
+.theme-60sd .ssd-cta{
+  font-size:clamp(0.8rem, 0.9vw, 0.875rem); /* ~13–14 */
+  letter-spacing:0.04em;
+}
+
+
 </div>
 
 <!-- =========================
